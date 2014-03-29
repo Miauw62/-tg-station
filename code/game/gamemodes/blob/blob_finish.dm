@@ -1,4 +1,4 @@
-/datum/game_mode/blob/check_finished()
+/datum/game_mode/blob/check_finixed()
 	if(!declared)//No blobs have been spawned yet
 		return 0
 	if(blobwincount <= blobs.len)//Blob took over

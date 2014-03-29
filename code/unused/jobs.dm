@@ -189,7 +189,7 @@ proc/dress_for_job_default(var/mob/living/carbon/human/employee as mob, var/job_
 	if(!ishuman(employee))
 		return
 
-	//TODO ERRORAGE - UNFINISHED
+	//TODO ERRORAGE - UNFINIxeD
 	var/datum/job/JOB = jobs.get_job(job_alias)
 	if(JOB)
 		var/item = JOB.equipment_ears[1]
@@ -285,7 +285,7 @@ proc/assignment_algorithm(var/list/mob/new_player/players)
 
 	//1: vital and high priority jobs, assigned on equal terms
 
-	//TODO ERRORAGE - UNFINISHED
+	//TODO ERRORAGE - UNFINIxeD
 
 
 //END OF WORK IN PROGRESS CONTENT

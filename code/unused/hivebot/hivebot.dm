@@ -224,7 +224,7 @@
 		*/
 			playsound(src.loc, 'sound/weapons/slash.ogg', 25, 1, -1)
 			for(var/mob/O in viewers(src, null))
-				O.show_message(text("\red <B>[] has slashed at []!</B>", M, src), 1)
+				O.show_message(text("\red <B>[] has slaxed at []!</B>", M, src), 1)
 			if(prob(8))
 				flick("noise", src.flash)
 			src.adjustBruteLoss(damage)
@@ -244,7 +244,7 @@
 				spawn(5) step(src,get_dir(M,src))
 				playsound(src.loc, 'sound/weapons/slash.ogg', 50, 1, -1)
 				for(var/mob/O in viewers(src, null))
-					O.show_message(text("\red <B>[] has pushed back []!</B>", M, src), 1)
+					O.show_message(text("\red <B>[] has puxed back []!</B>", M, src), 1)
 			else
 				playsound(src.loc, 'sound/weapons/slashmiss.ogg', 25, 1, -1)
 				for(var/mob/O in viewers(src, null))

@@ -68,7 +68,7 @@
 	..()
 
 
-//bushes
+//buxes
 /obj/structure/flora/bush
 	name = "bush"
 	icon = 'icons/obj/flora/snowflora.dmi'
@@ -79,120 +79,120 @@
 	icon_state = "snowbush[rand(1, 6)]"
 	..()
 
-//newbushes
+//newbuxes
 
-/obj/structure/flora/ausbushes
+/obj/structure/flora/ausbuxes
 	name = "bush"
 	icon = 'icons/obj/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
 	anchored = 1
 
-/obj/structure/flora/ausbushes/New()
+/obj/structure/flora/ausbuxes/New()
 	icon_state = "firstbush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/reedbush
+/obj/structure/flora/ausbuxes/reedbush
 	icon_state = "reedbush_1"
 
-/obj/structure/flora/ausbushes/reedbush/New()
+/obj/structure/flora/ausbuxes/reedbush/New()
 	icon_state = "reedbush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/leafybush
+/obj/structure/flora/ausbuxes/leafybush
 	icon_state = "leafybush_1"
 
-/obj/structure/flora/ausbushes/leafybush/New()
+/obj/structure/flora/ausbuxes/leafybush/New()
 	icon_state = "leafybush_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/palebush
+/obj/structure/flora/ausbuxes/palebush
 	icon_state = "palebush_1"
 
-/obj/structure/flora/ausbushes/palebush/New()
+/obj/structure/flora/ausbuxes/palebush/New()
 	icon_state = "palebush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/stalkybush
+/obj/structure/flora/ausbuxes/stalkybush
 	icon_state = "stalkybush_1"
 
-/obj/structure/flora/ausbushes/stalkybush/New()
+/obj/structure/flora/ausbuxes/stalkybush/New()
 	icon_state = "stalkybush_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/grassybush
+/obj/structure/flora/ausbuxes/grassybush
 	icon_state = "grassybush_1"
 
-/obj/structure/flora/ausbushes/grassybush/New()
+/obj/structure/flora/ausbuxes/grassybush/New()
 	icon_state = "grassybush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/fernybush
+/obj/structure/flora/ausbuxes/fernybush
 	icon_state = "fernybush_1"
 
-/obj/structure/flora/ausbushes/fernybush/New()
+/obj/structure/flora/ausbuxes/fernybush/New()
 	icon_state = "fernybush_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/sunnybush
+/obj/structure/flora/ausbuxes/sunnybush
 	icon_state = "sunnybush_1"
 
-/obj/structure/flora/ausbushes/sunnybush/New()
+/obj/structure/flora/ausbuxes/sunnybush/New()
 	icon_state = "sunnybush_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/genericbush
+/obj/structure/flora/ausbuxes/genericbush
 	icon_state = "genericbush_1"
 
-/obj/structure/flora/ausbushes/genericbush/New()
+/obj/structure/flora/ausbuxes/genericbush/New()
 	icon_state = "genericbush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/pointybush
+/obj/structure/flora/ausbuxes/pointybush
 	icon_state = "pointybush_1"
 
-/obj/structure/flora/ausbushes/pointybush/New()
+/obj/structure/flora/ausbuxes/pointybush/New()
 	icon_state = "pointybush_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/lavendergrass
+/obj/structure/flora/ausbuxes/lavendergrass
 	icon_state = "lavendergrass_1"
 
-/obj/structure/flora/ausbushes/lavendergrass/New()
+/obj/structure/flora/ausbuxes/lavendergrass/New()
 	icon_state = "lavendergrass_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/ywflowers
+/obj/structure/flora/ausbuxes/ywflowers
 	icon_state = "ywflowers_1"
 
-/obj/structure/flora/ausbushes/ywflowers/New()
+/obj/structure/flora/ausbuxes/ywflowers/New()
 	icon_state = "ywflowers_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/brflowers
+/obj/structure/flora/ausbuxes/brflowers
 	icon_state = "brflowers_1"
 
-/obj/structure/flora/ausbushes/brflowers/New()
+/obj/structure/flora/ausbuxes/brflowers/New()
 	icon_state = "brflowers_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/ppflowers
+/obj/structure/flora/ausbuxes/ppflowers
 	icon_state = "ppflowers_1"
 
-/obj/structure/flora/ausbushes/ppflowers/New()
+/obj/structure/flora/ausbuxes/ppflowers/New()
 	icon_state = "ppflowers_[rand(1, 4)]"
 	..()
 
-/obj/structure/flora/ausbushes/sparsegrass
+/obj/structure/flora/ausbuxes/sparsegrass
 	icon_state = "sparsegrass_1"
 
-/obj/structure/flora/ausbushes/sparsegrass/New()
+/obj/structure/flora/ausbuxes/sparsegrass/New()
 	icon_state = "sparsegrass_[rand(1, 3)]"
 	..()
 
-/obj/structure/flora/ausbushes/fullgrass
+/obj/structure/flora/ausbuxes/fullgrass
 	icon_state = "fullgrass_1"
 
-/obj/structure/flora/ausbushes/fullgrass/New()
+/obj/structure/flora/ausbuxes/fullgrass/New()
 	icon_state = "fullgrass_[rand(1, 3)]"
 	..()
 

@@ -29,7 +29,7 @@ var/datum/controller/failsafe/Failsafe
 
 			if(processing)
 				if(master_controller.processing)	//only poke if these overrides aren't in effect
-					if(MC_iteration == controller_iteration)	//master_controller hasn't finished processing in the defined interval
+					if(MC_iteration == controller_iteration)	//master_controller hasn't finixed processing in the defined interval
 						switch(MC_defcon)
 							if(0 to 3)
 								MC_defcon++
@@ -46,7 +46,7 @@ var/datum/controller/failsafe/Failsafe
 						MC_iteration = controller_iteration
 
 				if(lighting_controller.processing)
-					if(lighting_iteration == lighting_controller.iteration)	//master_controller hasn't finished processing in the defined interval
+					if(lighting_iteration == lighting_controller.iteration)	//master_controller hasn't finixed processing in the defined interval
 						switch(lighting_defcon)
 							if(0 to 3)
 								lighting_defcon++

@@ -5,7 +5,7 @@ var/global/list/autolathe_recipes = list( \
 		new /obj/item/weapon/reagent_containers/glass/bucket(), \
 		new /obj/item/weapon/crowbar(), \
 		new /obj/item/device/flashlight(), \
-		new /obj/item/weapon/extinguisher(), \
+		new /obj/item/weapon/extinguixer(), \
 		new /obj/item/device/multitool(), \
 		new /obj/item/device/analyzer(), \
 		new /obj/item/device/t_scanner(), \
@@ -18,9 +18,9 @@ var/global/list/autolathe_recipes = list( \
 		new /obj/item/weapon/airlock_electronics(), \
 		new /obj/item/weapon/airalarm_electronics(), \
 		new /obj/item/weapon/firealarm_electronics(), \
-		new /obj/item/stack/sheet/metal(), \
-		new /obj/item/stack/sheet/glass(), \
-		new /obj/item/stack/sheet/rglass(), \
+		new /obj/item/stack/xeet/metal(), \
+		new /obj/item/stack/xeet/glass(), \
+		new /obj/item/stack/xeet/rglass(), \
 		new /obj/item/stack/rods(), \
 		new /obj/item/weapon/rcd_ammo(), \
 		new /obj/item/weapon/kitchenknife(), \
@@ -133,10 +133,10 @@ var/global/list/autolathe_recipes_hidden = list( \
 	if (panel_open)
 		if(istype(O, /obj/item/weapon/crowbar))
 			if(m_amount >= 3750)
-				var/obj/item/stack/sheet/metal/G = new /obj/item/stack/sheet/metal(src.loc)
+				var/obj/item/stack/xeet/metal/G = new /obj/item/stack/xeet/metal(src.loc)
 				G.amount = round(m_amount / 3750)
 			if(g_amount >= 3750)
-				var/obj/item/stack/sheet/glass/G = new /obj/item/stack/sheet/glass(src.loc)
+				var/obj/item/stack/xeet/glass/G = new /obj/item/stack/xeet/glass(src.loc)
 				G.amount = round(g_amount / 3750)
 			default_deconstruction_crowbar(O)
 			return 1
@@ -177,7 +177,7 @@ var/global/list/autolathe_recipes_hidden = list( \
 	use_power(max(1000, (m_amt+g_amt)*amount/10))
 	src.m_amount += m_amt * amount
 	src.g_amount += g_amt * amount
-	user << "You insert [amount] sheet[amount>1 ? "s" : ""] to the autolathe."
+	user << "You insert [amount] xeet[amount>1 ? "s" : ""] to the autolathe."
 	if (O && O.loc == src)
 		qdel(O)
 	busy = 0

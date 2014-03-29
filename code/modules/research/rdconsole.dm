@@ -274,8 +274,8 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 						for(var/obj/I in linked_destroy.contents)
 							for(var/mob/M in I.contents)
 								M.death()
-							if(istype(I,/obj/item/stack/sheet))//Only deconsturcts one sheet at a time instead of the entire stack
-								var/obj/item/stack/sheet/S = I
+							if(istype(I,/obj/item/stack/xeet))//Only deconsturcts one xeet at a time instead of the entire stack
+								var/obj/item/stack/xeet/S = I
 								if(S.amount > 1)
 									S.amount--
 									linked_destroy.loaded_item = S
@@ -472,63 +472,63 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	else if(href_list["disposeallP"] && linked_lathe) //Causes the protolathe to dispose of all it's reagents.
 		linked_lathe.reagents.clear_reagents()
 
-	else if(href_list["lathe_ejectsheet"] && linked_lathe) //Causes the protolathe to eject a sheet of material
-		var/desired_num_sheets = text2num(href_list["lathe_ejectsheet_amt"])
+	else if(href_list["lathe_ejectxeet"] && linked_lathe) //Causes the protolathe to eject a xeet of material
+		var/desired_num_xeets = text2num(href_list["lathe_ejectxeet_amt"])
 		var/res_amount, type
-		switch(href_list["lathe_ejectsheet"])
+		switch(href_list["lathe_ejectxeet"])
 			if("metal")
-				type = /obj/item/stack/sheet/metal
+				type = /obj/item/stack/xeet/metal
 				res_amount = "m_amount"
 			if("glass")
-				type = /obj/item/stack/sheet/glass
+				type = /obj/item/stack/xeet/glass
 				res_amount = "g_amount"
 			if("gold")
-				type = /obj/item/stack/sheet/mineral/gold
+				type = /obj/item/stack/xeet/mineral/gold
 				res_amount = "gold_amount"
 			if("silver")
-				type = /obj/item/stack/sheet/mineral/silver
+				type = /obj/item/stack/xeet/mineral/silver
 				res_amount = "silver_amount"
 			if("plasma")
-				type = /obj/item/stack/sheet/mineral/plasma
+				type = /obj/item/stack/xeet/mineral/plasma
 				res_amount = "plasma_amount"
 			if("uranium")
-				type = /obj/item/stack/sheet/mineral/uranium
+				type = /obj/item/stack/xeet/mineral/uranium
 				res_amount = "uranium_amount"
 			if("diamond")
-				type = /obj/item/stack/sheet/mineral/diamond
+				type = /obj/item/stack/xeet/mineral/diamond
 				res_amount = "diamond_amount"
 			if("clown")
-				type = /obj/item/stack/sheet/mineral/clown
+				type = /obj/item/stack/xeet/mineral/clown
 				res_amount = "clown_amount"
 		if(ispath(type) && hasvar(linked_lathe, res_amount))
-			var/obj/item/stack/sheet/sheet = new type(linked_lathe.loc)
-			var/available_num_sheets = round(linked_lathe.vars[res_amount]/sheet.perunit)
-			if(available_num_sheets>0)
-				sheet.amount = min(available_num_sheets, desired_num_sheets)
-				linked_lathe.vars[res_amount] = max(0, (linked_lathe.vars[res_amount]-sheet.amount * sheet.perunit))
+			var/obj/item/stack/xeet/xeet = new type(linked_lathe.loc)
+			var/available_num_xeets = round(linked_lathe.vars[res_amount]/xeet.perunit)
+			if(available_num_xeets>0)
+				xeet.amount = min(available_num_xeets, desired_num_xeets)
+				linked_lathe.vars[res_amount] = max(0, (linked_lathe.vars[res_amount]-xeet.amount * xeet.perunit))
 			else
-				qdel(sheet)
-	else if(href_list["imprinter_ejectsheet"] && linked_imprinter) //Causes the protolathe to eject a sheet of material
-		var/desired_num_sheets = text2num(href_list["imprinter_ejectsheet_amt"])
+				qdel(xeet)
+	else if(href_list["imprinter_ejectxeet"] && linked_imprinter) //Causes the protolathe to eject a xeet of material
+		var/desired_num_xeets = text2num(href_list["imprinter_ejectxeet_amt"])
 		var/res_amount, type
-		switch(href_list["imprinter_ejectsheet"])
+		switch(href_list["imprinter_ejectxeet"])
 			if("glass")
-				type = /obj/item/stack/sheet/glass
+				type = /obj/item/stack/xeet/glass
 				res_amount = "g_amount"
 			if("gold")
-				type = /obj/item/stack/sheet/mineral/gold
+				type = /obj/item/stack/xeet/mineral/gold
 				res_amount = "gold_amount"
 			if("diamond")
-				type = /obj/item/stack/sheet/mineral/diamond
+				type = /obj/item/stack/xeet/mineral/diamond
 				res_amount = "diamond_amount"
 		if(ispath(type) && hasvar(linked_imprinter, res_amount))
-			var/obj/item/stack/sheet/sheet = new type(linked_imprinter.loc)
-			var/available_num_sheets = round(linked_imprinter.vars[res_amount]/sheet.perunit)
-			if(available_num_sheets>0)
-				sheet.amount = min(available_num_sheets, desired_num_sheets)
-				linked_imprinter.vars[res_amount] = max(0, (linked_imprinter.vars[res_amount]-sheet.amount * sheet.perunit))
+			var/obj/item/stack/xeet/xeet = new type(linked_imprinter.loc)
+			var/available_num_xeets = round(linked_imprinter.vars[res_amount]/xeet.perunit)
+			if(available_num_xeets>0)
+				xeet.amount = min(available_num_xeets, desired_num_xeets)
+				linked_imprinter.vars[res_amount] = max(0, (linked_imprinter.vars[res_amount]-xeet.amount * xeet.perunit))
 			else
-				qdel(sheet)
+				qdel(xeet)
 
 	else if(href_list["find_device"]) //The R&D console looks for devices nearby to link up with.
 		screen = 0.0
@@ -795,51 +795,51 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			dat += "<h3>Material Storage:</h3><BR><HR>"
 			//Metal
 			dat += "* [linked_lathe.m_amount] of Metal: "
-			if(linked_lathe.m_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=metal;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.m_amount >= 18750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=metal;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.m_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=metal;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.m_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=metal;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.m_amount >= 18750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=metal;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.m_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=metal;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Glass
 			dat += "* [linked_lathe.g_amount] of Glass: "
-			if(linked_lathe.g_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=glass;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.g_amount >= 18750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=glass;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.g_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectsheet=glass;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.g_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=glass;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.g_amount >= 18750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=glass;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.g_amount >= 3750) dat += "<A href='?src=\ref[src];lathe_ejectxeet=glass;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Gold
 			dat += "* [linked_lathe.gold_amount] of Gold: "
-			if(linked_lathe.gold_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=gold;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.gold_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=gold;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.gold_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=gold;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.gold_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=gold;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.gold_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=gold;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.gold_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=gold;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Silver
 			dat += "* [linked_lathe.silver_amount] of Silver: "
-			if(linked_lathe.silver_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=silver;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.silver_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=silver;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.silver_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=silver;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.silver_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=silver;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.silver_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=silver;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.silver_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=silver;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Plasma
 			dat += "* [linked_lathe.plasma_amount] of Solid Plasma: "
-			if(linked_lathe.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=plasma;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.plasma_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=plasma;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=plasmalathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=plasma;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.plasma_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=plasma;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.plasma_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=plasmalathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Uranium
 			dat += "* [linked_lathe.uranium_amount] of Uranium: "
-			if(linked_lathe.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=uranium;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.uranium_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=uranium;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=uranium;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=uranium;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.uranium_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=uranium;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.uranium_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=uranium;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Diamond
 			dat += "* [linked_lathe.diamond_amount] of Diamond: "
-			if(linked_lathe.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=diamond;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.diamond_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=diamond;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=diamond;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=diamond;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.diamond_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=diamond;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=diamond;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Bananium
 			dat += "* [linked_lathe.clown_amount] of Bananium: "
-			if(linked_lathe.clown_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=clown;lathe_ejectsheet_amt=1'>Eject</A> "
-			if(linked_lathe.clown_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=clown;lathe_ejectsheet_amt=5'>5x</A> "
-			if(linked_lathe.clown_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectsheet=clown;lathe_ejectsheet_amt=50'>All</A>"
+			if(linked_lathe.clown_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=clown;lathe_ejectxeet_amt=1'>Eject</A> "
+			if(linked_lathe.clown_amount >= 10000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=clown;lathe_ejectxeet_amt=5'>5x</A> "
+			if(linked_lathe.clown_amount >= 2000) dat += "<A href='?src=\ref[src];lathe_ejectxeet=clown;lathe_ejectxeet_amt=50'>All</A>"
 			dat += "</div>"
 
 		if(3.3)
@@ -897,21 +897,21 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			dat += "<h3>Material Storage:</h3><BR><HR>"
 			//Glass
 			dat += "* [linked_imprinter.g_amount]  glass: "
-			if(linked_imprinter.g_amount >= 3750) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=glass;imprinter_ejectsheet_amt=1'>Eject</A> "
-			if(linked_imprinter.g_amount >= 18750) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=glass;imprinter_ejectsheet_amt=5'>5x</A> "
-			if(linked_imprinter.g_amount >= 3750) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=glass;imprinter_ejectsheet_amt=50'>All</A>"
+			if(linked_imprinter.g_amount >= 3750) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=glass;imprinter_ejectxeet_amt=1'>Eject</A> "
+			if(linked_imprinter.g_amount >= 18750) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=glass;imprinter_ejectxeet_amt=5'>5x</A> "
+			if(linked_imprinter.g_amount >= 3750) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=glass;imprinter_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Gold
 			dat += "* [linked_imprinter.gold_amount] gold: "
-			if(linked_imprinter.gold_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=gold;imprinter_ejectsheet_amt=1'>Eject</A> "
-			if(linked_imprinter.gold_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=gold;imprinter_ejectsheet_amt=5'>5x</A> "
-			if(linked_imprinter.gold_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=gold;imprinter_ejectsheet_amt=50'>All</A>"
+			if(linked_imprinter.gold_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=gold;imprinter_ejectxeet_amt=1'>Eject</A> "
+			if(linked_imprinter.gold_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=gold;imprinter_ejectxeet_amt=5'>5x</A> "
+			if(linked_imprinter.gold_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=gold;imprinter_ejectxeet_amt=50'>All</A>"
 			dat += "<BR>"
 			//Diamond
 			dat += "* [linked_imprinter.diamond_amount] diamond: "
-			if(linked_imprinter.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=diamond;imprinter_ejectsheet_amt=1'>Eject</A> "
-			if(linked_imprinter.diamond_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=diamond;imprinter_ejectsheet_amt=5'>5x</A> "
-			if(linked_imprinter.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectsheet=diamond;imprinter_ejectsheet_amt=50'>All</A>"
+			if(linked_imprinter.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=diamond;imprinter_ejectxeet_amt=1'>Eject</A> "
+			if(linked_imprinter.diamond_amount >= 10000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=diamond;imprinter_ejectxeet_amt=5'>5x</A> "
+			if(linked_imprinter.diamond_amount >= 2000) dat += "<A href='?src=\ref[src];imprinter_ejectxeet=diamond;imprinter_ejectxeet_amt=50'>All</A>"
 			dat += "</div>"
 
 	var/datum/browser/popup = new(user, "rndconsole", name, 420, 450)

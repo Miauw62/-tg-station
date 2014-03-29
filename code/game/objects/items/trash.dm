@@ -62,7 +62,7 @@
 	icon_state = "candle4"
 
 /obj/item/trash/can
-	name = "crushed can"
+	name = "cruxed can"
 	icon_state = "cola"
 
 /obj/item/trash/attack(mob/M, mob/living/user)

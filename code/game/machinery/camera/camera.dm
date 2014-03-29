@@ -106,7 +106,7 @@
 	if(!istype(user))
 		return
 	status = 0
-	visible_message("<span class='warning'>\The [user] slashes at [src]!</span>")
+	visible_message("<span class='warning'>\The [user] slaxes at [src]!</span>")
 	playsound(src.loc, 'sound/weapons/slash.ogg', 100, 1)
 	icon_state = "[initial(icon_state)]1"
 	add_hiddenprint(user)

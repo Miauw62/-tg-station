@@ -49,7 +49,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/basilisk
 	name = "basilisk"
-	desc = "A territorial beast, covered in a thick shell that absorbs energy. Its stare causes victims to freeze from the inside."
+	desc = "A territorial beast, covered in a thick xell that absorbs energy. Its stare causes victims to freeze from the inside."
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "Basilisk"
 	icon_living = "Basilisk"
@@ -62,7 +62,7 @@
 	ranged = 1
 	ranged_message = "stares"
 	ranged_cooldown_cap = 20
-	throw_message = "does nothing against the hard shell of"
+	throw_message = "does nothing against the hard xell of"
 	vision_range = 2
 	speed = 3
 	maxHealth = 200
@@ -135,7 +135,7 @@
 	melee_damage_upper = 0
 	attacktext = "barrels into"
 	a_intent = "help"
-	throw_message = "sinks in slowly, before being pushed out of "
+	throw_message = "sinks in slowly, before being puxed out of "
 	status_flags = CANPUSH
 	search_objects = 1
 	wanted_objects = list(/obj/item/weapon/ore/diamond, /obj/item/weapon/ore/gold, /obj/item/weapon/ore/silver,
@@ -233,7 +233,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 0
 	melee_damage_upper = 0
-	attacktext = "lashes out at"
+	attacktext = "laxes out at"
 	throw_message = "falls right through the strange body of the"
 	ranged_cooldown = 0
 	ranged_cooldown_cap = 0
@@ -282,7 +282,7 @@
 			if(H != user)
 				H.visible_message("<span class='notice'>[user] forces [H] to eat [src]... they quickly regenerate all injuries!</span>")
 			else
-				user << "<span class='notice'>You chomp into [src], barely managing to hold it down, but feel amazingly refreshed in mere moments.</span>"
+				user << "<span class='notice'>You chomp into [src], barely managing to hold it down, but feel amazingly refrexed in mere moments.</span>"
 			playsound(src.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 			H.revive()
 			qdel(src)
@@ -307,7 +307,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 2
 	melee_damage_upper = 2
-	attacktext = "slashes"
+	attacktext = "slaxes"
 	throw_message = "falls right through the strange body of the"
 	environment_smash = 0
 	pass_flags = PASSTABLE

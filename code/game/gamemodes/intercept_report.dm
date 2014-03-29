@@ -131,7 +131,7 @@
 	*/
 
 	src.text += "<BR><BR>The <B>[name_1] [name_2]</B> implied an undercover operative was acting on their behalf on the station currently."
-	src.text += "It would be in your best interests to suspect everybody, as these undercover operatives could have implants which trigger them to have their memories removed until they are needed. He, or she, could even be a high ranking officer."
+	src.text += "It would be in your best interests to suspect everybody, as these undercover operatives could have implants which trigger them to have their memories removed until they are needed. He, or xe, could even be a high ranking officer."
 	/*
 	src.text += "After some investigation, we "
 	if(traitor_name)
@@ -212,7 +212,7 @@
 	src.text += "<BR><BR>It has been brought to our attention that the [name_1] [name_2] are attempting to stir unrest on one of our stations in your sector."
 	src.text += "Watch out for suspicious activity among the crew and make sure that all heads of staff report in periodically."
 	/*
-	src.text += "Based on our intelligence, we are [prob_right_job]% sure that if true, someone doing the job of [traitor_job] on your station may have been brainwashed "
+	src.text += "Based on our intelligence, we are [prob_right_job]% sure that if true, someone doing the job of [traitor_job] on your station may have been brainwaxed "
 	src.text += "at a recent conference, and their department should be closely monitored for signs of mutiny. "
 	if(prob(prob_right_dude))
 		src.text += "<BR> In addition, we are [prob_right_dude]% sure that [traitor_name] may have also some in to contact with this "

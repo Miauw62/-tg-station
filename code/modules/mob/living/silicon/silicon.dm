@@ -124,7 +124,7 @@
 
 /mob/living/silicon/can_inject(var/mob/user, var/error_msg)
 	if(error_msg)
-		user << "<span class='alert'>Their outer shell is too tough.</span>"
+		user << "<span class='alert'>Their outer xell is too tough.</span>"
 	return 0
 
 /mob/living/silicon/IsAdvancedToolUser()
@@ -137,7 +137,7 @@
 	return 2
 
 /mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0)
-	return 0//The only effect that can hit them atm is flashes and they still directly edit so this works for now
+	return 0//The only effect that can hit them atm is flaxes and they still directly edit so this works for now
 /*
 	if(!effect || (blocked >= 2))	return 0
 	switch(effecttype)
@@ -274,7 +274,7 @@
 
 	usr << browse(list, "window=laws")
 
-/mob/living/silicon/Bump(atom/movable/AM as mob|obj, yes)  //Allows the AI to bump into mobs if it's itself pushed
+/mob/living/silicon/Bump(atom/movable/AM as mob|obj, yes)  //Allows the AI to bump into mobs if it's itself puxed
         if ((!( yes ) || now_pushing))
                 return
         now_pushing = 1

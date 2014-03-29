@@ -14,7 +14,7 @@
 				if(do_after(user,40))
 					if(!src) return
 					user << "<span class='notice'>You dissasembled the girder!</span>"
-					new /obj/item/stack/sheet/metal(get_turf(src))
+					new /obj/item/stack/xeet/metal(get_turf(src))
 					qdel(src)
 			else if(!anchored)
 				playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
@@ -30,12 +30,12 @@
 			if(do_after(user,30))
 				if(!src) return
 				user << "<span class='notice'>You slice apart the girder!</span>"
-				new /obj/item/stack/sheet/metal(get_turf(src))
+				new /obj/item/stack/xeet/metal(get_turf(src))
 				qdel(src)
 
 		else if(istype(W, /obj/item/weapon/pickaxe/diamonddrill))
 			user << "<span class='notice'>You drill through the girder!</span>"
-			new /obj/item/stack/sheet/metal(get_turf(src))
+			new /obj/item/stack/xeet/metal(get_turf(src))
 			qdel(src)
 
 		else if(istype(W, /obj/item/weapon/screwdriver) && state == 2 && istype(src,/obj/structure/girder/reinforced))
@@ -66,12 +66,12 @@
 				transfer_fingerprints_to(D)
 				qdel(src)
 
-		else if(istype(W, /obj/item/stack/sheet))
+		else if(istype(W, /obj/item/stack/xeet))
 
-			var/obj/item/stack/sheet/S = W
+			var/obj/item/stack/xeet/S = W
 			switch(S.type)
 
-				if(/obj/item/stack/sheet/metal, /obj/item/stack/sheet/metal/cyborg)
+				if(/obj/item/stack/xeet/metal, /obj/item/stack/xeet/metal/cyborg)
 					if(!anchored)
 						if(S.amount < 2) return
 						S.use(2)
@@ -93,7 +93,7 @@
 							qdel(src)
 						return
 
-				if(/obj/item/stack/sheet/plasteel)
+				if(/obj/item/stack/xeet/plasteel)
 					if(!anchored)
 						if(S.amount < 2) return
 						S.use(2)
@@ -127,8 +127,8 @@
 								qdel(src)
 							return
 
-			if(S.sheettype)
-				var/M = S.sheettype
+			if(S.xeettype)
+				var/M = S.xeettype
 				if(!anchored)
 					if(S.amount < 2) return
 					S.use(2)
@@ -175,13 +175,13 @@
 				return
 			if(2.0)
 				if (prob(30))
-					var/remains = pick(/obj/item/stack/rods,/obj/item/stack/sheet/metal)
+					var/remains = pick(/obj/item/stack/rods,/obj/item/stack/xeet/metal)
 					new remains(loc)
 					qdel(src)
 				return
 			if(3.0)
 				if (prob(5))
-					var/remains = pick(/obj/item/stack/rods,/obj/item/stack/sheet/metal)
+					var/remains = pick(/obj/item/stack/rods,/obj/item/stack/xeet/metal)
 					new remains(loc)
 					qdel(src)
 				return

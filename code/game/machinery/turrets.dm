@@ -424,7 +424,7 @@
 /obj/machinery/turret/attack_alien(mob/living/carbon/alien/humanoid/M as mob)
 	if(!(stat & BROKEN))
 		playsound(src.loc, 'sound/weapons/slash.ogg', 25, 1, -1)
-		visible_message("\red <B>[] has slashed at []!</B>", M, src)
+		visible_message("\red <B>[] has slaxed at []!</B>", M, src)
 		src.health -= 15
 		if (src.health <= 0)
 			src.die()
@@ -546,7 +546,7 @@
 
 
 /obj/machinery/gun_turret/attack_alien(mob/user as mob)
-	user.visible_message("[user] slashes at [src]", "You slash at [src]")
+	user.visible_message("[user] slaxes at [src]", "You slash at [src]")
 	take_damage(15)
 	return
 

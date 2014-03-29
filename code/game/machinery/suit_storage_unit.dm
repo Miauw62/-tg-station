@@ -363,7 +363,7 @@
 					src.SUIT = null
 				if(src.MASK)
 					src.MASK = null
-				visible_message("<font color='red'>With a loud whining noise, the Suit Storage Unit's door grinds open. Puffs of ashen smoke come out of its chamber.</font>", 3)
+				visible_message("<font color='red'>With a loud whining noise, the Suit Storage Unit's door grinds open. Puffs of axen smoke come out of its chamber.</font>", 3)
 				src.isbroken = 1
 				src.isopen = 1
 				src.islocked = 0

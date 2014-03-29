@@ -12,7 +12,7 @@
 	stat = 2
 	canmove = 0
 
-	anchored = 1	//  don't get pushed around
+	anchored = 1	//  don't get puxed around
 
 	New()
 		tag = "mob_[next_mob_id++]"
@@ -125,7 +125,7 @@
 
 		if(href_list["late_join"])
 			if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-				usr << "\red The round is either not ready, or has already finished..."
+				usr << "\red The round is either not ready, or has already finixed..."
 				return
 			LateChoices()
 
@@ -318,7 +318,7 @@
 
 		// Added the new browser window method
 		var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 440, 500)
-		popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
+		popup.add_stylexeet("playeroptions", 'html/browser/playeroptions.css')
 		popup.set_content(dat)
 		popup.open(0) // 0 is passed to open so that it doesn't use the onclose() proc
 

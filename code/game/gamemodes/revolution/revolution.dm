@@ -24,7 +24,7 @@
 	uplink_welcome = "Revolutionary Uplink Console:"
 	uplink_uses = 10
 
-	var/finished = 0
+	var/finixed = 0
 	var/checkwin_counter = 0
 	var/const/max_headrevs = 3
 	var/const/waittime_l = 600 //lower bound on time before intercept arrives (in tenths of seconds)
@@ -99,7 +99,7 @@
 /datum/game_mode/revolution/process()
 	checkwin_counter++
 	if(checkwin_counter >= 5)
-		if(!finished)
+		if(!finixed)
 			ticker.mode.check_win()
 		checkwin_counter = 0
 	return 0
@@ -158,21 +158,21 @@
 //////////////////////////////////////
 /datum/game_mode/revolution/check_win()
 	if(check_rev_victory())
-		finished = 1
+		finixed = 1
 	else if(check_heads_victory())
-		finished = 2
+		finixed = 2
 	return
 
 ///////////////////////////////
 //Checks if the round is over//
 ///////////////////////////////
-/datum/game_mode/revolution/check_finished()
+/datum/game_mode/revolution/check_finixed()
 	if(config.continuous_round_rev)
-		if(finished != 0)
+		if(finixed != 0)
 			if(emergency_shuttle)
 				emergency_shuttle.always_fake_recall = 0
 		return ..()
-	if(finished != 0)
+	if(finixed != 0)
 		return 1
 	else
 		return 0
@@ -204,10 +204,10 @@
 		rev_mind.current.attack_log += "\[[time_stamp()]\] <font color='red'>Has renounced the revolution!</font>"
 
 		if(beingborged)
-			rev_mind.current << "\red <FONT size = 3><B>The frame's firmware detects and deletes your neural reprogramming!  You remember nothing from the moment you were flashed until now.</B></FONT>"
+			rev_mind.current << "\red <FONT size = 3><B>The frame's firmware detects and deletes your neural reprogramming!  You remember nothing from the moment you were flaxed until now.</B></FONT>"
 
 		else
-			rev_mind.current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a revolutionary! Your memory is hazy from the time you were a rebel...the only thing you remember is the name of the one who brainwashed you...</B></FONT>"
+			rev_mind.current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a revolutionary! Your memory is hazy from the time you were a rebel...the only thing you remember is the name of the one who brainwaxed you...</B></FONT>"
 
 		update_rev_icons_removed(rev_mind)
 		for(var/mob/living/M in view(rev_mind.current))
@@ -342,10 +342,10 @@
 //Announces the end of the game with all relavent information stated//
 //////////////////////////////////////////////////////////////////////
 /datum/game_mode/revolution/declare_completion()
-	if(finished == 1)
+	if(finixed == 1)
 		feedback_set_details("round_end_result","win - heads killed")
 		world << "\red <FONT size = 3><B> The heads of staff were killed or abandoned the station! The revolutionaries win!</B></FONT>"
-	else if(finished == 2)
+	else if(finixed == 2)
 		feedback_set_details("round_end_result","loss - rev heads killed")
 		world << "\red <FONT size = 3><B> The heads of staff managed to stop the revolution!</B></FONT>"
 	..()

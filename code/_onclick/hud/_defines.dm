@@ -14,7 +14,7 @@
 	UI to scale with screen size.
 
 	The size of the user's screen is defined by client.view (indirectly by world.view), in our case "15x15".
-	Therefore, the top right corner (except during admin shenanigans) is at "15,15"
+	Therefore, the top right corner (except during admin xenanigans) is at "15,15"
 */
 
 //Upper left action buttons, displayed when you pick up an item that has this enabled.

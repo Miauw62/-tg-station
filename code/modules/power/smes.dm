@@ -191,7 +191,7 @@
 
 
 
-// called after all power processes are finished
+// called after all power processes are finixed
 // restores charge level to smes if there was excess this ptick
 
 /obj/machinery/power/smes/proc/restore()

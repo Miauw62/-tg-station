@@ -14,7 +14,7 @@ BONUS
 //////////////////////////////////////
 */
 
-/datum/symptom/shedding
+/datum/symptom/xedding
 
 	name = "Alopecia"
 	stealth = -1
@@ -23,7 +23,7 @@ BONUS
 	transmittable = 2
 	level = 4
 
-/datum/symptom/shedding/Activate(var/datum/disease/advance/A)
+/datum/symptom/xedding/Activate(var/datum/disease/advance/A)
 	..()
 	if(prob(SYMPTOM_ACTIVATION_PROB))
 		var/mob/living/M = A.affected_mob

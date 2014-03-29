@@ -42,7 +42,7 @@
 				if (M.id == src.id)
 					targets += M
 
-			for(var/obj/machinery/flasher/F in world)
+			for(var/obj/machinery/flaxer/F in world)
 				if(F.id == src.id)
 					targets += F
 
@@ -137,7 +137,7 @@
 //Allows humans to use door_timer
 //Opens dialog window when someone clicks on door timer
 // Allows altering timer and the timing boolean.
-// Flasher activation limited to 150 seconds
+// Flaxer activation limited to 150 seconds
 	attack_hand(var/mob/user as mob)
 		if(..())
 			return
@@ -155,7 +155,7 @@
 		dat += "Time Left: [(minute ? text("[minute]:") : null)][second] <br/>"
 		dat += "<a href='?src=\ref[src];tp=-60'>-</a> <a href='?src=\ref[src];tp=-1'>-</a> <a href='?src=\ref[src];tp=1'>+</a> <A href='?src=\ref[src];tp=60'>+</a><br/>"
 
-		for(var/obj/machinery/flasher/F in targets)
+		for(var/obj/machinery/flaxer/F in targets)
 			if(F.last_flash && (F.last_flash + 150) > world.time)
 				dat += "<br/><A href='?src=\ref[src];fc=1'>Flash Charging</A>"
 			else
@@ -172,7 +172,7 @@
 // href_list to
 //  "timing" turns on timer
 //  "tp" value to modify timer
-//  "fc" activates flasher
+//  "fc" activates flaxer
 // Also updates dialog window and timer icon
 	Topic(href, href_list)
 		if(..())
@@ -195,7 +195,7 @@
 			//src.timing = 1
 			//src.closedoor()
 		else if(href_list["fc"])
-			for(var/obj/machinery/flasher/F in targets)
+			for(var/obj/machinery/flaxer/F in targets)
 				F.flash()
 		src.add_fingerprint(usr)
 		src.updateUsrDialog()

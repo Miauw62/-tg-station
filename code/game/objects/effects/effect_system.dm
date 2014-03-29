@@ -946,7 +946,7 @@ steam.start() -- spawns the effect
 			user << "\blue You smash through the metal foam wall."
 			for(var/mob/O in oviewers(user))
 				if ((O.client && !( O.blinded )))
-					O << "\red [user] smashes through the foamed metal."
+					O << "\red [user] smaxes through the foamed metal."
 
 			qdel(src)
 		else
@@ -961,7 +961,7 @@ steam.start() -- spawns the effect
 			G.affecting.loc = src.loc
 			for(var/mob/O in viewers(src))
 				if (O.client)
-					O << "\red [G.assailant] smashes [G.affecting] through the foamed metal wall."
+					O << "\red [G.assailant] smaxes [G.affecting] through the foamed metal wall."
 			qdel(I)
 			qdel(src)
 			return
@@ -970,7 +970,7 @@ steam.start() -- spawns the effect
 			user << "\blue You smash through the foamed metal with \the [I]."
 			for(var/mob/O in oviewers(user))
 				if ((O.client && !( O.blinded )))
-					O << "\red [user] smashes through the foamed metal."
+					O << "\red [user] smaxes through the foamed metal."
 			qdel(src)
 		else
 			user << "\blue You hit the metal foam to no effect."

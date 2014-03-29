@@ -48,14 +48,14 @@
 		t_is = "are"
 	else
 		if(icon)
-			msg += "\icon[src] " //note, should we ever go back to runtime-generated icons (please don't), you will need to change this to \icon[icon] to prevent crashes.
+			msg += "\icon[src] " //note, should we ever go back to runtime-generated icons (please don't), you will need to change this to \icon[icon] to prevent craxes.
 		switch(gender)
 			if(MALE)
 				t_He = "He"
 				t_his = "his"
 				t_him = "him"
 			if(FEMALE)
-				t_He = "She"
+				t_He = "xe"
 				t_his = "her"
 				t_him = "her"
 
@@ -251,7 +251,7 @@
 
 
 	if(nutrition < 100)
-		msg += "[t_He] [t_is] severely malnourished.\n"
+		msg += "[t_He] [t_is] severely malnourixed.\n"
 	else if(nutrition >= 500)
 		if(usr.nutrition < 100)
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"

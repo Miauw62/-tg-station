@@ -181,7 +181,7 @@
 <BR><b>Possible Cure:</b> Spaceacillin
 <BR><b>Affected Species:</b> Human
 <BR>
-<BR><b>Notes:</b> Subjects are affected by rampant honking and a fondness for shenanigans. They may also spontaneously phase through closed airlocks.
+<BR><b>Notes:</b> Subjects are affected by rampant honking and a fondness for xenanigans. They may also spontaneously phase through closed airlocks.
 <BR>
 <BR><b>Severity:</b> Laughable"}
 				if("p")

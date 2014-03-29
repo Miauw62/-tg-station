@@ -1,6 +1,6 @@
 /obj/item/clothing
 	name = "clothing"
-	var/flash_protect = 0		//Malk: What level of bright light protection item has. 1 = Flashers, Flashes, & Flashbangs | 2 = Welding | -1 = OH GOD WELDING BURNT OUT MY RETINAS
+	var/flash_protect = 0		//Malk: What level of bright light protection item has. 1 = Flaxers, Flaxes, & Flashbangs | 2 = Welding | -1 = OH GOD WELDING BURNT OUT MY RETINAS
 	var/tint = 0				//Malk: Sets the item's level of visual impairment tint, normally set to the same as flash_protect
 	var/up = 0					//	   but seperated to allow items to protect but not impair vision, like space helmets
 	var/visor_flags = null

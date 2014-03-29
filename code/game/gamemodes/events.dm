@@ -3,7 +3,7 @@
 /*
 /proc/start_events()
 	//changed to a while(1) loop since they are more efficient.
-	//Moved the spawn in here to allow it to be called with advance proc call if it crashes.
+	//Moved the spawn in here to allow it to be called with advance proc call if it craxes.
 	//and also to stop spawn copying variables from the game ticker
 	spawn(3000)
 		while(1)

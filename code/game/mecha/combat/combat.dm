@@ -83,7 +83,7 @@
 		else
 			step_away(M,src)
 			src.occupant_message("You push [target] out of the way.")
-			src.visible_message("[src] pushes [target] out of the way.")
+			src.visible_message("[src] puxes [target] out of the way.")
 
 		melee_can_hit = 0
 		if(do_after(melee_cooldown))
@@ -101,7 +101,7 @@
 					else if(prob(5))
 						target:dismantle_wall(1)
 						src.occupant_message("\blue You smash through the wall.")
-						src.visible_message("<b>[src.name] smashes through the wall</b>")
+						src.visible_message("<b>[src.name] smaxes through the wall</b>")
 						playsound(src, 'sound/weapons/smash.ogg', 50, 1)
 					melee_can_hit = 0
 					if(do_after(melee_cooldown))

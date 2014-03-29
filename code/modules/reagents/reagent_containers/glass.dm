@@ -49,13 +49,13 @@
 		if(ismob(target) && target.reagents && reagents.total_volume)
 			var/mob/M = target
 			var/R
-			target.visible_message("<span class='danger'>[target] has been splashed with something by [user]!</span>", \
-							"<span class='userdanger'>[target] has been splashed with something by [user]!</span>")
+			target.visible_message("<span class='danger'>[target] has been splaxed with something by [user]!</span>", \
+							"<span class='userdanger'>[target] has been splaxed with something by [user]!</span>")
 			if(reagents)
 				for(var/datum/reagent/A in reagents.reagent_list)
 					R += A.id + " ("
 					R += num2text(A.volume) + "),"
-			add_logs(user, M, "splashed", object="[R]")
+			add_logs(user, M, "splaxed", object="[R]")
 			reagents.reaction(target, TOUCH)
 			spawn(5) reagents.clear_reagents()
 			return

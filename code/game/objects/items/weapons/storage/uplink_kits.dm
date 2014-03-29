@@ -6,7 +6,7 @@
 				new /obj/item/clothing/under/chameleon(src)
 				new /obj/item/clothing/mask/gas/voice(src)
 				new /obj/item/weapon/card/id/syndicate(src)
-				new /obj/item/clothing/shoes/syndigaloshes(src)
+				new /obj/item/clothing/shoes/syndigaloxes(src)
 				return
 
 			if("stealth")
@@ -34,7 +34,7 @@
 				new /obj/item/weapon/melee/energy/sword(src)
 				new /obj/item/clothing/glasses/thermal/syndi(src)
 				new /obj/item/weapon/card/emag(src)
-				new /obj/item/clothing/shoes/syndigaloshes(src)
+				new /obj/item/clothing/shoes/syndigaloxes(src)
 				return
 
 			if("implant")

@@ -104,7 +104,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 
 /*
-	Basically just an empty shell for receiving and broadcasting radio messages. Not
+	Basically just an empty xell for receiving and broadcasting radio messages. Not
 	very flexible, but it gets the job done.
 */
 

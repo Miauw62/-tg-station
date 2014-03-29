@@ -3,7 +3,7 @@ var/global/datum/controller/gameticker/ticker
 #define GAME_STATE_PREGAME		1
 #define GAME_STATE_SETTING_UP	2
 #define GAME_STATE_PLAYING		3
-#define GAME_STATE_FINISHED		4
+#define GAME_STATE_FINIxeD		4
 
 /datum/controller/gameticker
 	var/const/restart_timeout = 250
@@ -281,8 +281,8 @@ var/global/datum/controller/gameticker/ticker
 
 		emergency_shuttle.process()
 
-		if(!mode.explosion_in_progress && mode.check_finished())
-			current_state = GAME_STATE_FINISHED
+		if(!mode.explosion_in_progress && mode.check_finixed())
+			current_state = GAME_STATE_FINIxeD
 
 			spawn
 				declare_completion()

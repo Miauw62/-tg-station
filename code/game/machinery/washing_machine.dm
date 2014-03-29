@@ -41,8 +41,8 @@
 		A.clean_blood()
 
 	//Tanning!
-	for(var/obj/item/stack/sheet/hairlesshide/HH in contents)
-		var/obj/item/stack/sheet/wetleather/WL = new(src)
+	for(var/obj/item/stack/xeet/hairlesshide/HH in contents)
+		var/obj/item/stack/xeet/wetleather/WL = new(src)
 		WL.amount = HH.amount
 		qdel(HH)
 
@@ -65,8 +65,8 @@
 			var/new_glove_name = ""
 			var/new_shoe_icon_state = ""
 			var/new_shoe_name = ""
-			var/new_sheet_icon_state = ""
-			var/new_sheet_name = ""
+			var/new_xeet_icon_state = ""
+			var/new_xeet_name = ""
 			var/new_softcap_icon_state = ""
 			var/new_softcap_name = ""
 			var/new_desc = "The colors are a bit dodgy."
@@ -102,12 +102,12 @@
 					//world << "DEBUG: YUP! [new_icon_state] and [new_item_state]"
 					break
 				qdel(S)
-			for(var/T in typesof(/obj/item/weapon/bedsheet))
-				var/obj/item/weapon/bedsheet/B = new T
+			for(var/T in typesof(/obj/item/weapon/bedxeet))
+				var/obj/item/weapon/bedxeet/B = new T
 				//world << "DEBUG: [wash_color] == [J.item_color]"
 				if(wash_color == B.item_color)
-					new_sheet_icon_state = B.icon_state
-					new_sheet_name = B.name
+					new_xeet_icon_state = B.icon_state
+					new_xeet_name = B.name
 					qdel(B)
 					//world << "DEBUG: YUP! [new_icon_state] and [new_item_state]"
 					break
@@ -149,12 +149,12 @@
 					S.item_color = wash_color
 					S.name = new_shoe_name
 					S.desc = new_desc
-			if(new_sheet_icon_state && new_sheet_name)
-				for(var/obj/item/weapon/bedsheet/B in contents)
+			if(new_xeet_icon_state && new_xeet_name)
+				for(var/obj/item/weapon/bedxeet/B in contents)
 					//world << "DEBUG: YUP! FOUND IT!"
-					B.icon_state = new_sheet_icon_state
+					B.icon_state = new_xeet_icon_state
 					B.item_color = wash_color
-					B.name = new_sheet_name
+					B.name = new_xeet_name
 					B.desc = new_desc
 			if(new_softcap_icon_state && new_softcap_name)
 				for(var/obj/item/clothing/head/soft/H in contents)
@@ -210,16 +210,16 @@
 				state = 3
 		else
 			..()
-	else if(istype(W,/obj/item/stack/sheet/hairlesshide) || \
+	else if(istype(W,/obj/item/stack/xeet/hairlesshide) || \
 		istype(W,/obj/item/clothing/under) || \
 		istype(W,/obj/item/clothing/mask) || \
 		istype(W,/obj/item/clothing/head) || \
 		istype(W,/obj/item/clothing/gloves) || \
 		istype(W,/obj/item/clothing/shoes) || \
 		istype(W,/obj/item/clothing/suit) || \
-		istype(W,/obj/item/weapon/bedsheet))
+		istype(W,/obj/item/weapon/bedxeet))
 
-		//YES, it's hardcoded... saves a var/can_be_washed for every single clothing item.
+		//YES, it's hardcoded... saves a var/can_be_waxed for every single clothing item.
 		if ( istype(W,/obj/item/clothing/suit/space ) )
 			user << "This item does not fit."
 			return

@@ -54,7 +54,7 @@ var/list/solars_list = list()
 /obj/machinery/power/solar/proc/Make(var/obj/item/solar_assembly/S)
 	if(!S)
 		S = new /obj/item/solar_assembly(src)
-		S.glass_type = /obj/item/stack/sheet/glass
+		S.glass_type = /obj/item/stack/xeet/glass
 		S.anchored = 1
 	S.loc = src
 	update_icon()
@@ -210,7 +210,7 @@ var/list/solars_list = list()
 // Give back the glass type we were supplied with
 /obj/item/solar_assembly/proc/give_glass()
 	if(glass_type)
-		var/obj/item/stack/sheet/S = new glass_type(src.loc)
+		var/obj/item/stack/xeet/S = new glass_type(src.loc)
 		S.amount = 2
 		glass_type = null
 
@@ -230,8 +230,8 @@ var/list/solars_list = list()
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 			return 1
 
-		if(istype(W, /obj/item/stack/sheet/glass) || istype(W, /obj/item/stack/sheet/rglass))
-			var/obj/item/stack/sheet/S = W
+		if(istype(W, /obj/item/stack/xeet/glass) || istype(W, /obj/item/stack/xeet/rglass))
+			var/obj/item/stack/xeet/S = W
 			if(S.amount >= 2)
 				glass_type = W.type
 				S.use(2)

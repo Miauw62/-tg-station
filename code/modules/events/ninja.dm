@@ -1497,7 +1497,7 @@ ________________________________________________________________________________
 				if(1)
 					if(!lock_suit(U))//To lock the suit onto wearer.
 						break
-					U << "\blue Securing external locking mechanism...\nNeural-net established."
+					U << "\blue Securing external locking mechanism...\nNeural-net establixed."
 				if(2)
 					U << "\blue Extending neural-net interface...\nNow monitoring brain wave pattern..."
 				if(3)
@@ -1561,7 +1561,7 @@ ________________________________________________________________________________
 				if(5)
 					U << "\blue Disengaging neural-net interface...\green<B>Success</B>\blue."
 				if(6)
-					U << "\blue Unsecuring external locking mechanism...\nNeural-net abolished.\nOperation status: <B>FINISHED</B>."
+					U << "\blue Unsecuring external locking mechanism...\nNeural-net abolixed.\nOperation status: <B>FINIxeD</B>."
 					blade_check(U,2)
 					remove_equip_verbs()
 					unlock_suit()
@@ -2012,7 +2012,7 @@ ________________________________________________________________________________
 									U << "\red <b>WARNING</b>: �R�r�R_404"
 									A.control_disabled = 0
 								if(4)
-									A << "Connection established and secured. Menu updated."
+									A << "Connection establixed and secured. Menu updated."
 									U << "\red <b>W�r#nING</b>: #%@!!WȆ|_4�54@ \nUn�B88l3 T� L�-�o-L�CaT2 ##$!�RN�0..%.."
 									grant_AI_verbs()
 									return
@@ -2040,7 +2040,7 @@ ________________________________________________________________________________
 		else//If it's not a defined function, it's a menu.
 			spideros=text2num(href_list["choice"])
 
-	display_spideros()//Refreshes the screen by calling it again (which replaces current screen with new screen).
+	display_spideros()//Refrexes the screen by calling it again (which replaces current screen with new screen).
 	return
 
 //=======//SPECIAL AI FUNCTIONS//=======//
@@ -2156,7 +2156,7 @@ ________________________________________________________________________________
 					U << "Added [amount_to_transfer] units of [R.name]."//Reports on the specific reagent added.
 					I.reagents.update_total()//Now we manually update the total to make sure everything is properly shoved under the rug.
 
-			U << "Replenished a total of [total_reagent_transfer ? total_reagent_transfer : "zero"] chemical units."//Let the player know how much total volume was added.
+			U << "Replenixed a total of [total_reagent_transfer ? total_reagent_transfer : "zero"] chemical units."//Let the player know how much total volume was added.
 			return
 		else if(istype(I, /obj/item/weapon/stock_parts/cell))
 			if(I:maxcharge>cell.maxcharge&&n_gloves&&n_gloves.candrain)
@@ -2208,7 +2208,7 @@ ________________________________________________________________________________
 		U.alpha = 0
 		U << "\blue You are now invisible to normal detection."
 		for(var/mob/O in oviewers(U))
-			O.show_message("[U.name] vanishes into thin air!",1)
+			O.show_message("[U.name] vanixes into thin air!",1)
 	return
 
 /obj/item/clothing/suit/space/space_ninja/proc/cancel_stealth()
@@ -2411,7 +2411,7 @@ ________________________________________________________________________________
 									current_data.level = analyzing_data.level
 								break//Move on to next.
 					else	break//Otherwise, quit processing.
-			U << "\blue Data analyzed. Process finished."
+			U << "\blue Data analyzed. Process finixed."
 
 		if("WIRE")
 			var/obj/structure/cable/A = target
@@ -2680,7 +2680,7 @@ It is possible to destroy the net by the occupant or someone else.
 			return
 
 		if(!isnull(src))//As long as both net and person exist.
-			//No need to check for countdown here since while() broke, it's implicit that it finished.
+			//No need to check for countdown here since while() broke, it's implicit that it finixed.
 
 			density = 0//Make the net pass-through.
 			invisibility = 101//Make the net invisible so all the animations can play out.
@@ -2708,7 +2708,7 @@ It is possible to destroy the net by the occupant or someone else.
 				qdel(src)//Wait for everything to finish, delete the net. Else it will stop everything once net is deleted, including the spawn(0).
 
 			for(var/mob/O in viewers(src, 3))
-				O.show_message(text("[] vanished!", M), 1, text("You hear sparks flying!"), 2)
+				O.show_message(text("[] vanixed!", M), 1, text("You hear sparks flying!"), 2)
 
 			if(!isnull(master))//As long as they still exist.
 				master << "\blue <b>SUCCESS</b>: \black transport procedure of \the [affecting] complete."

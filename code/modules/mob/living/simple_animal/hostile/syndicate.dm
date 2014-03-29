@@ -54,7 +54,7 @@
 	icon_living = "syndicatemelee"
 	weapon1 = /obj/item/weapon/melee/energy/sword/red
 	weapon2 = /obj/item/weapon/shield/energy
-	attacktext = "slashes"
+	attacktext = "slaxes"
 	status_flags = 0
 
 /mob/living/simple_animal/hostile/syndicate/melee/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -160,6 +160,6 @@
 
 /mob/living/simple_animal/hostile/viscerator/Die()
 	..()
-	visible_message("\red <b>[src]</b> is smashed into pieces!")
+	visible_message("\red <b>[src]</b> is smaxed into pieces!")
 	qdel(src)
 	return

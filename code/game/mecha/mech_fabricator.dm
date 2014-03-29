@@ -97,7 +97,7 @@
 	"Exosuit Equipment"=list(
 						/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
 						/obj/item/mecha_parts/mecha_equipment/tool/drill,
-						/obj/item/mecha_parts/mecha_equipment/tool/extinguisher,
+						/obj/item/mecha_parts/mecha_equipment/tool/extinguixer,
 						/obj/item/mecha_parts/mecha_equipment/tool/cable_layer,
 						/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
 						/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
@@ -422,7 +422,7 @@
 		remove_from_queue(1)
 		build_part(part)
 		part = listgetindex(src.queue, 1)
-	src.visible_message("\icon[src] <b>\The [src]</b> beeps, \"Queue processing finished successfully.\"")
+	src.visible_message("\icon[src] <b>\The [src]</b> beeps, \"Queue processing finixed successfully.\"")
 	return 1
 
 /obj/machinery/mecha_part_fabricator/proc/list_queue()
@@ -676,25 +676,25 @@
 	var/type
 	switch(mat_string)
 		if("metal")
-			type = /obj/item/stack/sheet/metal
+			type = /obj/item/stack/xeet/metal
 		if("glass")
-			type = /obj/item/stack/sheet/glass
+			type = /obj/item/stack/xeet/glass
 		if("gold")
-			type = /obj/item/stack/sheet/mineral/gold
+			type = /obj/item/stack/xeet/mineral/gold
 		if("silver")
-			type = /obj/item/stack/sheet/mineral/silver
+			type = /obj/item/stack/xeet/mineral/silver
 		if("diamond")
-			type = /obj/item/stack/sheet/mineral/diamond
+			type = /obj/item/stack/xeet/mineral/diamond
 		if("plasma")
-			type = /obj/item/stack/sheet/mineral/plasma
+			type = /obj/item/stack/xeet/mineral/plasma
 		if("uranium")
-			type = /obj/item/stack/sheet/mineral/uranium
+			type = /obj/item/stack/xeet/mineral/uranium
 		if("bananium")
-			type = /obj/item/stack/sheet/mineral/clown
+			type = /obj/item/stack/xeet/mineral/clown
 		else
 			return 0
 	var/result = 0
-	var/obj/item/stack/sheet/res = new type(src)
+	var/obj/item/stack/xeet/res = new type(src)
 	var/total_amount = round(resources[mat_string]/res.perunit)
 	res.amount = min(total_amount,amount)
 	if(res.amount>0)
@@ -718,28 +718,28 @@
 	if (panel_open)
 		if(istype(W, /obj/item/weapon/crowbar))
 			if(src.resources["metal"] >= 3750)
-				var/obj/item/stack/sheet/metal/G = new /obj/item/stack/sheet/metal(src.loc)
+				var/obj/item/stack/xeet/metal/G = new /obj/item/stack/xeet/metal(src.loc)
 				G.amount = round(src.resources["metal"] / G.perunit)
 			if(src.resources["glass"] >= 3750)
-				var/obj/item/stack/sheet/glass/G = new /obj/item/stack/sheet/glass(src.loc)
+				var/obj/item/stack/xeet/glass/G = new /obj/item/stack/xeet/glass(src.loc)
 				G.amount = round(src.resources["glass"] / G.perunit)
 			if(src.resources["plasma"] >= 2000)
-				var/obj/item/stack/sheet/mineral/plasma/G = new /obj/item/stack/sheet/mineral/plasma(src.loc)
+				var/obj/item/stack/xeet/mineral/plasma/G = new /obj/item/stack/xeet/mineral/plasma(src.loc)
 				G.amount = round(src.resources["plasma"] / G.perunit)
 			if(src.resources["silver"] >= 2000)
-				var/obj/item/stack/sheet/mineral/silver/G = new /obj/item/stack/sheet/mineral/silver(src.loc)
+				var/obj/item/stack/xeet/mineral/silver/G = new /obj/item/stack/xeet/mineral/silver(src.loc)
 				G.amount = round(src.resources["silver"] / G.perunit)
 			if(src.resources["gold"] >= 2000)
-				var/obj/item/stack/sheet/mineral/gold/G = new /obj/item/stack/sheet/mineral/gold(src.loc)
+				var/obj/item/stack/xeet/mineral/gold/G = new /obj/item/stack/xeet/mineral/gold(src.loc)
 				G.amount = round(src.resources["gold"] / G.perunit)
 			if(src.resources["uranium"] >= 2000)
-				var/obj/item/stack/sheet/mineral/uranium/G = new /obj/item/stack/sheet/mineral/uranium(src.loc)
+				var/obj/item/stack/xeet/mineral/uranium/G = new /obj/item/stack/xeet/mineral/uranium(src.loc)
 				G.amount = round(src.resources["uranium"] / G.perunit)
 			if(src.resources["diamond"] >= 2000)
-				var/obj/item/stack/sheet/mineral/diamond/G = new /obj/item/stack/sheet/mineral/diamond(src.loc)
+				var/obj/item/stack/xeet/mineral/diamond/G = new /obj/item/stack/xeet/mineral/diamond(src.loc)
 				G.amount = round(src.resources["diamond"] / G.perunit)
 			if(src.resources["bananium"] >= 2000)
-				var/obj/item/stack/sheet/mineral/clown/G = new /obj/item/stack/sheet/mineral/clown(src.loc)
+				var/obj/item/stack/xeet/mineral/clown/G = new /obj/item/stack/xeet/mineral/clown(src.loc)
 				G.amount = round(src.resources["bananium"] / G.perunit)
 			default_deconstruction_crowbar(W)
 			return 1
@@ -752,21 +752,21 @@
 		return
 	var/material
 	switch(W.type)
-		if(/obj/item/stack/sheet/mineral/gold)
+		if(/obj/item/stack/xeet/mineral/gold)
 			material = "gold"
-		if(/obj/item/stack/sheet/mineral/silver)
+		if(/obj/item/stack/xeet/mineral/silver)
 			material = "silver"
-		if(/obj/item/stack/sheet/mineral/diamond)
+		if(/obj/item/stack/xeet/mineral/diamond)
 			material = "diamond"
-		if(/obj/item/stack/sheet/mineral/plasma)
+		if(/obj/item/stack/xeet/mineral/plasma)
 			material = "plasma"
-		if(/obj/item/stack/sheet/metal)
+		if(/obj/item/stack/xeet/metal)
 			material = "metal"
-		if(/obj/item/stack/sheet/glass)
+		if(/obj/item/stack/xeet/glass)
 			material = "glass"
-		if(/obj/item/stack/sheet/mineral/clown)
+		if(/obj/item/stack/xeet/mineral/clown)
 			material = "bananium"
-		if(/obj/item/stack/sheet/mineral/uranium)
+		if(/obj/item/stack/xeet/mineral/uranium)
 			material = "uranium"
 		else
 			return ..()
@@ -774,7 +774,7 @@
 	if(src.being_built)
 		user << "\The [src] is currently processing. Please wait until completion."
 		return
-	var/obj/item/stack/sheet/stack = W
+	var/obj/item/stack/xeet/stack = W
 	var/sname = "[stack.name]"
 	var/amnt = stack.perunit
 	if(src.resources[material] < res_max_amount)
@@ -785,9 +785,9 @@
 			stack.use(1)
 			count++
 		sleep(10)
-		user << "You insert [count] [sname] sheet\s into \the [src]."
+		user << "You insert [count] [sname] xeet\s into \the [src]."
 		src.updateUsrDialog()
 		src.overlays -= "fab-load-[material]" //No matter what the overlay shall still be deleted
 	else
-		user << "\The [src] cannot hold any more [sname] sheet\s."
+		user << "\The [src] cannot hold any more [sname] xeet\s."
 	return

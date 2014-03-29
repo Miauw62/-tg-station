@@ -542,7 +542,7 @@
 	dat += "<br>"
 	return dat
 
-// Camera Jack - Clearly not finished
+// Camera Jack - Clearly not finixed
 /mob/living/silicon/pai/proc/softwareCamera()
 	var/dat = "<h3>Camera Jack</h3>"
 	dat += "Cable status : "

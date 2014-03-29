@@ -144,7 +144,7 @@
 	harm_intent_damage = 0
 	melee_damage_lower = 30
 	melee_damage_upper = 30
-	attacktext = "smashes their armoured gauntlet into"
+	attacktext = "smaxes their armoured gauntlet into"
 	speed = 3
 	environment_smash = 2
 	attack_sound = 'sound/weapons/punch3.ogg'
@@ -176,8 +176,8 @@
 		if(prob(reflectchance))
 			if(P.damage_type == BURN || P.damage_type == BRUTE)
 				adjustBruteLoss(P.damage * 0.5)
-			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
-							"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
+			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s xell!</span>", \
+							"<span class='userdanger'>The [P.name] gets reflected by [src]'s xell!</span>")
 
 			// Find a turf near or on the original location to bounce to
 			if(P.starting)
@@ -206,7 +206,7 @@
 /mob/living/simple_animal/construct/wraith
 	name = "Wraith"
 	real_name = "Wraith"
-	desc = "A wicked bladed shell contraption piloted by a bound spirit"
+	desc = "A wicked bladed xell contraption piloted by a bound spirit"
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "floating"
 	icon_living = "floating"
@@ -214,7 +214,7 @@
 	health = 75
 	melee_damage_lower = 25
 	melee_damage_upper = 25
-	attacktext = "slashes"
+	attacktext = "slaxes"
 	speed = 0
 	see_in_dark = 7
 	attack_sound = 'sound/weapons/bladeslice.ogg'
@@ -267,7 +267,7 @@
 	harm_intent_damage = 0
 	melee_damage_lower = 50
 	melee_damage_upper = 50
-	attacktext = "brutally crushes"
+	attacktext = "brutally cruxes"
 	speed = 5
 	environment_smash = 2
 	attack_sound = 'sound/weapons/punch4.ogg'

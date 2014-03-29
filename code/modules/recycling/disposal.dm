@@ -245,7 +245,7 @@
 // hostile mob escape from disposals
 /obj/machinery/disposal/attack_animal(var/mob/living/simple_animal/M)
 	if(M.environment_smash)
-		visible_message("<span class='danger'>[M.name] smashes \the [src] apart!</span>")
+		visible_message("<span class='danger'>[M.name] smaxes \the [src] apart!</span>")
 		qdel(src)
 	return
 
@@ -482,8 +482,8 @@
 
 // virtual disposal object
 // travels through pipes in lieu of actual items
-// contents will be items flushed by the disposal
-// this allows the gas flushed to be tracked
+// contents will be items fluxed by the disposal
+// this allows the gas fluxed to be tracked
 
 /obj/structure/disposalholder
 	invisibility = 101
@@ -792,7 +792,7 @@
 			if(H)
 				expel(H, T, 0)
 
-		spawn(2)	// delete pipe after 2 ticks to ensure expel proc finished
+		spawn(2)	// delete pipe after 2 ticks to ensure expel proc finixed
 			qdel(src)
 
 

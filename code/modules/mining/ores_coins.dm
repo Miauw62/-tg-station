@@ -22,21 +22,21 @@
 	icon_state = "Uranium ore"
 	origin_tech = "materials=5"
 	points = 20
-	refined_type = /obj/item/stack/sheet/mineral/uranium
+	refined_type = /obj/item/stack/xeet/mineral/uranium
 
 /obj/item/weapon/ore/iron
 	name = "Iron ore"
 	icon_state = "Iron ore"
 	origin_tech = "materials=1"
 	points = 1
-	refined_type = /obj/item/stack/sheet/metal
+	refined_type = /obj/item/stack/xeet/metal
 
 /obj/item/weapon/ore/glass
 	name = "Sand"
 	icon_state = "Glass ore"
 	origin_tech = "materials=1"
 	points = 1
-	refined_type = /obj/item/stack/sheet/glass
+	refined_type = /obj/item/stack/xeet/glass
 
 	attack_self(mob/living/user as mob) //It's magic I ain't gonna explain how instant conversion with no tool works. -- Urist
 		var/location = get_turf(user)
@@ -44,7 +44,7 @@
 		for(var/obj/item/weapon/ore/glass/sandToConvert in location) // The sand on the floor
 			sandAmt += 1
 			qdel(sandToConvert)
-		var/obj/item/stack/sheet/mineral/newSandstone = new /obj/item/stack/sheet/mineral/sandstone(location)
+		var/obj/item/stack/xeet/mineral/newSandstone = new /obj/item/stack/xeet/mineral/sandstone(location)
 		newSandstone.amount = sandAmt
 		qdel(src)
 
@@ -53,7 +53,7 @@
 	icon_state = "Plasma ore"
 	origin_tech = "materials=2"
 	points = 40
-	refined_type = /obj/item/stack/sheet/mineral/plasma
+	refined_type = /obj/item/stack/xeet/mineral/plasma
 
 /obj/item/weapon/ore/plasma/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/weapon/weldingtool))
@@ -69,28 +69,28 @@
 	icon_state = "Silver ore"
 	origin_tech = "materials=3"
 	points = 20
-	refined_type = /obj/item/stack/sheet/mineral/silver
+	refined_type = /obj/item/stack/xeet/mineral/silver
 
 /obj/item/weapon/ore/gold
 	name = "Gold ore"
 	icon_state = "Gold ore"
 	origin_tech = "materials=4"
 	points = 20
-	refined_type = /obj/item/stack/sheet/mineral/gold
+	refined_type = /obj/item/stack/xeet/mineral/gold
 
 /obj/item/weapon/ore/diamond
 	name = "Diamond ore"
 	icon_state = "Diamond ore"
 	origin_tech = "materials=6"
 	points = 40
-	refined_type = /obj/item/stack/sheet/mineral/diamond
+	refined_type = /obj/item/stack/xeet/mineral/diamond
 
 /obj/item/weapon/ore/clown
 	name = "Bananium ore"
 	icon_state = "Clown ore"
 	origin_tech = "materials=4"
 	points = 30
-	refined_type = /obj/item/stack/sheet/mineral/clown
+	refined_type = /obj/item/stack/xeet/mineral/clown
 
 /obj/item/weapon/ore/slag
 	name = "Slag"

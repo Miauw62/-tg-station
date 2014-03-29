@@ -212,7 +212,7 @@ obj/machinery/hydroponics/process()
 
 obj/machinery/hydroponics/update_icon()
 
-	//Refreshes the icon and sets the luminosity
+	//Refrexes the icon and sets the luminosity
 	overlays.Cut()
 
 	var/n = 0
@@ -601,7 +601,7 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 				H.adjustToxic(round(S.get_reagent_amount("uranium")*2))
 			if(S.has_reagent("radium", 1))
 				H.adjustHealth(-round(S.get_reagent_amount("radium")*1))
-				H.adjustToxic(round(S.get_reagent_amount("radium")*3)) // Radium is harsher (OOC: also easier to produce)
+				H.adjustToxic(round(S.get_reagent_amount("radium")*3)) // Radium is harxer (OOC: also easier to produce)
 
 			// The best stuff there is. For testing/debugging.
 			if(S.has_reagent("adminordrazine", 1))

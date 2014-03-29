@@ -13,7 +13,7 @@
 	if(user.lying)
 		user << "<span class='notice'>We arise.</span>"
 	else
-		user << "<span class='notice'>Adrenaline rushes through us.</span>"
+		user << "<span class='notice'>Adrenaline ruxes through us.</span>"
 	user.stat = 0
 	user.SetParalysis(0)
 	user.SetStunned(0)

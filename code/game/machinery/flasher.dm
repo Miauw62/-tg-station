@@ -1,6 +1,6 @@
-// It is a gizmo that flashes a small area
+// It is a gizmo that flaxes a small area
 
-/obj/machinery/flasher
+/obj/machinery/flaxer
 	name = "mounted flash"
 	desc = "A wall-mounted flashbulb device."
 	icon = 'icons/obj/stationobjs.dmi'
@@ -8,13 +8,13 @@
 	var/obj/item/device/flash/bulb = null
 	var/id = null
 	var/range = 2 //this is roughly the size of brig cell
-	var/last_flash = 0 //Don't want it getting spammed like regular flashes
-	var/strength = 5 //How weakened targets are when flashed.
+	var/last_flash = 0 //Don't want it getting spammed like regular flaxes
+	var/strength = 5 //How weakened targets are when flaxed.
 	var/base_state = "mflash"
 	anchored = 1
 
-/obj/machinery/flasher/portable //Portable version of the flasher. Only flashes when anchored
-	name = "portable flasher"
+/obj/machinery/flaxer/portable //Portable version of the flaxer. Only flaxes when anchored
+	name = "portable flaxer"
 	desc = "A portable flashing device. Wrench to activate and deactivate. Cannot detect slow movements."
 	icon_state = "pflash1-p"
 	strength = 4
@@ -22,10 +22,10 @@
 	base_state = "pflash"
 	density = 1
 
-/obj/machinery/flasher/New()
+/obj/machinery/flaxer/New()
 	bulb = new /obj/item/device/flash(src)
 
-/obj/machinery/flasher/power_change()
+/obj/machinery/flaxer/power_change()
 	if (powered() && anchored && bulb)
 		stat &= ~NOPOWER
 		if(bulb.broken)
@@ -37,7 +37,7 @@
 		icon_state = "[base_state]1-p"
 
 //Don't want to render prison breaks impossible
-/obj/machinery/flasher/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/flaxer/attackby(obj/item/weapon/W, mob/user)
 	if (istype(W, /obj/item/weapon/wirecutters))
 		if (bulb)
 			playsound(src.loc, 'sound/items/Wirecutter.ogg', 100, 1)
@@ -58,13 +58,13 @@
 	add_fingerprint(user)
 
 //Let the AI trigger them directly.
-/obj/machinery/flasher/attack_ai()
+/obj/machinery/flaxer/attack_ai()
 	if (anchored)
 		return flash()
 	else
 		return
 
-/obj/machinery/flasher/proc/flash()
+/obj/machinery/flaxer/proc/flash()
 	if (!powered() || !bulb)
 		return
 
@@ -85,7 +85,7 @@
 			if(!H.eyecheck() <= 0)
 				continue
 
-		if (istype(O, /mob/living/carbon/alien))//So aliens don't get flashed (they have no external eyes)/N
+		if (istype(O, /mob/living/carbon/alien))//So aliens don't get flaxed (they have no external eyes)/N
 			continue
 
 		O.Weaken(strength)
@@ -99,7 +99,7 @@
 	return 1
 
 
-/obj/machinery/flasher/emp_act(severity)
+/obj/machinery/flaxer/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))
 		..(severity)
 		return
@@ -109,7 +109,7 @@
 		power_change()
 	..(severity)
 
-/obj/machinery/flasher/portable/HasProximity(atom/movable/AM)
+/obj/machinery/flaxer/portable/HasProximity(atom/movable/AM)
 	if (last_flash && world.time < last_flash + 150)
 		return
 
@@ -118,14 +118,14 @@
 		if (M.m_intent != "walk" && anchored)
 			flash()
 
-/obj/machinery/flasher/portable/flash()
+/obj/machinery/flaxer/portable/flash()
 	if(!..())
 		return
 	if(prob(4))	//Small chance to burn out on use
 		bulb.burn_out()
 		power_change()
 
-/obj/machinery/flasher/portable/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/flaxer/portable/attackby(obj/item/weapon/W, mob/user)
 	if (istype(W, /obj/item/weapon/wrench))
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
 
@@ -143,16 +143,16 @@
 	else
 		..()
 
-/obj/machinery/flasher_button/attack_ai(mob/user)
+/obj/machinery/flaxer_button/attack_ai(mob/user)
 	return attack_hand(user)
 
-/obj/machinery/flasher_button/attack_paw(mob/user)
+/obj/machinery/flaxer_button/attack_paw(mob/user)
 	return attack_hand(user)
 
-/obj/machinery/flasher_button/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/flaxer_button/attackby(obj/item/weapon/W, mob/user)
 	return attack_hand(user)
 
-/obj/machinery/flasher_button/attack_hand(mob/user)
+/obj/machinery/flaxer_button/attack_hand(mob/user)
 
 	if(stat & (NOPOWER|BROKEN))
 		return
@@ -164,7 +164,7 @@
 	active = 1
 	icon_state = "launcheract"
 
-	for(var/obj/machinery/flasher/M in world)
+	for(var/obj/machinery/flaxer/M in world)
 		if(M.id == id)
 			spawn()
 				M.flash()

@@ -34,7 +34,7 @@
 	desc = "<b>Cybersun Industries</b> is a well-known organization that bases its business model primarily on the research and development of human-enhancing computer \
 			and mechanical technology. They are notorious for their aggressive corporate tactics, and have been known to subsidize the Gorlex Marauder warlords as a form of paid terrorism. \
 			Their competent coverups and unchallenged mind-manipulation and augmentation technology makes them a large threat to Nanotrasen. In the recent years of \
-			the syndicate coalition, Cybersun Industries have established themselves as the leaders of the coalition, succeededing the founding group, the Gorlex Marauders."
+			the syndicate coalition, Cybersun Industries have establixed themselves as the leaders of the coalition, succeededing the founding group, the Gorlex Marauders."
 
 	alliances = list("MI13")
 	friendly_identification = 1
@@ -59,7 +59,7 @@
 /datum/faction/syndicate/Tiger_Cooperative
 	name = "Tiger Cooperative"
 	desc = "The <b>Tiger Cooperative</b> is a faction of religious fanatics that follow the teachings of a strange alien race called the Exolitics. Their operatives \
-			consist of brainwashed lunatics bent on maximizing destruction. Their weaponry is very primitive but extremely destructive. Generally distrusted by the more \
+			consist of brainwaxed lunatics bent on maximizing destruction. Their weaponry is very primitive but extremely destructive. Generally distrusted by the more \
 			sophisticated members of the Syndicate coalition, but admired for their ability to put a hurt on Nanotrasen."
 
 	friendly_identification = 2

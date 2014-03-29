@@ -97,7 +97,7 @@
 
 /obj/item/robot_parts/robot_suit/attackby(obj/item/W as obj, mob/user as mob)
 	..()
-	if(istype(W, /obj/item/stack/sheet/metal) && !l_arm && !r_arm && !l_leg && !r_leg && !chest && !head)
+	if(istype(W, /obj/item/stack/xeet/metal) && !l_arm && !r_arm && !l_leg && !r_leg && !chest && !head)
 		var/obj/item/weapon/ed209_assembly/B = new /obj/item/weapon/ed209_assembly
 		B.loc = get_turf(src)
 		user << "You armed the robot frame"
@@ -181,7 +181,7 @@
 				return
 
 			if(M.brainmob.mind in ticker.mode.head_revolutionaries)
-				user << "\red The frame's firmware lets out a shrill sound, and flashes 'Abnormal Memory Engram'. It refuses to accept the MMI."
+				user << "\red The frame's firmware lets out a shrill sound, and flaxes 'Abnormal Memory Engram'. It refuses to accept the MMI."
 				return
 
 			if(jobban_isbanned(M.brainmob, "Cyborg"))

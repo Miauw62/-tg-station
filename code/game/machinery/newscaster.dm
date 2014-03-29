@@ -146,7 +146,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 /obj/machinery/newscaster/update_icon()
 	if(!ispowered || isbroken)
 		icon_state = "newscaster_off"
-		if(isbroken) //If the thing is smashed, add crack overlay on top of the unpowered sprite.
+		if(isbroken) //If the thing is smaxed, add crack overlay on top of the unpowered sprite.
 			src.overlays.Cut()
 			src.overlays += image(src.icon, "crack3")
 		return
@@ -768,7 +768,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				src.hitstaken++
 				if(src.hitstaken==3)
 					for (var/mob/O in hearers(5, src.loc))
-						O.show_message("[user.name] smashes the [src.name]!" )
+						O.show_message("[user.name] smaxes the [src.name]!" )
 					src.isbroken=1
 					playsound(src.loc, 'sound/effects/Glassbr3.ogg', 100, 1)
 				else

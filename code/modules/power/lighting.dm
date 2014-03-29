@@ -19,11 +19,11 @@
 	flags = CONDUCT
 	var/fixture_type = "tube"
 	var/obj/machinery/light/newlight = null
-	var/sheets_refunded = 2
+	var/xeets_refunded = 2
 
 /obj/item/light_fixture_frame/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/wrench))
-		new /obj/item/stack/sheet/metal( get_turf(src.loc), sheets_refunded )
+		new /obj/item/stack/xeet/metal( get_turf(src.loc), xeets_refunded )
 		qdel(src)
 		return
 	..()
@@ -65,7 +65,7 @@
 	icon_state = "bulb-construct-item"
 	flags = CONDUCT
 	fixture_type = "bulb"
-	sheets_refunded = 1
+	xeets_refunded = 1
 
 /obj/machinery/light_construct
 	name = "light fixture frame"
@@ -76,7 +76,7 @@
 	layer = 5
 	var/stage = 1
 	var/fixture_type = "tube"
-	var/sheets_refunded = 2
+	var/xeets_refunded = 2
 	var/obj/machinery/light/newlight = null
 
 /obj/machinery/light_construct/New()
@@ -107,7 +107,7 @@
 			usr << "You begin deconstructing [src]."
 			if (!do_after(usr, 30))
 				return
-			new /obj/item/stack/sheet/metal( get_turf(src.loc), sheets_refunded )
+			new /obj/item/stack/xeet/metal( get_turf(src.loc), xeets_refunded )
 			user.visible_message("[user.name] deconstructs [src].", \
 				"You deconstruct [src].", "You hear a noise.")
 			playsound(src.loc, 'sound/items/Deconstruct.ogg', 75, 1)
@@ -182,7 +182,7 @@
 	layer = 5
 	stage = 1
 	fixture_type = "bulb"
-	sheets_refunded = 1
+	xeets_refunded = 1
 
 // the standard tube light fixture
 /obj/machinery/light
@@ -321,7 +321,7 @@
 			if(LIGHT_BURNED)
 				usr << "The [fitting] is burnt out."
 			if(LIGHT_BROKEN)
-				usr << "The [fitting] has been smashed."
+				usr << "The [fitting] has been smaxed."
 
 
 
@@ -371,11 +371,11 @@
 
 		if(prob(1+W.force * 5))
 
-			user << "You hit the light, and it smashes!"
+			user << "You hit the light, and it smaxes!"
 			for(var/mob/M in viewers(src))
 				if(M == user)
 					continue
-				M.show_message("[user.name] smashed the light!", 3, "You hear a tinkle of breaking glass", 2)
+				M.show_message("[user.name] smaxed the light!", 3, "You hear a tinkle of breaking glass", 2)
 			if(on && (W.flags & CONDUCT))
 				//if(!user.mutations & COLD_RESISTANCE)
 				if (prob(12))
@@ -451,7 +451,7 @@
 		return
 	else if (status == LIGHT_OK||status == LIGHT_BURNED)
 		for(var/mob/M in viewers(src))
-			M.show_message("\red [user.name] smashed the light!", 3, "You hear a tinkle of breaking glass", 2)
+			M.show_message("\red [user.name] smaxed the light!", 3, "You hear a tinkle of breaking glass", 2)
 		broken()
 	return
 
@@ -462,7 +462,7 @@
 		return
 	else if (status == LIGHT_OK||status == LIGHT_BURNED)
 		for(var/mob/O in viewers(src))
-			O.show_message("\red [M.name] smashed the light!", 3, "You hear a tinkle of breaking glass", 2)
+			O.show_message("\red [M.name] smaxed the light!", 3, "You hear a tinkle of breaking glass", 2)
 		broken()
 	return
 // attack with hand - remove tube/bulb

@@ -3,7 +3,7 @@
 
 /obj/machinery/mineral/ore_redemption
 	name = "ore redemption machine"
-	desc = "A machine that accepts ore and instantly transforms it into workable material sheets, but cannot produce alloys such as Plasteel. Points for ore are generated based on type and can be redeemed at a mining equipment locker."
+	desc = "A machine that accepts ore and instantly transforms it into workable material xeets, but cannot produce alloys such as Plasteel. Points for ore are generated based on type and can be redeemed at a mining equipment locker."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
 	density = 1
@@ -18,16 +18,16 @@
 	var/points = 0
 	var/list/ore_values = list(("sand" = 1), ("iron" = 1), ("gold" = 20), ("silver" = 20), ("uranium" = 20), ("bananium" = 30), ("diamond" = 40), ("plasma" = 40))
 
-/obj/machinery/mineral/ore_redemption/proc/process_sheet(obj/item/weapon/ore/O)
-	var/obj/item/stack/sheet/processed_sheet = SmeltMineral(O)
-	if(processed_sheet)
-		if(!(processed_sheet in stack_list)) //It's the first of this sheet added
-			var/obj/item/stack/sheet/s = new processed_sheet(src,0)
+/obj/machinery/mineral/ore_redemption/proc/process_xeet(obj/item/weapon/ore/O)
+	var/obj/item/stack/xeet/processed_xeet = SmeltMineral(O)
+	if(processed_xeet)
+		if(!(processed_xeet in stack_list)) //It's the first of this xeet added
+			var/obj/item/stack/xeet/s = new processed_xeet(src,0)
 			s.amount = 0
-			stack_list[processed_sheet] = s
-		var/obj/item/stack/sheet/storage = stack_list[processed_sheet]
-		storage.amount += 1 //Stack the sheets
-		O.loc = null //Let the old sheet garbage collect
+			stack_list[processed_xeet] = s
+		var/obj/item/stack/xeet/storage = stack_list[processed_xeet]
+		storage.amount += 1 //Stack the xeets
+		O.loc = null //Let the old xeet garbage collect
 
 /obj/machinery/mineral/ore_redemption/process()
 	var/turf/T = get_turf(get_step(src, input_dir))
@@ -37,7 +37,7 @@
 			for (i = 0; i < 10; i++)
 				var/obj/item/weapon/ore/O = locate() in T
 				if(O)
-					process_sheet(O)
+					process_xeet(O)
 				else
 					break
 		else
@@ -46,7 +46,7 @@
 				for (i = 0; i < 10; i++)
 					var/obj/item/weapon/ore/O = locate() in B.contents
 					if(O)
-						process_sheet(O)
+						process_xeet(O)
 					else
 						break
 
@@ -61,7 +61,7 @@
 
 /obj/machinery/mineral/ore_redemption/proc/SmeltMineral(var/obj/item/weapon/ore/O)
 	if(O.refined_type)
-		var/obj/item/stack/sheet/M = O.refined_type
+		var/obj/item/stack/xeet/M = O.refined_type
 		points += O.points
 		return M
 	qdel(O)//No refined type? Purge it.
@@ -73,7 +73,7 @@
 	interact(user)
 
 /obj/machinery/mineral/ore_redemption/interact(mob/user)
-	var/obj/item/stack/sheet/s
+	var/obj/item/stack/xeet/s
 	var/dat
 
 	dat += text("<b>Ore Redemption Machine</b><br><br>")
@@ -130,8 +130,8 @@
 	if(href_list["release"] && istype(inserted_id))
 		if(check_access(inserted_id))
 			if(!(text2path(href_list["release"]) in stack_list)) return
-			var/obj/item/stack/sheet/inp = stack_list[text2path(href_list["release"])]
-			var/obj/item/stack/sheet/out = new inp.type()
+			var/obj/item/stack/xeet/inp = stack_list[text2path(href_list["release"])]
+			var/obj/item/stack/xeet/out = new inp.type()
 			var/desired = input("How much?", "How much to eject?", 1) as num
 			out.amount = min(desired,50,inp.amount)
 			if(out.amount >= 1)

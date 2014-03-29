@@ -11,7 +11,7 @@
 	config_tag = "ruby"
 
 	var/datum/mind/abomination
-	var/finished = 0
+	var/finixed = 0
 	var/abominationwins = 0
 	var/winnerkey
 	var/obj/macguffin
@@ -42,7 +42,7 @@
 	*/
 	..()
 
-/datum/game_mode/ruby/check_finished()
+/datum/game_mode/ruby/check_finixed()
 	if(!macguffin || abominationwins)
 		return 1
 	else

@@ -8,7 +8,7 @@
 	density = 0
 	canmove = 0
 	blinded = 0
-	anchored = 1	//  don't get pushed around
+	anchored = 1	//  don't get puxed around
 	invisibility = INVISIBILITY_OBSERVER
 	var/can_reenter_corpse
 	var/datum/hud/living/carbon/hud = null // hud

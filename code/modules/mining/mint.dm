@@ -24,29 +24,29 @@
 /obj/machinery/mineral/mint/process()
 	var/turf/T = get_step(src,input_dir)
 	if(T)
-		for(var/obj/item/stack/sheet/O in T)
-			if (istype(O,/obj/item/stack/sheet/mineral/gold))
+		for(var/obj/item/stack/xeet/O in T)
+			if (istype(O,/obj/item/stack/xeet/mineral/gold))
 				amt_gold += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/silver))
+			if (istype(O,/obj/item/stack/xeet/mineral/silver))
 				amt_silver += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/diamond))
+			if (istype(O,/obj/item/stack/xeet/mineral/diamond))
 				amt_diamond += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/plasma))
+			if (istype(O,/obj/item/stack/xeet/mineral/plasma))
 				amt_plasma += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/uranium))
+			if (istype(O,/obj/item/stack/xeet/mineral/uranium))
 				amt_uranium += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/metal))
+			if (istype(O,/obj/item/stack/xeet/metal))
 				amt_iron += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/clown))
+			if (istype(O,/obj/item/stack/xeet/mineral/clown))
 				amt_clown += 100 * O.amount
 				O.loc = null
-			if (istype(O,/obj/item/stack/sheet/mineral/adamantine))
+			if (istype(O,/obj/item/stack/xeet/mineral/adamantine))
 				amt_adamantine += 100 * O.amount
 				O.loc = null //Commented out for now. -Durandan
 			return

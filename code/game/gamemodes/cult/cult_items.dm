@@ -8,7 +8,7 @@
 	force = 30
 	throwforce = 10
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb = list("attacked", "slaxed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 
 
 /obj/item/weapon/melee/cultblade/attack(mob/living/target as mob, mob/living/carbon/human/user as mob)

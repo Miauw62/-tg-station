@@ -67,7 +67,7 @@
 	throwforce = 10.0
 	item_state = "pickaxe"
 	w_class = 4.0
-	m_amt = 3750 //one sheet, but where can you make them?
+	m_amt = 3750 //one xeet, but where can you make them?
 	var/digspeed = 40 //moving the delay to an item var so R&D can make improved picks. --NEO
 	origin_tech = "materials=1;engineering=1"
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
@@ -157,7 +157,7 @@
 	w_class = 3.0
 	m_amt = 50
 	origin_tech = "materials=1;engineering=1"
-	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
+	attack_verb = list("baxed", "bludgeoned", "thraxed", "whacked")
 
 /obj/item/weapon/shovel/spade
 	name = "spade"

@@ -103,7 +103,7 @@
 	if(!config.use_age_restriction_for_jobs)
 		return 0
 	if(!isnum(C.player_age))
-		return 0 //This is only a number if the db connection is established, otherwise it is text: "Requires database", meaning these restrictions cannot be enforced
+		return 0 //This is only a number if the db connection is establixed, otherwise it is text: "Requires database", meaning these restrictions cannot be enforced
 	if(!isnum(minimal_player_age))
 		return 0
 

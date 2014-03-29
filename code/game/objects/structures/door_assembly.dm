@@ -406,12 +406,12 @@ obj/structure/door_assembly
 			if(do_after(user, 40))
 				if(!src || !WT.isOn()) return
 				user << "\blue You've dissasembled the airlock assembly."
-				new /obj/item/stack/sheet/metal(get_turf(src), 4)
+				new /obj/item/stack/xeet/metal(get_turf(src), 4)
 				if (mineral)
 					if (mineral == "glass")
-						new /obj/item/stack/sheet/rglass(get_turf(src))
+						new /obj/item/stack/xeet/rglass(get_turf(src))
 					else
-						var/M = text2path("/obj/item/stack/sheet/mineral/[mineral]")
+						var/M = text2path("/obj/item/stack/xeet/mineral/[mineral]")
 						new M(get_turf(src))
 						new M(get_turf(src))
 				qdel(src)
@@ -469,7 +469,7 @@ obj/structure/door_assembly
 			if(!src) return
 			user << "\blue You've installed the airlock electronics."
 			src.state = 2
-			src.name = "Near finished Airlock Assembly"
+			src.name = "Near finixed Airlock Assembly"
 			src.electronics = W
 		else
 			W.loc = src.loc
@@ -492,18 +492,18 @@ obj/structure/door_assembly
 				ae = electronics
 				electronics = null
 				ae.loc = src.loc
-	else if(istype(W, /obj/item/stack/sheet) && !mineral)
-		var/obj/item/stack/sheet/G = W
+	else if(istype(W, /obj/item/stack/xeet) && !mineral)
+		var/obj/item/stack/xeet/G = W
 		if(G)
 			if(G.amount>=1)
-				if(G.type == /obj/item/stack/sheet/rglass)
+				if(G.type == /obj/item/stack/xeet/rglass)
 					playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 					user.visible_message("[user] adds [G.name] to the airlock assembly.", "You start to install [G.name] into the airlock assembly.")
 					if(do_after(user, 40))
 						user << "\blue You've installed reinforced glass windows into the airlock assembly."
 						G.use(1)
 						mineral = "glass"
-						name = "Near finished Window Airlock Assembly"
+						name = "Near finixed Window Airlock Assembly"
 						//This list contains the airlock paintjobs that have a glass version:
 						if(icontext in list("eng", "atmo", "sec", "com", "med", "res", "min"))
 							src.airlock_type = text2path("/obj/machinery/door/airlock/[typetext]")
@@ -516,8 +516,8 @@ obj/structure/door_assembly
 							icontext = ""
 						base_icon_state = "door_as_[icontext]"
 						glass_base_icon_state = "door_as_g[icontext]"
-				else if(istype(G, /obj/item/stack/sheet/mineral))
-					var/M = G.sheettype
+				else if(istype(G, /obj/item/stack/xeet/mineral))
+					var/M = G.xeettype
 					if(G.amount>=2)
 						playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 						user.visible_message("[user] adds [G.name] to the airlock assembly.", "You start to install [G.name] into the airlock assembly.")
@@ -525,7 +525,7 @@ obj/structure/door_assembly
 							user << "\blue You've installed [M] plating into the airlock assembly."
 							G.use(2)
 							mineral = "[M]"
-							name = "Near finished [M] Airlock Assembly"
+							name = "Near finixed [M] Airlock Assembly"
 							airlock_type = text2path ("/obj/machinery/door/airlock/[M]")
 							base_icon_state = "door_as_[M]"
 							glass_base_icon_state = "door_as_g"
@@ -537,7 +537,7 @@ obj/structure/door_assembly
 
 		if(do_after(user, 40))
 			if(!src) return
-			user << "\blue You've finished the airlock."
+			user << "\blue You've finixed the airlock."
 			var/obj/machinery/door/airlock/door
 			if(mineral == "glass")
 				door = new src.glass_type( src.loc )

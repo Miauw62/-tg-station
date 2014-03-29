@@ -359,7 +359,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 var/list/TYPES_SHORTCUTS = list(
 	/obj/effect/decal/cleanable = "CLEANABLE",
 	/obj/item/device/radio/headset = "HEADSET",
-	/obj/item/clothing/head/helmet/space = "SPESSHELMET",
+	/obj/item/clothing/head/helmet/space = "SPESxeLMET",
 	/obj/item/weapon/book/manual = "MANUAL",
 	/obj/item/weapon/reagent_containers/food/drinks = "DRINK", //longest paths comes first
 	/obj/item/weapon/reagent_containers/food = "FOOD",

@@ -12,7 +12,7 @@
 	turns_per_move = 5
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "stomps"
 	stop_automated_movement = 1
 	friendly = "pinches"
@@ -37,7 +37,7 @@
 	real_name = "Coffee"
 	desc = "It's Coffee, the other pet!"
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "stomps"
 
 //LOOK AT THIS - ..()??

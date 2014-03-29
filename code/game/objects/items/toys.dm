@@ -118,7 +118,7 @@
 	w_class = 3.0
 	g_amt = 10
 	m_amt = 10
-	attack_verb = list("struck", "pistol whipped", "hit", "bashed")
+	attack_verb = list("struck", "pistol whipped", "hit", "baxed")
 	var/bullets = 7.0
 
 	examine()
@@ -400,7 +400,7 @@
 	force = 5
 	throwforce = 5
 	w_class = 3
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
+	attack_verb = list("attacked", "slaxed", "stabbed", "sliced")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 /*
@@ -918,7 +918,7 @@ obj/item/toy/cards/deck/syndicate
 	card_throwforce = 10
 	card_throw_speed = 3
 	card_throw_range = 7
-	card_attack_verb = list("attacked", "sliced", "diced", "slashed", "cut")
+	card_attack_verb = list("attacked", "sliced", "diced", "slaxed", "cut")
 
 
 /obj/item/toy/nuke

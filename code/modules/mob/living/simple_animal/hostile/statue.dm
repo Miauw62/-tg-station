@@ -11,7 +11,7 @@
 	a_intent = "harm"
 
 	response_help = "touches"
-	response_disarm = "pushes"
+	response_disarm = "puxes"
 
 	speed = -1
 	maxHealth = 50000

@@ -9,8 +9,8 @@
 	icon_state = "shards"
 
 /obj/effect/decal/cleanable/ash
-	name = "ashes"
-	desc = "Ashes to ashes, dust to dust, and into space."
+	name = "axes"
+	desc = "Axes to axes, dust to dust, and into space."
 	gender = PLURAL
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "ash"
@@ -110,19 +110,19 @@
 	random_icon_states = list("tomato_floor1", "tomato_floor2", "tomato_floor3")
 
 /obj/effect/decal/cleanable/egg_smudge
-	name = "smashed egg"
+	name = "smaxed egg"
 	desc = "Seems like this one won't hatch."
 	density = 0
 	anchored = 1
 	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
-	random_icon_states = list("smashed_egg1", "smashed_egg2", "smashed_egg3")
+	random_icon_states = list("smaxed_egg1", "smaxed_egg2", "smaxed_egg3")
 
 /obj/effect/decal/cleanable/pie_smudge //honk
-	name = "smashed pie"
+	name = "smaxed pie"
 	desc = "It's pie cream from a cream pie."
 	density = 0
 	anchored = 1
 	layer = 2
 	icon = 'icons/effects/tomatodecal.dmi'
-	random_icon_states = list("smashed_pie")
+	random_icon_states = list("smaxed_pie")

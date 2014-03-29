@@ -43,14 +43,14 @@
 				playsound(loc, 'sound/items/Crowbar.ogg', 100, 1)
 				if(do_after(user, 20))
 					user << "<span class='notice'>You pry the frame apart.</span>"
-					new /obj/item/stack/sheet/wood(loc, 4)
+					new /obj/item/stack/xeet/wood(loc, 4)
 					qdel(src)
 
 		if(1)
-			if(istype(I, /obj/item/stack/sheet/wood))
-				var/obj/item/stack/sheet/wood/W = I
+			if(istype(I, /obj/item/stack/xeet/wood))
+				var/obj/item/stack/xeet/wood/W = I
 				W.use(2)
-				user << "<span class='notice'>You add a shelf.</span>"
+				user << "<span class='notice'>You add a xelf.</span>"
 				state = 2
 				icon_state = "book-0"
 			if(istype(I, /obj/item/weapon/wrench))
@@ -72,7 +72,7 @@
 				user << "<span class='notice'>You empty \the [I] into \the [src].</span>"
 				update_icon()
 			else if(istype(I, /obj/item/weapon/pen))
-				var/newname = stripped_input(usr, "What would you like to title this bookshelf?")
+				var/newname = stripped_input(usr, "What would you like to title this bookxelf?")
 				if(!newname)
 					return
 				else
@@ -82,8 +82,8 @@
 					user << "<span class='notice'>You need to remove the books first.</span>"
 				else
 					playsound(loc, 'sound/items/Crowbar.ogg', 100, 1)
-					user << "<span class='notice'>You pry the shelf out.</span>"
-					new /obj/item/stack/sheet/wood(loc, 1)
+					user << "<span class='notice'>You pry the xelf out.</span>"
+					new /obj/item/stack/xeet/wood(loc, 1)
 					state = 1
 					icon_state = "bookempty"
 			else
@@ -92,7 +92,7 @@
 
 /obj/structure/bookcase/attack_hand(mob/user)
 	if(contents.len)
-		var/obj/item/weapon/book/choice = input("Which book would you like to remove from the shelf?") in contents as obj|null
+		var/obj/item/weapon/book/choice = input("Which book would you like to remove from the xelf?") in contents as obj|null
 		if(choice)
 			if(!usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
 				return
@@ -173,7 +173,7 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = 3		 //upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)
-	attack_verb = list("bashed", "whacked", "educated")
+	attack_verb = list("baxed", "whacked", "educated")
 	var/dat				//Actual page content
 	var/due_date = 0	//Game time in 1/10th seconds
 	var/author			//Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
@@ -258,32 +258,32 @@
 	else if(istype(I, /obj/item/weapon/barcodescanner))
 		var/obj/item/weapon/barcodescanner/scanner = I
 		if(!scanner.computer)
-			user << "[I]'s screen flashes: 'No associated computer found!'"
+			user << "[I]'s screen flaxes: 'No associated computer found!'"
 		else
 			switch(scanner.mode)
 				if(0)
 					scanner.book = src
-					user << "[I]'s screen flashes: 'Book stored in buffer.'"
+					user << "[I]'s screen flaxes: 'Book stored in buffer.'"
 				if(1)
 					scanner.book = src
 					scanner.computer.buffer_book = name
-					user << "[I]'s screen flashes: 'Book stored in buffer. Book title stored in associated computer buffer.'"
+					user << "[I]'s screen flaxes: 'Book stored in buffer. Book title stored in associated computer buffer.'"
 				if(2)
 					scanner.book = src
 					for(var/datum/borrowbook/b in scanner.computer.checkouts)
 						if(b.bookname == name)
 							scanner.computer.checkouts.Remove(b)
-							user << "[I]'s screen flashes: 'Book stored in buffer. Book has been checked in.'"
+							user << "[I]'s screen flaxes: 'Book stored in buffer. Book has been checked in.'"
 							return
-					user << "[I]'s screen flashes: 'Book stored in buffer. No active check-out record found for current title.'"
+					user << "[I]'s screen flaxes: 'Book stored in buffer. No active check-out record found for current title.'"
 				if(3)
 					scanner.book = src
 					for(var/obj/item/weapon/book in scanner.computer.inventory)
 						if(book == src)
-							user << "[I]'s screen flashes: 'Book stored in buffer. Title already present in inventory, aborting to avoid duplicate entry.'"
+							user << "[I]'s screen flaxes: 'Book stored in buffer. Title already present in inventory, aborting to avoid duplicate entry.'"
 							return
 					scanner.computer.inventory.Add(src)
-					user << "[I]'s screen flashes: 'Book stored in buffer. Title added to general inventory.'"
+					user << "[I]'s screen flaxes: 'Book stored in buffer. Title added to general inventory.'"
 
 	else if(istype(I, /obj/item/weapon/kitchenknife) || istype(I, /obj/item/weapon/wirecutters))
 		if(carved)

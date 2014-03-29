@@ -444,7 +444,7 @@ silicate
 	result_amount = 1
 /datum/chemical_reaction/plasmasolidification/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/location = get_turf(holder.my_atom)
-	new /obj/item/stack/sheet/mineral/plasma(location)
+	new /obj/item/stack/xeet/mineral/plasma(location)
 	return
 
 /datum/chemical_reaction/capsaicincondensation
@@ -777,11 +777,11 @@ datum/chemical_reaction/pestkiller
 
 		playsound(TO, 'sound/effects/phasein.ogg', 100, 1)
 
-		var/list/flashers = list()
+		var/list/flaxers = list()
 		for(var/mob/living/carbon/human/M in viewers(TO, null))
 			if(M:eyecheck() <= 0)
 				flick("e_flash", M.flash) // flash dose faggots
-				flashers += M
+				flaxers += M
 
 		var/y_distance = TO.y - FROM.y
 		var/x_distance = TO.x - FROM.x
@@ -795,7 +795,7 @@ datum/chemical_reaction/pestkiller
 				A.loc = locate(A.x + x_distance, A.y + y_distance, TO.z)
 
 			spawn()
-				if(ismob(A) && !(A in flashers)) // don't flash if we're already doing an effect
+				if(ismob(A) && !(A in flaxers)) // don't flash if we're already doing an effect
 					var/mob/M = A
 					if(M.client)
 						var/obj/blueeffect = new /obj(src)
@@ -984,10 +984,10 @@ datum/chemical_reaction/pestkiller
 	required_other = 1
 /datum/chemical_reaction/slimemetal/on_reaction(var/datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[replacetext(name," ","_")]")
-	var/obj/item/stack/sheet/metal/M = new /obj/item/stack/sheet/metal
+	var/obj/item/stack/xeet/metal/M = new /obj/item/stack/xeet/metal
 	M.amount = 15
 	M.loc = get_turf(holder.my_atom)
-	var/obj/item/stack/sheet/plasteel/P = new /obj/item/stack/sheet/plasteel
+	var/obj/item/stack/xeet/plasteel/P = new /obj/item/stack/xeet/plasteel
 	P.amount = 5
 	P.loc = get_turf(holder.my_atom)
 
@@ -1318,7 +1318,7 @@ datum/chemical_reaction/pestkiller
 	required_other = 1
 /datum/chemical_reaction/slimeplasma/on_reaction(var/datum/reagents/holder)
 	feedback_add_details("slime_cores_used","[replacetext(name," ","_")]")
-	var/obj/item/stack/sheet/mineral/plasma/P = new /obj/item/stack/sheet/mineral/plasma
+	var/obj/item/stack/xeet/mineral/plasma/P = new /obj/item/stack/xeet/mineral/plasma
 	P.amount = 10
 	P.loc = get_turf(holder.my_atom)
 

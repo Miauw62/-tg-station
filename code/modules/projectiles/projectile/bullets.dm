@@ -75,7 +75,7 @@
 				M.adjust_fire_stacks(1)
 				M.IgniteMob()
 
-/obj/item/projectile/bullet/incendiary/shell
+/obj/item/projectile/bullet/incendiary/xell
 	damage = 20
 
 /obj/item/projectile/bullet/incendiary/mech

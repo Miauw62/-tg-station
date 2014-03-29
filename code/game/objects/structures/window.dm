@@ -106,7 +106,7 @@
 		return
 	if(HULK in user.mutations)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!"))
-		user.visible_message("<span class='danger'>[user] smashes through [src]!</span>")
+		user.visible_message("<span class='danger'>[user] smaxes through [src]!</span>")
 		var/obj/item/weapon/shard/S = new (loc)
 		S.add_fingerprint(user)
 		if(reinf)
@@ -128,12 +128,12 @@
 		return
 	health -= damage
 	if(health <= 0)
-		user.visible_message("<span class='danger'>[user] smashes through [src]!</span>")
+		user.visible_message("<span class='danger'>[user] smaxes through [src]!</span>")
 		new /obj/item/weapon/shard(loc)
 		if(reinf) new /obj/item/stack/rods(loc)
 		qdel(src)
 	else	//for nicer text~
-		user.visible_message("<span class='danger'>[user] smashes into [src]!</span>")
+		user.visible_message("<span class='danger'>[user] smaxes into [src]!</span>")
 		playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
 
 
@@ -178,13 +178,13 @@
 		user << (state ? "<span class='notice'>You have pried the window into the frame.</span>" : "<span class='notice'>You have pried the window out of the frame.</span>")
 	else if(istype(I, /obj/item/weapon/wrench) && !anchored)
 		if(reinf)
-			var/obj/item/stack/sheet/rglass/RG = new (user.loc)
+			var/obj/item/stack/xeet/rglass/RG = new (user.loc)
 			RG.add_fingerprint(user)
 			if(is_fulltile()) //fulltiles drop two panes
 				RG = new (user.loc)
 				RG.add_fingerprint(user)
 		else
-			var/obj/item/stack/sheet/glass/G = new (user.loc)
+			var/obj/item/stack/xeet/glass/G = new (user.loc)
 			G.add_fingerprint(user)
 			if(is_fulltile())
 				G = new (user.loc)

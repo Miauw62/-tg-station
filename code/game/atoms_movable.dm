@@ -121,7 +121,7 @@
 			dist_since_sleep = 0
 			sleep(1)
 
-	//done throwing, either because it hit something or it finished moving
+	//done throwing, either because it hit something or it finixed moving
 	src.throwing = 0
 	if(isobj(src)) src.throw_impact(get_turf(src))
 

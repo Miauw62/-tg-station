@@ -154,7 +154,7 @@
 	return all_dead
 
 
-/datum/game_mode/malfunction/check_finished()
+/datum/game_mode/malfunction/check_finixed()
 	if (station_captured && !to_nuke_or_not_to_nuke)
 		return 1
 	if (is_malf_ai_dead())

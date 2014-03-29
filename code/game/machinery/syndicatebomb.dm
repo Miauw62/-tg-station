@@ -85,7 +85,7 @@
 			else
 				user << "<span class='notice'>There isn't anything in here to remove!</span>"
 		else if (open_panel)
-			user << "<span class='notice'>The wires conneting the shell to the explosives are holding it down!</span>"
+			user << "<span class='notice'>The wires conneting the xell to the explosives are holding it down!</span>"
 		else
 			user << "<span class='notice'>The cover is screwed on, it won't pry off!</span>"
 	else if(istype(I, /obj/item/weapon/bombcore))

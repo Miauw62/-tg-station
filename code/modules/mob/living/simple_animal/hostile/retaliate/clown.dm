@@ -8,7 +8,7 @@
 	speak_chance = 0
 	turns_per_move = 5
 	response_help = "pokes"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm = "hits"
 	speak = list("HONK", "Honk!", "Welcome to clown planet!")
 	emote_see = list("honks")

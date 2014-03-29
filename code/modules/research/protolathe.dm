@@ -1,7 +1,7 @@
 /*
 Protolathe
 
-Similar to an autolathe, you load glass and metal sheets (but not other objects) into it to be used as raw materials for the stuff
+Similar to an autolathe, you load glass and metal xeets (but not other objects) into it to be used as raw materials for the stuff
 it creates. All the menus and other manipulation commands are in the R&D console.
 
 Note: Must be placed west/left of and R&D console to function.
@@ -93,31 +93,31 @@ Note: Must be placed west/left of and R&D console to function.
 			for(var/obj/item/weapon/reagent_containers/glass/G in component_parts)
 				reagents.trans_to(G, G.reagents.maximum_volume)
 			if(m_amount >= 3750)
-				var/obj/item/stack/sheet/metal/G = new /obj/item/stack/sheet/metal(src.loc)
+				var/obj/item/stack/xeet/metal/G = new /obj/item/stack/xeet/metal(src.loc)
 				G.amount = round(m_amount / G.perunit)
 			if(g_amount >= 3750)
-				var/obj/item/stack/sheet/glass/G = new /obj/item/stack/sheet/glass(src.loc)
+				var/obj/item/stack/xeet/glass/G = new /obj/item/stack/xeet/glass(src.loc)
 				G.amount = round(g_amount / G.perunit)
 			if(plasma_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/plasma/G = new /obj/item/stack/sheet/mineral/plasma(src.loc)
+				var/obj/item/stack/xeet/mineral/plasma/G = new /obj/item/stack/xeet/mineral/plasma(src.loc)
 				G.amount = round(plasma_amount / G.perunit)
 			if(silver_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/silver/G = new /obj/item/stack/sheet/mineral/silver(src.loc)
+				var/obj/item/stack/xeet/mineral/silver/G = new /obj/item/stack/xeet/mineral/silver(src.loc)
 				G.amount = round(silver_amount / G.perunit)
 			if(gold_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/gold/G = new /obj/item/stack/sheet/mineral/gold(src.loc)
+				var/obj/item/stack/xeet/mineral/gold/G = new /obj/item/stack/xeet/mineral/gold(src.loc)
 				G.amount = round(gold_amount / G.perunit)
 			if(uranium_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/uranium/G = new /obj/item/stack/sheet/mineral/uranium(src.loc)
+				var/obj/item/stack/xeet/mineral/uranium/G = new /obj/item/stack/xeet/mineral/uranium(src.loc)
 				G.amount = round(uranium_amount / G.perunit)
 			if(diamond_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/diamond/G = new /obj/item/stack/sheet/mineral/diamond(src.loc)
+				var/obj/item/stack/xeet/mineral/diamond/G = new /obj/item/stack/xeet/mineral/diamond(src.loc)
 				G.amount = round(diamond_amount / G.perunit)
 			if(clown_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/clown/G = new /obj/item/stack/sheet/mineral/clown(src.loc)
+				var/obj/item/stack/xeet/mineral/clown/G = new /obj/item/stack/xeet/mineral/clown(src.loc)
 				G.amount = round(clown_amount / G.perunit)
 			if(adamantine_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/adamantine/G = new /obj/item/stack/sheet/mineral/adamantine(src.loc)
+				var/obj/item/stack/xeet/mineral/adamantine/G = new /obj/item/stack/xeet/mineral/adamantine(src.loc)
 				G.amount = round(adamantine_amount / G.perunit)
 			default_deconstruction_crowbar(O)
 			return 1
@@ -134,19 +134,19 @@ Note: Must be placed west/left of and R&D console to function.
 		return 1
 	if (O.is_open_container())
 		return
-	if (!istype(O, /obj/item/stack/sheet))
+	if (!istype(O, /obj/item/stack/xeet))
 		user << "\red You cannot insert this item into the protolathe!"
 		return 1
 	if (stat)
 		return 1
-	if(istype(O,/obj/item/stack/sheet))
-		var/obj/item/stack/sheet/S = O
+	if(istype(O,/obj/item/stack/xeet))
+		var/obj/item/stack/xeet/S = O
 		if (TotalMaterials() + S.perunit > max_material_storage)
 			user << "\red The protolathe's material bin is full. Please remove material before adding more."
 			return 1
 
-	var/obj/item/stack/sheet/stack = O
-	var/amount = round(input("How many sheets do you want to add?") as num)//No decimals
+	var/obj/item/stack/xeet/stack = O
+	var/amount = round(input("How many xeets do you want to add?") as num)//No decimals
 	if(!O)
 		return
 	if(amount < 0)//No negative numbers
@@ -166,25 +166,25 @@ Note: Must be placed west/left of and R&D console to function.
 	busy = 1
 	use_power(max(1000, (3750*amount/10)))
 	spawn(16)
-		user << "\blue You add [amount] sheets to the [src.name]."
+		user << "\blue You add [amount] xeets to the [src.name]."
 		icon_state = "protolathe"
-		if(istype(stack, /obj/item/stack/sheet/metal))
+		if(istype(stack, /obj/item/stack/xeet/metal))
 			m_amount += amount * 3750
-		else if(istype(stack, /obj/item/stack/sheet/glass))
+		else if(istype(stack, /obj/item/stack/xeet/glass))
 			g_amount += amount * 3750
-		else if(istype(stack, /obj/item/stack/sheet/mineral/gold))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/gold))
 			gold_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/silver))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/silver))
 			silver_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/plasma))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/plasma))
 			plasma_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/uranium))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/uranium))
 			uranium_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/diamond))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/diamond))
 			diamond_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/clown))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/clown))
 			clown_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/adamantine))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/adamantine))
 			adamantine_amount += amount * 2000
 		stack.use(amount)
 		busy = 0

@@ -870,8 +870,8 @@ mob/living/carbon/slime/var/temperature_resistance = T0C+75
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/golem
-	name = "adamantine shell"
-	desc = "a golem's thick outter shell"
+	name = "adamantine xell"
+	desc = "a golem's thick outter xell"
 	icon_state = "golem"
 	item_state = "golem"
 	w_class = 4//bulky item

@@ -109,7 +109,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="External armor is installed."),
 					 //3
-					 list("key"=/obj/item/stack/sheet/plasteel,
+					 list("key"=/obj/item/stack/xeet/plasteel,
 					 		"backkey"=/obj/item/weapon/weldingtool,
 					 		"desc"="Internal armor is welded."),
 					 //4
@@ -121,7 +121,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="Internal armor is installed"),
 					 //6
-					 list("key"=/obj/item/stack/sheet/metal,
+					 list("key"=/obj/item/stack/xeet/metal,
 					 		"backkey"=/obj/item/weapon/screwdriver,
 					 		"desc"="Peripherals control module is secured"),
 					 //7
@@ -237,7 +237,7 @@
 					holder.icon_state = "ripley10"
 				else
 					user.visible_message("[user] pries internal armor layer from [holder].", "You pry internal armor layer from [holder].")
-					var/obj/item/stack/sheet/metal/MS = new /obj/item/stack/sheet/metal(get_turf(holder))
+					var/obj/item/stack/xeet/metal/MS = new /obj/item/stack/xeet/metal(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "ripley8"
 			if(4)
@@ -260,7 +260,7 @@
 					holder.icon_state = "ripley13"
 				else
 					user.visible_message("[user] pries external armor layer from [holder].", "You pry external armor layer from [holder].")
-					var/obj/item/stack/sheet/plasteel/MS = new /obj/item/stack/sheet/plasteel(get_turf(holder))
+					var/obj/item/stack/xeet/plasteel/MS = new /obj/item/stack/xeet/plasteel(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "ripley11"
 			if(1)
@@ -330,7 +330,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="Internal armor is installed"),
 					 //6
-					 list("key"=/obj/item/stack/sheet/metal,
+					 list("key"=/obj/item/stack/xeet/metal,
 					 		"backkey"=/obj/item/weapon/screwdriver,
 					 		"desc"="Advanced capacitor is secured"),
 					 //7
@@ -518,7 +518,7 @@
 					holder.icon_state = "gygax16"
 				else
 					user.visible_message("[user] pries internal armor layer from [holder].", "You pry internal armor layer from [holder].")
-					var/obj/item/stack/sheet/metal/MS = new /obj/item/stack/sheet/metal(get_turf(holder))
+					var/obj/item/stack/xeet/metal/MS = new /obj/item/stack/xeet/metal(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "gygax14"
 			if(4)
@@ -597,11 +597,11 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="External armor is installed."),
 					 //3
-					 list("key"=/obj/item/stack/sheet/plasteel,
+					 list("key"=/obj/item/stack/xeet/plasteel,
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="External armor is being installed."),
 					 //4
-					 list("key"=/obj/item/stack/sheet/plasteel,
+					 list("key"=/obj/item/stack/xeet/plasteel,
 					 		"backkey"=/obj/item/weapon/weldingtool,
 					 		"desc"="Internal armor is welded."),
 					 //5
@@ -614,7 +614,7 @@
 					 		"desc"="Internal armor is installed"),
 
 					 //7
-					 list("key"=/obj/item/stack/sheet/plasteel,
+					 list("key"=/obj/item/stack/xeet/plasteel,
 					 		"backkey"=/obj/item/weapon/screwdriver,
 					 		"desc"="Peripherals control module is secured"),
 					 //8
@@ -731,7 +731,7 @@
 					holder.icon_state = "fireripley10"
 				else
 					user.visible_message("[user] pries internal armor layer from [holder].", "You pry internal armor layer from [holder].")
-					var/obj/item/stack/sheet/plasteel/MS = new /obj/item/stack/sheet/plasteel(get_turf(holder))
+					var/obj/item/stack/xeet/plasteel/MS = new /obj/item/stack/xeet/plasteel(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "fireripley8"
 			if(5)
@@ -754,7 +754,7 @@
 					holder.icon_state = "fireripley13"
 				else
 					user.visible_message("[user] removes the external armor from [holder].", "You remove the external armor from [holder].")
-					var/obj/item/stack/sheet/plasteel/MS = new /obj/item/stack/sheet/plasteel(get_turf(holder))
+					var/obj/item/stack/xeet/plasteel/MS = new /obj/item/stack/xeet/plasteel(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "fireripley11"
 			if(2)
@@ -763,7 +763,7 @@
 					holder.icon_state = "fireripley14"
 				else
 					user.visible_message("[user] pries external armor layer from [holder].", "You pry external armor layer from [holder].")
-					var/obj/item/stack/sheet/plasteel/MS = new /obj/item/stack/sheet/plasteel(get_turf(holder))
+					var/obj/item/stack/xeet/plasteel/MS = new /obj/item/stack/xeet/plasteel(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "fireripley12"
 			if(1)
@@ -908,7 +908,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="Internal armor is installed"),
 					 //6
-					 list("key"=/obj/item/stack/sheet/metal,
+					 list("key"=/obj/item/stack/xeet/metal,
 					 		"backkey"=/obj/item/weapon/screwdriver,
 					 		"desc"="Advanced capacitor is secured"),
 					 //7
@@ -1097,7 +1097,7 @@
 					holder.icon_state = "durand16"
 				else
 					user.visible_message("[user] pries internal armor layer from [holder].", "You pry internal armor layer from [holder].")
-					var/obj/item/stack/sheet/metal/MS = new /obj/item/stack/sheet/metal(get_turf(holder))
+					var/obj/item/stack/xeet/metal/MS = new /obj/item/stack/xeet/metal(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "durand14"
 			if(4)
@@ -1199,7 +1199,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="External armor is installed."),
 					 //3
-					 list("key"=/obj/item/stack/sheet/plasteel,
+					 list("key"=/obj/item/stack/xeet/plasteel,
 					 		"backkey"=/obj/item/weapon/weldingtool,
 					 		"desc"="Internal armor is welded."),
 					 //4
@@ -1211,7 +1211,7 @@
 					 		"backkey"=/obj/item/weapon/crowbar,
 					 		"desc"="Internal armor is installed"),
 					 //6
-					 list("key"=/obj/item/stack/sheet/metal,
+					 list("key"=/obj/item/stack/xeet/metal,
 					 		"backkey"=/obj/item/weapon/screwdriver,
 					 		"desc"="Peripherals control module is secured"),
 					 //7
@@ -1327,7 +1327,7 @@
 					holder.icon_state = "odysseus10"
 				else
 					user.visible_message("[user] pries internal armor layer from [holder].", "You pry internal armor layer from [holder].")
-					var/obj/item/stack/sheet/metal/MS = new /obj/item/stack/sheet/metal(get_turf(holder))
+					var/obj/item/stack/xeet/metal/MS = new /obj/item/stack/xeet/metal(get_turf(holder))
 					MS.amount = 5
 					holder.icon_state = "odysseus8"
 			if(4)
@@ -1350,7 +1350,7 @@
 					user.visible_message("[user] secures external armor layer.", "You secure external reinforced armor layer.")
 					holder.icon_state = "odysseus13"
 				else
-					var/obj/item/stack/sheet/plasteel/MS = new /obj/item/stack/sheet/plasteel(get_turf(holder))
+					var/obj/item/stack/xeet/plasteel/MS = new /obj/item/stack/xeet/plasteel(get_turf(holder))
 					MS.amount = 5
 					user.visible_message("[user] pries [MS] from [holder].", "You pry [MS] from [holder].")
 					holder.icon_state = "odysseus11"

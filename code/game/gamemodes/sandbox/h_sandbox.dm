@@ -183,19 +183,19 @@ datum/hSB
 				//
 
 				if("hsbrglass")
-					new/obj/item/stack/sheet/rglass{amount=50}(usr.loc)
+					new/obj/item/stack/xeet/rglass{amount=50}(usr.loc)
 
 				if("hsbmetal")
-					new/obj/item/stack/sheet/metal{amount=50}(usr.loc)
+					new/obj/item/stack/xeet/metal{amount=50}(usr.loc)
 
 				if("hsbplasteel")
-					new/obj/item/stack/sheet/plasteel{amount=50}(usr.loc)
+					new/obj/item/stack/xeet/plasteel{amount=50}(usr.loc)
 
 				if("hsbglass")
-					new/obj/item/stack/sheet/glass{amount=50}(usr.loc)
+					new/obj/item/stack/xeet/glass{amount=50}(usr.loc)
 
 				if("hsbwood")
-					new/obj/item/stack/sheet/wood{amount=50}(usr.loc)
+					new/obj/item/stack/xeet/wood{amount=50}(usr.loc)
 
 				//
 				// All access ID

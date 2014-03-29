@@ -277,10 +277,10 @@ var/list/uplink_items = list()
 	item = /obj/item/weapon/stamp/chameleon
 	cost = 1
 
-/datum/uplink_item/stealthy_tools/syndigolashes
+/datum/uplink_item/stealthy_tools/syndigolaxes
 	name = "No-Slip Brown Shoes"
 	desc = "These allow you to run on wet floors. They do not work on lubricated surfaces."
-	item = /obj/item/clothing/shoes/syndigaloshes
+	item = /obj/item/clothing/shoes/syndigaloxes
 	cost = 2
 
 /datum/uplink_item/stealthy_tools/agent_card

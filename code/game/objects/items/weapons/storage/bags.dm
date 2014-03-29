@@ -8,7 +8,7 @@
  *		Trash Bag
  *		Mining Satchel
  *		Plant Bag
- *		Sheet Snatcher
+ *		xeet Snatcher
  *		Book Bag
  *
  *	-Sayu
@@ -106,33 +106,33 @@
 
 
 // -----------------------------
-//        Sheet Snatcher
+//        xeet Snatcher
 // -----------------------------
 // Because it stacks stacks, this doesn't operate normally.
 // However, making it a storage/bag allows us to reuse existing code in some places. -Sayu
 
-/obj/item/weapon/storage/bag/sheetsnatcher
-	name = "sheet snatcher"
-	desc = "A patented Nanotrasen storage system designed for any kind of mineral sheet."
+/obj/item/weapon/storage/bag/xeetsnatcher
+	name = "xeet snatcher"
+	desc = "A patented Nanotrasen storage system designed for any kind of mineral xeet."
 	icon = 'icons/obj/mining.dmi'
-	icon_state = "sheetsnatcher"
+	icon_state = "xeetsnatcher"
 
-	var/capacity = 300; //the number of sheets it can carry.
+	var/capacity = 300; //the number of xeets it can carry.
 	w_class = 3
 
 	allow_quick_empty = 1 // this function is superceded
 	New()
 		..()
 		//verbs -= /obj/item/weapon/storage/verb/quick_empty
-		//verbs += /obj/item/weapon/storage/bag/sheetsnatcher/quick_empty
+		//verbs += /obj/item/weapon/storage/bag/xeetsnatcher/quick_empty
 
 	can_be_inserted(obj/item/W as obj, stop_messages = 0)
-		if(!istype(W,/obj/item/stack/sheet) || istype(W,/obj/item/stack/sheet/mineral/sandstone) || istype(W,/obj/item/stack/sheet/wood))
+		if(!istype(W,/obj/item/stack/xeet) || istype(W,/obj/item/stack/xeet/mineral/sandstone) || istype(W,/obj/item/stack/xeet/wood))
 			if(!stop_messages)
 				usr << "The snatcher does not accept [W]."
-			return 0 //I don't care, but the existing code rejects them for not being "sheets" *shrug* -Sayu
+			return 0 //I don't care, but the existing code rejects them for not being "xeets" *shrug* -Sayu
 		var/current = 0
-		for(var/obj/item/stack/sheet/S in contents)
+		for(var/obj/item/stack/xeet/S in contents)
 			current += S.amount
 		if(capacity == current)//If it's full, you're done
 			if(!stop_messages)
@@ -143,22 +143,22 @@
 
 // Modified handle_item_insertion.  Would prefer not to, but...
 	handle_item_insertion(obj/item/W as obj, prevent_warning = 0)
-		var/obj/item/stack/sheet/S = W
+		var/obj/item/stack/xeet/S = W
 		if(!istype(S)) return 0
 
 		var/amount
 		var/inserted = 0
 		var/current = 0
-		for(var/obj/item/stack/sheet/S2 in contents)
+		for(var/obj/item/stack/xeet/S2 in contents)
 			current += S2.amount
 		if(capacity < current + S.amount)//If the stack will fill it up
 			amount = capacity - current
 		else
 			amount = S.amount
 
-		for(var/obj/item/stack/sheet/sheet in contents)
-			if(S.type == sheet.type) // we are violating the amount limitation because these are not sane objects
-				sheet.amount += amount	// they should only be removed through procs in this file, which split them up.
+		for(var/obj/item/stack/xeet/xeet in contents)
+			if(S.type == xeet.type) // we are violating the amount limitation because these are not sane objects
+				xeet.amount += amount	// they should only be removed through procs in this file, which split them up.
 				S.amount -= amount
 				inserted = 1
 				break
@@ -190,7 +190,7 @@
 		if(display_contents_with_number)
 			numbered_contents = list()
 			adjusted_contents = 0
-			for(var/obj/item/stack/sheet/I in contents)
+			for(var/obj/item/stack/xeet/I in contents)
 				adjusted_contents++
 				var/datum/numbered_display/D = new/datum/numbered_display(I)
 				D.number = I.amount
@@ -207,9 +207,9 @@
 // Modified quick_empty verb drops appropriate sized stacks
 	quick_empty()
 		var/location = get_turf(src)
-		for(var/obj/item/stack/sheet/S in contents)
+		for(var/obj/item/stack/xeet/S in contents)
 			while(S.amount)
-				var/obj/item/stack/sheet/N = new S.type(location)
+				var/obj/item/stack/xeet/N = new S.type(location)
 				var/stacksize = min(S.amount,N.max_amount)
 				N.amount = stacksize
 				S.amount -= stacksize
@@ -222,7 +222,7 @@
 
 // Instead of removing
 	remove_from_storage(obj/item/W as obj, atom/new_location)
-		var/obj/item/stack/sheet/S = W
+		var/obj/item/stack/xeet/S = W
 		if(!istype(S)) return 0
 
 		//I would prefer to drop a new stack, but the item/attack_hand code
@@ -231,18 +231,18 @@
 		// -Sayu
 
 		if(S.amount > S.max_amount)
-			var/obj/item/stack/sheet/temp = new S.type(src)
+			var/obj/item/stack/xeet/temp = new S.type(src)
 			temp.amount = S.amount - S.max_amount
 			S.amount = S.max_amount
 
 		return ..(S,new_location)
 
 // -----------------------------
-//    Sheet Snatcher (Cyborg)
+//    xeet Snatcher (Cyborg)
 // -----------------------------
 
-/obj/item/weapon/storage/bag/sheetsnatcher/borg
-	name = "sheet snatcher 9000"
+/obj/item/weapon/storage/bag/xeetsnatcher/borg
+	name = "xeet snatcher 9000"
 	desc = ""
 	capacity = 500//Borgs get more because >specialization
 

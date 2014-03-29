@@ -20,7 +20,7 @@
 /obj/item/weapon/hive_module/standard/New()
 	..()
 	src.modules += new /obj/item/weapon/melee/baton(src)
-	src.modules += new /obj/item/weapon/extinguisher(src)
+	src.modules += new /obj/item/weapon/extinguixer(src)
 	//var/obj/item/weapon/gun/mp5/M = new /obj/item/weapon/gun/mp5(src)
 	//M.weapon_lock = 0
 	//src.modules += M
@@ -28,7 +28,7 @@
 
 /obj/item/weapon/hive_module/engineering/New()
 
-	src.modules += new /obj/item/weapon/extinguisher(src)
+	src.modules += new /obj/item/weapon/extinguixer(src)
 	src.modules += new /obj/item/weapon/screwdriver(src)
 	src.modules += new /obj/item/weapon/weldingtool(src)
 	src.modules += new /obj/item/weapon/wrench(src)
@@ -44,11 +44,11 @@
 	src.modules += new /obj/item/weapon/wirecutters(src)
 	src.modules += new /obj/item/device/multitool(src)
 
-	var/obj/item/stack/sheet/metal/M = new /obj/item/stack/sheet/metal(src)
+	var/obj/item/stack/xeet/metal/M = new /obj/item/stack/xeet/metal(src)
 	M.amount = 50
 	src.modules += M
 
-	var/obj/item/stack/sheet/rglass/G = new /obj/item/stack/sheet/rglass(src)
+	var/obj/item/stack/xeet/rglass/G = new /obj/item/stack/xeet/rglass(src)
 	G.amount = 50
 	src.modules += G
 

@@ -1,9 +1,9 @@
-/obj/item/weapon/extinguisher
-	name = "fire extinguisher"
-	desc = "A traditional red fire extinguisher."
+/obj/item/weapon/extinguixer
+	name = "fire extinguixer"
+	desc = "A traditional red fire extinguixer."
 	icon = 'icons/obj/items.dmi'
-	icon_state = "fire_extinguisher0"
-	item_state = "fire_extinguisher"
+	icon_state = "fire_extinguixer0"
+	item_state = "fire_extinguixer"
 	hitsound = 'sound/weapons/smash.ogg'
 	flags = CONDUCT
 	throwforce = 10
@@ -12,15 +12,15 @@
 	throw_range = 7
 	force = 10
 	m_amt = 90
-	attack_verb = list("slammed", "whacked", "bashed", "thunked", "battered", "bludgeoned", "thrashed")
+	attack_verb = list("slammed", "whacked", "baxed", "thunked", "battered", "bludgeoned", "thraxed")
 	var/max_water = 50
 	var/last_use = 1.0
 	var/safety = 1
-	var/sprite_name = "fire_extinguisher"
+	var/sprite_name = "fire_extinguixer"
 
-/obj/item/weapon/extinguisher/mini
-	name = "fire extinguisher"
-	desc = "A light and compact fibreglass-framed model fire extinguisher."
+/obj/item/weapon/extinguixer/mini
+	name = "fire extinguixer"
+	desc = "A light and compact fibreglass-framed model fire extinguixer."
 	icon_state = "miniFE0"
 	item_state = "miniFE"
 	hitsound = null	//it is much lighter, after all.
@@ -32,24 +32,24 @@
 	max_water = 30
 	sprite_name = "miniFE"
 
-/obj/item/weapon/extinguisher/New()
+/obj/item/weapon/extinguixer/New()
 	create_reagents(max_water)
 	reagents.add_reagent("water", max_water)
 
-/obj/item/weapon/extinguisher/examine()
+/obj/item/weapon/extinguixer/examine()
 	set src in usr
 	..()
 	usr << "It contains [src.reagents.total_volume] units of water!"
 	return
 
-/obj/item/weapon/extinguisher/attack_self(mob/user as mob)
+/obj/item/weapon/extinguixer/attack_self(mob/user as mob)
 	safety = !safety
 	src.icon_state = "[sprite_name][!safety]"
 	src.desc = "The safety is [safety ? "on" : "off"]."
 	user << "The safety is [safety ? "on" : "off"]."
 	return
 
-/obj/item/weapon/extinguisher/afterattack(atom/target, mob/user , flag)
+/obj/item/weapon/extinguixer/afterattack(atom/target, mob/user , flag)
 	//TODO; Add support for reagents in water.
 
 	if( istype(target, /obj/structure/reagent_dispensers/watertank) && get_dist(src,target) <= 1)

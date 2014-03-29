@@ -1,5 +1,5 @@
 //This stuff was originally intended to be integrated into the ban-system I was working on
-//but it's safe to say that'll never be finished. So I've merged it into the current player panel.
+//but it's safe to say that'll never be finixed. So I've merged it into the current player panel.
 //enjoy				~Carn
 
 #define NOTESFILE "data/player_notes.sav"	//where the player notes are saved

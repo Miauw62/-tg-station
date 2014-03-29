@@ -163,7 +163,7 @@ datum/objective_item/special/laserpointer
 //Stack objectives get their own subtype
 datum/objective_item/stack
 	name = "5 cardboards"
-	targetitem = /obj/item/stack/sheet/cardboard
+	targetitem = /obj/item/stack/xeet/cardboard
 	difficulty = 9001
 
 datum/objective_item/stack/check_special_completion(var/obj/item/stack/S)
@@ -176,15 +176,15 @@ datum/objective_item/stack/check_special_completion(var/obj/item/stack/S)
 
 datum/objective_item/stack/diamond
 	name = "10 diamonds"
-	targetitem = /obj/item/stack/sheet/mineral/diamond
+	targetitem = /obj/item/stack/xeet/mineral/diamond
 	difficulty = 10
 
 datum/objective_item/stack/gold
 	name = "50 gold bars"
-	targetitem = /obj/item/stack/sheet/mineral/gold
+	targetitem = /obj/item/stack/xeet/mineral/gold
 	difficulty = 15
 
 datum/objective_item/stack/uranium
 	name = "25 refined uranium bars"
-	targetitem = /obj/item/stack/sheet/mineral/uranium
+	targetitem = /obj/item/stack/xeet/mineral/uranium
 	difficulty = 10

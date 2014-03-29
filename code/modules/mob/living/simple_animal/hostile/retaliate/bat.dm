@@ -6,7 +6,7 @@
 	icon_dead = "bat_dead"
 	icon_gib = "bat_dead"
 	turns_per_move = 1
-	response_help = "brushes aside"
+	response_help = "bruxes aside"
 	response_disarm = "flails at"
 	response_harm = "hits"
 	speak_chance = 0

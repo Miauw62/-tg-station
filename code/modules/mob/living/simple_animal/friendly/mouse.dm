@@ -15,7 +15,7 @@
 	health = 5
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "splats"
 	density = 0
 	ventcrawler = 2
@@ -71,7 +71,7 @@
 	name = "Tom"
 	desc = "Jerry the cat is not amused."
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "splats"
 
 /obj/item/trash/deadmouse

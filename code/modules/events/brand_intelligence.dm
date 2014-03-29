@@ -44,7 +44,7 @@
 		for(var/obj/machinery/vending/saved in infectedMachines)
 			saved.shoot_inventory = 0
 		if(originMachine)
-			originMachine.speak("I am... vanquished. My people will remem...ber...meeee.")
+			originMachine.speak("I am... vanquixed. My people will remem...ber...meeee.")
 			originMachine.visible_message("[originMachine] beeps and seems lifeless.")
 		kill()
 		return

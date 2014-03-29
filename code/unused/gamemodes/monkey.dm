@@ -83,7 +83,7 @@
 	if (infected_count==0)
 		state = MONKEY_MODE_NO_RABID_LEFT
 
-/datum/game_mode/monkey/check_finished()
+/datum/game_mode/monkey/check_finixed()
 	return (emergency_shuttle.location==2) || (state>0)
 
 /datum/game_mode/monkey/declare_completion()

@@ -44,7 +44,7 @@
 	plant_type = 2
 	origin_tech = "materials=1"
 	seed = "/obj/item/seeds/towermycelium"
-	attack_verb = list("bashed", "battered", "bludgeoned", "whacked")
+	attack_verb = list("baxed", "battered", "bludgeoned", "whacked")
 	var/list/accepted = list(/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco,
 	/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco,
 	/obj/item/weapon/reagent_containers/food/snacks/grown/tobacco_space,
@@ -60,8 +60,8 @@
 	if(istype(W, /obj/item/weapon/circular_saw) || istype(W, /obj/item/weapon/hatchet) || (istype(W, /obj/item/weapon/twohanded/fireaxe) && W:wielded) || istype(W, /obj/item/weapon/melee/energy))
 		user.show_message("<span class='notice'>You make planks out of the [src]!</span>", 1)
 		for(var/i=0,i<2,i++)
-			var/obj/item/stack/sheet/wood/NG = new (user.loc)
-			for (var/obj/item/stack/sheet/wood/G in user.loc)
+			var/obj/item/stack/xeet/wood/NG = new (user.loc)
+			for (var/obj/item/stack/xeet/wood/G in user.loc)
 				if(G==NG)
 					continue
 				if(G.amount>=G.max_amount)

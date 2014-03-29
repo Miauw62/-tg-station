@@ -15,7 +15,7 @@
 	handle_regular_status_updates()
 
 	if(client)
-		src.shell = 0
+		src.xell = 0
 		handle_regular_hud_updates()
 		update_items()
 		if(dependent)

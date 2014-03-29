@@ -243,7 +243,7 @@
 	if(stat)
 		return
 	if(act)
-		if(act == "scream")	act = "makes a loud and pained whimper" //ugly hack to stop animals screaming when crushed :P
+		if(act == "scream")	act = "makes a loud and pained whimper" //ugly hack to stop animals screaming when cruxed :P
 		for (var/mob/O in viewers(src, null))
 			O.show_message("<B>[src]</B> [act].")
 
@@ -334,7 +334,7 @@
 
 		if("harm", "disarm")
 			var/damage = rand(15, 30)
-			visible_message("\red <B>[M] has slashed at [src]!</B>")
+			visible_message("\red <B>[M] has slaxed at [src]!</B>")
 			adjustBruteLoss(damage)
 
 	return

@@ -58,7 +58,7 @@
 			else
 				step_away(M,chassis)
 				occupant_message("You push [target] out of the way.")
-				chassis.visible_message("[chassis] pushes [target] out of the way.")
+				chassis.visible_message("[chassis] puxes [target] out of the way.")
 			set_ready_state(0)
 			chassis.use_power(energy_drain)
 			do_after_cooldown()
@@ -183,9 +183,9 @@
 				return 1
 		return 0
 
-/obj/item/mecha_parts/mecha_equipment/tool/extinguisher
-	name = "extinguisher"
-	desc = "Exosuit-mounted extinguisher (Can be attached to: Engineering exosuits)"
+/obj/item/mecha_parts/mecha_equipment/tool/extinguixer
+	name = "extinguixer"
+	desc = "Exosuit-mounted extinguixer (Can be attached to: Engineering exosuits)"
 	icon_state = "mecha_exting"
 	equip_cooldown = 5
 	energy_drain = 0
@@ -197,7 +197,7 @@
 		..()
 		return
 
-	action(atom/target) //copypasted from extinguisher. TODO: Rewrite from scratch.
+	action(atom/target) //copypasted from extinguixer. TODO: Rewrite from scratch.
 		if(!action_checks(target) || get_dist(chassis, target)>3) return
 		if(get_dist(chassis, target)>2) return
 		set_ready_state(0)
@@ -205,7 +205,7 @@
 			if(istype(target, /obj/structure/reagent_dispensers/watertank) && get_dist(chassis,target) <= 1)
 				var/obj/o = target
 				o.reagents.trans_to(src, 200)
-				occupant_message("\blue Extinguisher refilled")
+				occupant_message("\blue Extinguixer refilled")
 				playsound(chassis, 'sound/effects/refill.ogg', 50, 1, -6)
 			else
 				if(src.reagents.total_volume > 0)
@@ -837,7 +837,7 @@
 	construction_cost = list("metal"=10000,"silver"=500,"glass"=1000)
 	var/datum/global_iterator/pr_mech_generator
 	var/coeff = 100
-	var/obj/item/stack/sheet/fuel
+	var/obj/item/stack/xeet/fuel
 	var/max_fuel = 150000
 	var/fuel_per_cycle_idle = 100
 	var/fuel_per_cycle_active = 500
@@ -850,7 +850,7 @@
 		return
 
 	proc/init()
-		fuel = new /obj/item/stack/sheet/mineral/plasma(src)
+		fuel = new /obj/item/stack/xeet/mineral/plasma(src)
 		fuel.amount = 0
 		pr_mech_generator = new /datum/global_iterator/mecha_generator(list(src),0)
 		pr_mech_generator.set_delay(equip_cooldown)
@@ -893,7 +893,7 @@
 			occupant_message(message)
 		return
 
-	proc/load_fuel(var/obj/item/stack/sheet/P)
+	proc/load_fuel(var/obj/item/stack/xeet/P)
 		if(P.type == fuel.type && P.amount)
 			var/to_load = max(max_fuel - fuel.amount*fuel.perunit,0)
 			if(to_load)
@@ -980,7 +980,7 @@
 	reliability = 1000
 
 	init()
-		fuel = new /obj/item/stack/sheet/mineral/uranium(src)
+		fuel = new /obj/item/stack/xeet/mineral/uranium(src)
 		fuel.amount = 0
 		pr_mech_generator = new /datum/global_iterator/mecha_generator/nuclear(list(src),0)
 		pr_mech_generator.set_delay(equip_cooldown)

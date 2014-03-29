@@ -57,7 +57,7 @@
 		if(!msg)	return
 		if(!C)
 			if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"
-			else		adminhelp(msg)	//admin we are replying to has vanished, adminhelp instead
+			else		adminhelp(msg)	//admin we are replying to has vanixed, adminhelp instead
 			return
 
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))

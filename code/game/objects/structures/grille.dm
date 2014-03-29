@@ -60,7 +60,7 @@
 	if(!user.is_adult)	return
 
 	playsound(loc, 'sound/effects/grillehit.ogg', 80, 1)
-	user.visible_message("<span class='warning'>[user] smashes against [src].</span>", \
+	user.visible_message("<span class='warning'>[user] smaxes against [src].</span>", \
 						 "<span class='warning'>You smash against [src].</span>", \
 						 "You hear twisting metal.")
 
@@ -72,7 +72,7 @@
 	if(M.melee_damage_upper == 0)	return
 
 	playsound(loc, 'sound/effects/grillehit.ogg', 80, 1)
-	M.visible_message("<span class='warning'>[M] smashes against [src].</span>", \
+	M.visible_message("<span class='warning'>[M] smaxes against [src].</span>", \
 					  "<span class='warning'>You smash against [src].</span>", \
 					  "You hear twisting metal.")
 
@@ -119,7 +119,7 @@
 			return
 
 //window placing begin
-	else if( istype(W,/obj/item/stack/sheet/rglass) || istype(W,/obj/item/stack/sheet/glass) )
+	else if( istype(W,/obj/item/stack/xeet/rglass) || istype(W,/obj/item/stack/xeet/glass) )
 		var/dir_to_set = 1
 		if(loc == user.loc)
 			dir_to_set = user.dir
@@ -150,7 +150,7 @@
 					user << "<span class='notice'>There is already a window facing this way there.</span>"
 					return
 			var/obj/structure/window/WD
-			if(istype(W,/obj/item/stack/sheet/rglass))
+			if(istype(W,/obj/item/stack/xeet/rglass))
 				WD = new/obj/structure/window(loc,1) //reinforced window
 			else
 				WD = new/obj/structure/window(loc,0) //normal window

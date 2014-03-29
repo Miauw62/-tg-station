@@ -45,7 +45,7 @@
 				<b>Implant Details:</b> <BR>
 				<b>Function:</b> Continuously transmits low power signal. Useful for tracking.<BR>
 				<b>Special Features:</b><BR>
-				<i>Neuro-Safe</i>- Specialized shell absorbs excess voltages self-destructing the chip if
+				<i>Neuro-Safe</i>- Specialized xell absorbs excess voltages self-destructing the chip if
 				a malfunction occurs thereby securing safety of subject. The implant will melt and
 				disintegrate into bio-safe elements.<BR>
 				<b>Integrity:</b> Gradient creates slight risk of being overcharged and frying the

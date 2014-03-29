@@ -11,7 +11,7 @@
 	turns_per_move = 5
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
 	response_help = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm = "hits"
 	speed = 0
 	maxHealth = 25
@@ -42,7 +42,7 @@
 /mob/living/simple_animal/hostile/carp/FindTarget()
 	. = ..()
 	if(.)
-		emote("nashes at [.]")
+		emote("naxes at [.]")
 
 /mob/living/simple_animal/hostile/carp/AttackingTarget()
 	. =..()

@@ -13,7 +13,7 @@
 <head>
 <title>Permissions Panel</title>
 <script type='text/javascript' src='search.js'></script>
-<link rel='stylesheet' type='text/css' href='panels.css'>
+<link rel='stylexeet' type='text/css' href='panels.css'>
 </head>
 <body onload='selectTextField();updateSearch();'>
 <div id='main'><table id='searchable' cellspacing='0'>

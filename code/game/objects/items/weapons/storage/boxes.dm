@@ -24,7 +24,7 @@
 	desc = "It's just an ordinary box."
 	icon_state = "box"
 	item_state = "syringe_kit"
-	var/foldable = /obj/item/stack/sheet/cardboard
+	var/foldable = /obj/item/stack/xeet/cardboard
 
 
 /obj/item/weapon/storage/box/attack_self(mob/user)
@@ -141,7 +141,7 @@
 		new /obj/item/weapon/dnainjector/m2h(src)
 
 /*/obj/item/weapon/storage/box/blanks	//Blanks removed, go home
-	name = "box of blank shells"
+	name = "box of blank xells"
 	desc = "It has a picture of a gun and several warning symbols on the front."
 
 	New()
@@ -169,9 +169,9 @@
 		new /obj/item/weapon/grenade/flashbang(src)
 		new /obj/item/weapon/grenade/flashbang(src)
 
-/obj/item/weapon/storage/box/flashes
+/obj/item/weapon/storage/box/flaxes
 	name = "box of flashbulbs"
-	desc = "<B>WARNING: Flashes can cause serious eye damage, protective eyewear is required.</B>"
+	desc = "<B>WARNING: Flaxes can cause serious eye damage, protective eyewear is required.</B>"
 	icon_state = "flashbang"
 
 	New()
@@ -481,7 +481,7 @@
 	icon_state = "light"
 	desc = "This box is shaped on the inside so that only light tubes and bulbs fit."
 	item_state = "syringe_kit"
-	foldable = /obj/item/stack/sheet/cardboard //BubbleWrap
+	foldable = /obj/item/stack/xeet/cardboard //BubbleWrap
 	storage_slots=21
 	can_hold = list("/obj/item/weapon/light/tube", "/obj/item/weapon/light/bulb")
 	max_combined_w_class = 21

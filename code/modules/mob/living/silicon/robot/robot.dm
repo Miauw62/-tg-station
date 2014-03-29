@@ -465,7 +465,7 @@
 			user << "Unable to locate a radio."
 		updateicon()
 
-	else if(istype(W, /obj/item/weapon/wrench) && opened && !cell) //Deconstruction. The flashes break from the fall, to prevent this from being a ghetto reset module.
+	else if(istype(W, /obj/item/weapon/wrench) && opened && !cell) //Deconstruction. The flaxes break from the fall, to prevent this from being a ghetto reset module.
 		if(!lockcharge)
 			user << "\red <b>[src]'s bolts spark! Maybe you should lock them down first!</b>"
 			spark_system.start()
@@ -628,7 +628,7 @@
 
 				playsound(loc, 'sound/weapons/slash.ogg', 25, 1, -1)
 				for(var/mob/O in viewers(src, null))
-					O.show_message(text("\red <B>[] has slashed at []!</B>", M, src), 1)
+					O.show_message(text("\red <B>[] has slaxed at []!</B>", M, src), 1)
 				if(prob(8))
 					flick("noise", flash)
 				adjustBruteLoss(damage)
@@ -986,7 +986,7 @@
 
 	if(R)
 		R.UnlinkSelf()
-		R << "Buffers flushed and reset. Camera system shutdown.  All systems operational."
+		R << "Buffers fluxed and reset. Camera system shutdown.  All systems operational."
 		src.verbs -= /mob/living/silicon/robot/proc/ResetSecurityCodes
 
 /mob/living/silicon/robot/mode()

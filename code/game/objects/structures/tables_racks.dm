@@ -48,7 +48,7 @@
 				/obj/item/clothing/suit/armor/vest = 1,
 				/obj/item/robot_parts/l_leg = 1,
 				/obj/item/robot_parts/r_leg = 1,
-				/obj/item/stack/sheet/metal = 5,
+				/obj/item/stack/xeet/metal = 5,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weapon/gun/energy/taser = 1,
 				/obj/item/weapon/stock_parts/cell = 1,
@@ -460,7 +460,7 @@
 /obj/structure/table/attack_paw(mob/user)
 	if(HULK in user.mutations)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
-		visible_message("<span class='danger'>[user] smashes the table apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes the table apart!</span>")
 		if(istype(src, /obj/structure/table/reinforced))
 			new /obj/item/weapon/table_parts/reinforced(loc)
 		else if(istype(src, /obj/structure/table/woodentable))
@@ -485,7 +485,7 @@
 
 /obj/structure/table/attack_animal(mob/living/simple_animal/user)
 	if(user.environment_smash)
-		visible_message("<span class='danger'>[user] smashes [src] apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes [src] apart!</span>")
 		if(istype(src, /obj/structure/table/reinforced))
 			new /obj/item/weapon/table_parts/reinforced(loc)
 		else if(istype(src, /obj/structure/table/woodentable))
@@ -500,7 +500,7 @@
 
 /obj/structure/table/attack_hand(mob/user)
 	if(HULK in user.mutations)
-		visible_message("<span class='danger'>[user] smashes [src] apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes [src] apart!</span>")
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
 		if(istype(src, /obj/structure/table/reinforced))
 			new /obj/item/weapon/table_parts/reinforced(loc)
@@ -551,8 +551,8 @@
 				return
 			G.affecting.loc = src.loc
 			G.affecting.Weaken(5)
-			G.affecting.visible_message("<span class='danger'>[G.assailant] pushes [G.affecting] onto [src].</span>", \
-										"<span class='userdanger'>[G.assailant] pushes [G.affecting] onto [src].</span>")
+			G.affecting.visible_message("<span class='danger'>[G.assailant] puxes [G.affecting] onto [src].</span>", \
+										"<span class='userdanger'>[G.assailant] puxes [G.affecting] onto [src].</span>")
 		qdel(I)
 		return
 
@@ -730,7 +730,7 @@ Destroy type values:
 
 /obj/structure/rack/attack_hand(mob/user)
 	if(HULK in user.mutations)
-		visible_message("<span class='danger'>[user] smashes [src] apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes [src] apart!</span>")
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
 		new /obj/item/weapon/rack_parts(loc)
 		density = 0
@@ -740,7 +740,7 @@ Destroy type values:
 /obj/structure/rack/attack_paw(mob/user)
 	if(HULK in user.mutations)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
-		visible_message("<span class='danger'>[user] smashes [src] apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes [src] apart!</span>")
 		new /obj/item/weapon/rack_parts(loc)
 		density = 0
 		qdel(src)
@@ -755,7 +755,7 @@ Destroy type values:
 
 /obj/structure/rack/attack_animal(mob/living/simple_animal/user)
 	if(user.environment_smash)
-		visible_message("<span class='danger'>[user] smashes [src] apart!</span>")
+		visible_message("<span class='danger'>[user] smaxes [src] apart!</span>")
 		new /obj/item/weapon/rack_parts(loc)
 		density = 0
 		qdel(src)

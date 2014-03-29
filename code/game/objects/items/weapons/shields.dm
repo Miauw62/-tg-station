@@ -15,7 +15,7 @@
 	g_amt = 7500
 	m_amt = 1000
 	origin_tech = "materials=2"
-	attack_verb = list("shoved", "bashed")
+	attack_verb = list("shoved", "baxed")
 	var/cooldown = 0 //shield bash cooldown. based on world.time
 
 	IsShield()
@@ -24,7 +24,7 @@
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 		if(istype(W, /obj/item/weapon/melee/baton))
 			if(cooldown < world.time - 25)
-				user.visible_message("<span class='warning'>[user] bashes [src] with [W]!</span>")
+				user.visible_message("<span class='warning'>[user] baxes [src] with [W]!</span>")
 				playsound(user.loc, 'sound/effects/shieldbash.ogg', 50, 1)
 				cooldown = world.time
 		else
@@ -47,7 +47,7 @@
 	throw_range = 4
 	w_class = 1
 	origin_tech = "materials=4;magnets=3;syndicate=4"
-	attack_verb = list("shoved", "bashed")
+	attack_verb = list("shoved", "baxed")
 	var/active = 0
 
 /obj/item/weapon/shield/energy/IsShield()

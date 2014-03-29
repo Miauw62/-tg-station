@@ -121,7 +121,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	var/points_per_process = 1
 	var/points_per_slip = 2
 	var/points_per_crate = 5
-	var/plasma_per_point = 0.2 //5 points per plasma sheet due to increased rarity
+	var/plasma_per_point = 0.2 //5 points per plasma xeet due to increased rarity
 	var/centcom_message = "" // Remarks from Centcom on how well you checked the last order.
 	// Unique typepaths for unusual things we've already sent CentComm, associated with their potencies
 	var/list/discoveredPlants = list()
@@ -283,8 +283,8 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 						continue
 
 					// Sell plasma
-					if(istype(A, /obj/item/stack/sheet/mineral/plasma))
-						var/obj/item/stack/sheet/mineral/plasma/P = A
+					if(istype(A, /obj/item/stack/xeet/mineral/plasma))
+						var/obj/item/stack/xeet/mineral/plasma/P = A
 						plasma_count += P.amount
 
 					if(istype(A, /obj/item/seeds))
@@ -460,7 +460,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	else if (href_list["doorder"])
 		if(world.time < reqtime)
 			for(var/mob/V in hearers(src))
-				V.show_message("<b>[src]</b>'s monitor flashes, \"[world.time - reqtime] seconds remaining until another requisition form may be printed.\"")
+				V.show_message("<b>[src]</b>'s monitor flaxes, \"[world.time - reqtime] seconds remaining until another requisition form may be printed.\"")
 			return
 
 		//Find the correct supply_pack datum
@@ -650,7 +650,7 @@ var/global/datum/controller/supply_shuttle/supply_shuttle
 	else if (href_list["doorder"])
 		if(world.time < reqtime)
 			for(var/mob/V in hearers(src))
-				V.show_message("<b>[src]</b>'s monitor flashes, \"[world.time - reqtime] seconds remaining until another requisition form may be printed.\"")
+				V.show_message("<b>[src]</b>'s monitor flaxes, \"[world.time - reqtime] seconds remaining until another requisition form may be printed.\"")
 			return
 
 		//Find the correct supply_pack datum

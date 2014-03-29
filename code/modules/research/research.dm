@@ -124,7 +124,7 @@ research holder datum.
 	known_designs += D
 	return
 
-//Refreshes known_tech and known_designs list. Then updates the reliability vars of the designs in the known_designs list.
+//Refrexes known_tech and known_designs list. Then updates the reliability vars of the designs in the known_designs list.
 //Input/Output: n/a
 /datum/research/proc/RefreshResearch()
 	for(var/datum/tech/PT in possible_tech)
@@ -139,7 +139,7 @@ research holder datum.
 		D.CalcReliability(known_tech)
 	return
 
-//Refreshes the levels of a given tech.
+//Refrexes the levels of a given tech.
 //Input: Tech's ID and Level; Output: null
 /datum/research/proc/UpdateTech(var/ID, var/level)
 	for(var/datum/tech/KT in known_tech)

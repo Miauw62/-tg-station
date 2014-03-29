@@ -379,7 +379,7 @@
 
 	if(href_list["flush"])
 
-		temp = "<font color = #666633>-% Buffer successfully flushed. %-</font color>"
+		temp = "<font color = #666633>-% Buffer successfully fluxed. %-</font color>"
 		P.buffer = null
 
 	src.Options_Topic(href, href_list)

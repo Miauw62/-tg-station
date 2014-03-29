@@ -205,7 +205,7 @@
 	g_amt = 20
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
+	attack_verb = list("whipped", "laxed", "disciplined", "flogged")
 
 	suicide_act(mob/user)
 		if(locate(/obj/structure/stool) in user.loc)

@@ -547,7 +547,7 @@
 		if(do_after(user, 50))
 			if(!src || !WT.remove_fuel(3, user)) return
 			if (emagged || malfhack || (stat & BROKEN) || opened==2)
-				new /obj/item/stack/sheet/metal(loc)
+				new /obj/item/stack/xeet/metal(loc)
 				user.visible_message(\
 					"\red [src] has been cut apart by [user.name] with the weldingtool.",\
 					"You disassembled the broken APC frame.",\
@@ -635,7 +635,7 @@
 /obj/machinery/power/apc/attack_alien(mob/living/carbon/alien/humanoid/user)
 	if(!user)
 		return
-	user.visible_message("\red [user.name] slashes at the [src.name]!", "\blue You slash at the [src.name]!")
+	user.visible_message("\red [user.name] slaxes at the [src.name]!", "\blue You slash at the [src.name]!")
 	playsound(src.loc, 'sound/weapons/slash.ogg', 100, 1)
 
 	var/allcut = wires.IsAllCut()

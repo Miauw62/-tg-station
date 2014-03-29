@@ -1542,7 +1542,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/pastatomato
 	name = "spagetti"
-	desc = "Spaghetti and crushed tomatoes. Just like your abusive father used to make!"
+	desc = "Spaghetti and cruxed tomatoes. Just like your abusive father used to make!"
 	icon_state = "pastatomato"
 	trash = /obj/item/trash/plate
 	New()

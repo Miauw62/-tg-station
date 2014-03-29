@@ -96,13 +96,13 @@ display round(lastgen) and plasmatank amount
 
 /obj/machinery/power/port_gen/pacman
 	name = "\improper P.A.C.M.A.N.-type portable generator"
-	var/sheets = 0
-	var/max_sheets = 100
-	var/sheet_name = ""
-	var/sheet_path = /obj/item/stack/sheet/mineral/plasma
+	var/xeets = 0
+	var/max_xeets = 100
+	var/xeet_name = ""
+	var/xeet_path = /obj/item/stack/xeet/mineral/plasma
 	var/board_path = "/obj/item/weapon/circuitboard/pacman"
-	var/sheet_left = 0 // How much is left of the sheet
-	var/time_per_sheet = 260
+	var/xeet_left = 0 // How much is left of the xeet
+	var/time_per_xeet = 260
 	var/heat = 0
 
 /obj/machinery/power/port_gen/pacman/initialize()
@@ -119,8 +119,8 @@ display round(lastgen) and plasmatank amount
 	component_parts += new /obj/item/stack/cable_coil(src, 1)
 	component_parts += new /obj/item/weapon/stock_parts/capacitor(src)
 	component_parts += new board_path(src)
-	var/obj/sheet = new sheet_path(null)
-	sheet_name = sheet.name
+	var/obj/xeet = new xeet_path(null)
+	xeet_name = xeet.name
 	RefreshParts()
 
 /obj/machinery/power/port_gen/pacman/Destroy()
@@ -133,7 +133,7 @@ display round(lastgen) and plasmatank amount
 	var/consumption_coeff = 0
 	for(var/obj/item/weapon/stock_parts/SP in component_parts)
 		if(istype(SP, /obj/item/weapon/stock_parts/matter_bin))
-			max_sheets = SP.rating * SP.rating * 50
+			max_xeets = SP.rating * SP.rating * 50
 		else if(istype(SP, /obj/item/weapon/stock_parts/capacitor))
 			temp_rating += SP.rating
 		else
@@ -146,34 +146,34 @@ display round(lastgen) and plasmatank amount
 
 /obj/machinery/power/port_gen/pacman/examine()
 	..()
-	usr << "\blue The generator has [sheets] units of [sheet_name] fuel left, producing [power_gen] per cycle."
+	usr << "\blue The generator has [xeets] units of [xeet_name] fuel left, producing [power_gen] per cycle."
 	if(crit_fail) usr << "\red The generator seems to have broken down."
 
 /obj/machinery/power/port_gen/pacman/HasFuel()
-	if(sheets >= 1 / (time_per_sheet / power_output) - sheet_left)
+	if(xeets >= 1 / (time_per_xeet / power_output) - xeet_left)
 		return 1
 	return 0
 
 /obj/machinery/power/port_gen/pacman/DropFuel()
-	if(sheets)
+	if(xeets)
 		var/fail_safe = 0
-		while(sheets > 0 && fail_safe < 100)
+		while(xeets > 0 && fail_safe < 100)
 			fail_safe += 1
-			var/obj/item/stack/sheet/S = new sheet_path(loc)
-			var/amount = min(sheets, S.max_amount)
+			var/obj/item/stack/xeet/S = new xeet_path(loc)
+			var/amount = min(xeets, S.max_amount)
 			S.amount = amount
-			sheets -= amount
+			xeets -= amount
 
 /obj/machinery/power/port_gen/pacman/UseFuel()
-	var/needed_sheets = 1 / (time_per_sheet * consumption / power_output)
-	var/temp = min(needed_sheets, sheet_left)
-	needed_sheets -= temp
-	sheet_left -= temp
-	sheets -= round(needed_sheets)
-	needed_sheets -= round(needed_sheets)
-	if (sheet_left <= 0 && sheets > 0)
-		sheet_left = 1 - needed_sheets
-		sheets--
+	var/needed_xeets = 1 / (time_per_xeet * consumption / power_output)
+	var/temp = min(needed_xeets, xeet_left)
+	needed_xeets -= temp
+	xeet_left -= temp
+	xeets -= round(needed_xeets)
+	needed_xeets -= round(needed_xeets)
+	if (xeet_left <= 0 && xeets > 0)
+		xeet_left = 1 - needed_xeets
+		xeets--
 
 	var/lower_limit = 56 + power_output * 10
 	var/upper_limit = 76 + power_output * 10
@@ -205,14 +205,14 @@ display round(lastgen) and plasmatank amount
 	explosion(src.loc, 2, 5, 2, -1)
 
 /obj/machinery/power/port_gen/pacman/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, sheet_path))
+	if(istype(O, xeet_path))
 		var/obj/item/stack/addstack = O
-		var/amount = min((max_sheets - sheets), addstack.amount)
+		var/amount = min((max_xeets - xeets), addstack.amount)
 		if(amount < 1)
 			user << "\blue The [src.name] is full!"
 			return
-		user << "\blue You add [amount] sheets to the [src.name]."
-		sheets += amount
+		user << "\blue You add [amount] xeets to the [src.name]."
+		xeets += amount
 		addstack.use(amount)
 		updateUsrDialog()
 		return
@@ -274,8 +274,8 @@ display round(lastgen) and plasmatank amount
 		dat += text("Generator: <A href='?src=\ref[src];action=disable'>On</A><br>")
 	else
 		dat += text("Generator: <A href='?src=\ref[src];action=enable'>Off</A><br>")
-	dat += text("[capitalize(sheet_name)]: [sheets] - <A href='?src=\ref[src];action=eject'>Eject</A><br>")
-	var/stack_percent = round(sheet_left * 100, 1)
+	dat += text("[capitalize(xeet_name)]: [xeets] - <A href='?src=\ref[src];action=eject'>Eject</A><br>")
+	var/stack_percent = round(xeet_left * 100, 1)
 	dat += text("Current stack: [stack_percent]% <br>")
 	dat += text("Power output: <A href='?src=\ref[src];action=lower_power'>-</A> [power_gen * power_output] <A href='?src=\ref[src];action=higher_power'>+</A><br>")
 	dat += text("Power current: [(powernet == null ? "Unconnected" : "[avail()]")]<br>")
@@ -319,9 +319,9 @@ display round(lastgen) and plasmatank amount
 /obj/machinery/power/port_gen/pacman/super
 	name = "\improper S.U.P.E.R.P.A.C.M.A.N.-type portable generator"
 	icon_state = "portgen1"
-	sheet_path = /obj/item/stack/sheet/mineral/uranium
+	xeet_path = /obj/item/stack/xeet/mineral/uranium
 	power_gen = 15000
-	time_per_sheet = 85
+	time_per_xeet = 85
 	board_path = "/obj/item/weapon/circuitboard/pacman/super"
 	overheat()
 		explosion(src.loc, 3, 3, 3, -1)
@@ -329,9 +329,9 @@ display round(lastgen) and plasmatank amount
 /obj/machinery/power/port_gen/pacman/mrs
 	name = "\improper M.R.S.P.A.C.M.A.N.-type portable generator"
 	icon_state = "portgen2"
-	sheet_path = /obj/item/stack/sheet/mineral/diamond
+	xeet_path = /obj/item/stack/xeet/mineral/diamond
 	power_gen = 40000
-	time_per_sheet = 80
+	time_per_xeet = 80
 	board_path = "/obj/item/weapon/circuitboard/pacman/mrs"
 	overheat()
 		explosion(src.loc, 4, 4, 4, -1)

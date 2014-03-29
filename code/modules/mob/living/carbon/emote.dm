@@ -36,7 +36,7 @@
 			m_type = 1
 
 		if ("blush")
-			message = "<B>[src]</B> blushes."
+			message = "<B>[src]</B> bluxes."
 			m_type = 1
 
 		if ("bow")

@@ -10,7 +10,7 @@
 	throw_range = 7
 	flags = CONDUCT
 	max_amount = 60
-	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "smashed")
+	attack_verb = list("baxed", "battered", "bludgeoned", "thraxed", "smaxed")
 	var/on = 1
 	var/state //0 = fine, 1 = flickering, 2 = breaking, 3 = broken
 
@@ -28,7 +28,7 @@
 /obj/item/stack/tile/light/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	..()
 	if(istype(O,/obj/item/weapon/crowbar))
-		new/obj/item/stack/sheet/metal(user.loc)
+		new/obj/item/stack/xeet/metal(user.loc)
 		amount--
 		new/obj/item/stack/light_w(user.loc)
 		if(amount <= 0)

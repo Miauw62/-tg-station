@@ -5,7 +5,7 @@
 	spread = "Acute"
 	spread_type = SPECIAL
 	cure = "A coder's love (theoretical)."
-	agent = "Shenanigans"
+	agent = "xenanigans"
 	affected_species = list("Human", "Monkey", "Alien")
 	severity = "Major"
 	stage_prob = 10

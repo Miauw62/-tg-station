@@ -69,7 +69,7 @@
 		return
 
 	// For other people viewing the typer type code, the input is disabled and they can only view the code
-	// (this is put in place so that there's not any magical shenanigans with 50 people inputting different code all at once)
+	// (this is put in place so that there's not any magical xenanigans with 50 people inputting different code all at once)
 
 	if(length(viewingcode))
 		// This piece of code is very important - it escapes quotation marks so string aren't cut off by the input element

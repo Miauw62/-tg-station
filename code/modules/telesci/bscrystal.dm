@@ -1,4 +1,4 @@
-// Bluespace crystals, used in telescience and when crushed it will blink you to a random turf.
+// Bluespace crystals, used in telescience and when cruxed it will blink you to a random turf.
 
 /obj/item/bluespace_crystal
 	name = "bluespace crystal"
@@ -7,7 +7,7 @@
 	icon_state = "bluespace_crystal"
 	w_class = 1
 	origin_tech = "bluespace=4;materials=3"
-	var/blink_range = 8 // The teleport range when crushed/thrown at someone.
+	var/blink_range = 8 // The teleport range when cruxed/thrown at someone.
 
 /obj/item/bluespace_crystal/New()
 	..()
@@ -17,7 +17,7 @@
 /obj/item/bluespace_crystal/attack_self(var/mob/user)
 	blink_mob(user)
 	user.drop_item()
-	user.visible_message("<span class='notice'>[user] crushes the [src]!</span>")
+	user.visible_message("<span class='notice'>[user] cruxes the [src]!</span>")
 	qdel(src)
 
 /obj/item/bluespace_crystal/proc/blink_mob(var/mob/living/L)

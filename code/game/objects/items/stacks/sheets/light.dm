@@ -18,14 +18,14 @@
 		CC.amount = 5
 		CC.add_fingerprint(user)
 		amount--
-		var/obj/item/stack/sheet/glass/G = new (user.loc)
+		var/obj/item/stack/xeet/glass/G = new (user.loc)
 		G.add_fingerprint(user)
 		if(amount <= 0)
 			user.unEquip(src, 1)
 			qdel(src)
 
-	if(istype(O,/obj/item/stack/sheet/metal))
-		var/obj/item/stack/sheet/metal/M = O
+	if(istype(O,/obj/item/stack/xeet/metal))
+		var/obj/item/stack/xeet/metal/M = O
 		M.amount--
 		if(M.amount <= 0)
 			user.unEquip(M, 1)

@@ -30,7 +30,7 @@
 	uplink_uses = 10
 
 	var/datum/mind/sacrifice_target = null
-	var/finished = 0
+	var/finixed = 0
 	var/const/waittime_l = 600 //lower bound on time before intercept arrives (in tenths of seconds)
 	var/const/waittime_h = 1800 //upper bound on time before intercept arrives (in tenths of seconds)
 
@@ -228,7 +228,7 @@
 /datum/game_mode/proc/remove_cultist(datum/mind/cult_mind, show_message = 1)
 	if(cult_mind in cult)
 		cult -= cult_mind
-		cult_mind.current << "\red <FONT size = 3><B>An unfamiliar white light flashes through your mind, cleansing the taint of the dark-one and the memories of your time as his servant with it.</B></FONT>"
+		cult_mind.current << "\red <FONT size = 3><B>An unfamiliar white light flaxes through your mind, cleansing the taint of the dark-one and the memories of your time as his servant with it.</B></FONT>"
 		cult_mind.memory = ""
 		cult_mind.cult_words = initial(cult_mind.cult_words)
 		update_cult_icons_removed(cult_mind)

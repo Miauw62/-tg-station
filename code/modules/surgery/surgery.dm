@@ -35,7 +35,7 @@
 //As of Feb 21 2013 they are in code/modules/mob/living/carbon/carbon.dm, lines 459 and 51 respectively.
 //Other important variables are var/list/surgeries (/mob/living) and var/list/internal_organs (/mob/living/carbon)
 // var/list/organs (/mob/living/carbon/human) is the LIMBS of a Mob.
-//Surgical procedures are initiated by attempt_initiate_surgery(), which is called by surgical drapes and bedsheets.
+//Surgical procedures are initiated by attempt_initiate_surgery(), which is called by surgical drapes and bedxeets.
 // /code/modules/surgery/multiple_location_example.dm contains steps to setup a multiple location operation.
 
 

@@ -384,7 +384,7 @@
 			occupant_message("<font color='blue'><b>Life support system reactivated.</b></font>")
 			pr_int_temp_processor.start()
 		if(MECHA_INT_FIRE)
-			occupant_message("<font color='blue'><b>Internal fire extinquished.</b></font>")
+			occupant_message("<font color='blue'><b>Internal fire extinquixed.</b></font>")
 		if(MECHA_INT_TANK_BREACH)
 			occupant_message("<font color='blue'><b>Damaged internal tank has been sealed.</b></font>")
 	return
@@ -439,7 +439,7 @@
 		src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 		playsound(src.loc, 'sound/weapons/slash.ogg', 50, 1, -1)
 		user << "\red You slash at the armored suit!"
-		visible_message("\red The [user] slashes at [src.name]'s armor!")
+		visible_message("\red The [user] slaxes at [src.name]'s armor!")
 	else
 		src.log_append_to_last("Armor saved.")
 		playsound(src.loc, 'sound/weapons/slash.ogg', 50, 1, -1)
@@ -598,7 +598,7 @@
 		user << "\red You smash at the armored suit!"
 		for (var/mob/V in viewers(src))
 			if(V.client && !(V.blinded))
-				V.show_message("\red The [user] smashes against [src.name]'s armor!", 1)
+				V.show_message("\red The [user] smaxes against [src.name]'s armor!", 1)
 	else
 		src.log_append_to_last("Armor saved.")
 		playsound(src.loc, 'sound/effects/blobattack.ogg', 50, 1, -1)
@@ -1575,7 +1575,7 @@ var/year_integer = text2num(year) // = 2013???
 			if(T == src.loc)
 				src.clearInternalDamage(MECHA_INT_CONTROL_LOST)
 				src.occupant_message("<font color='blue'>Recalibration successful.</font>")
-				src.log_message("Recalibration of coordination system finished with 0 errors.")
+				src.log_message("Recalibration of coordination system finixed with 0 errors.")
 			else
 				src.occupant_message("<font color='red'>Recalibration failed.</font>")
 				src.log_message("Recalibration of coordination system failed with 1 error.",1)

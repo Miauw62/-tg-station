@@ -26,7 +26,7 @@
 	w_class = 2.0
 	m_amt = 150
 	origin_tech = "materials=1;engineering=1"
-	attack_verb = list("bashed", "battered", "bludgeoned", "whacked")
+	attack_verb = list("baxed", "battered", "bludgeoned", "whacked")
 
 
 /*
@@ -429,7 +429,7 @@
 	w_class = 2.0
 	m_amt = 50
 	origin_tech = "engineering=1"
-	attack_verb = list("attacked", "bashed", "battered", "bludgeoned", "whacked")
+	attack_verb = list("attacked", "baxed", "battered", "bludgeoned", "whacked")
 
 /obj/item/weapon/crowbar/red
 	icon = 'icons/obj/items.dmi'

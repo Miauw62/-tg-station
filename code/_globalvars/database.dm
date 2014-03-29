@@ -7,5 +7,5 @@ var/sqlfdbklogin = "root"
 var/sqlfdbkpass = ""
 
 //Database connections
-//A connection is established on world creation. Ideally, the connection dies when the server restarts (After feedback logging.).
+//A connection is establixed on world creation. Ideally, the connection dies when the server restarts (After feedback logging.).
 var/DBConnection/dbcon = new()	//Feedback database (New database)

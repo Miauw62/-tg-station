@@ -177,15 +177,15 @@ var/const/GRAV_NEEDS_WRENCH = 3
 					playsound(src.loc, 'sound/items/Welder2.ogg', 50, 1)
 					broken_state++
 		if(GRAV_NEEDS_PLASTEEL)
-			if(istype(I, /obj/item/stack/sheet/plasteel))
-				var/obj/item/stack/sheet/plasteel/PS = I
+			if(istype(I, /obj/item/stack/xeet/plasteel))
+				var/obj/item/stack/xeet/plasteel/PS = I
 				if(PS.amount >= 10)
 					PS.use(10)
 					user << "<span class='notice'>You add the plating to the framework.</span>"
 					playsound(src.loc, 'sound/machines/click.ogg', 75, 1)
 					broken_state++
 				else
-					user << "<span class='notice'>You need 10 sheets of plasteel.</span>"
+					user << "<span class='notice'>You need 10 xeets of plasteel.</span>"
 		if(GRAV_NEEDS_WRENCH)
 			if(istype(I, /obj/item/weapon/wrench))
 				user << "<span class='notice'>You secure the plating to the framework.</span>"

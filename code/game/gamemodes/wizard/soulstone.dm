@@ -75,13 +75,13 @@
 		attack_self(U)
 
 ///////////////////////////Transferring to constructs/////////////////////////////////////////////////////
-/obj/structure/constructshell
-	name = "empty shell"
+/obj/structure/constructxell
+	name = "empty xell"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "construct"
 	desc = "A wicked machine used by those skilled in magical arts. It is inactive"
 
-/obj/structure/constructshell/attackby(obj/item/O as obj, mob/user as mob)
+/obj/structure/constructxell/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/device/soulstone))
 		O.transfer_soul("CONSTRUCT",src,user)
 
@@ -136,7 +136,7 @@
 			var/mob/living/simple_animal/shade/T = target
 			var/obj/item/device/soulstone/C = src
 			if (T.stat == DEAD)
-				U << "\red <b>Capture failed!</b>: \black The shade has already been banished!"
+				U << "\red <b>Capture failed!</b>: \black The shade has already been banixed!"
 			else
 				if(C.contents.len)
 					U << "\red <b>Capture failed!</b>: \black The soul stone is full! Use or free an existing soul to make room."
@@ -152,7 +152,7 @@
 						T << "Your soul has been recaptured by the soul stone, its arcane energies are reknitting your ethereal form"
 						U << "\blue <b>Capture successful!</b>: \black [T.name]'s has been recaptured and stored within the soul stone."
 		if("CONSTRUCT")
-			var/obj/structure/constructshell/T = target
+			var/obj/structure/constructxell/T = target
 			var/obj/item/device/soulstone/C = src
 			var/mob/living/simple_animal/shade/A = locate() in C
 			if(A)
@@ -168,7 +168,7 @@
 								ticker.mode.cult+=Z.mind
 							ticker.mode.update_cult_icons_added(Z.mind)
 						qdel(T)
-						Z << "<B>You are a Juggernaut. Though slow, your shell can withstand extreme punishment, create shield walls and even deflect energy weapons, and rip apart enemies and walls alike.</B>"
+						Z << "<B>You are a Juggernaut. Though slow, your xell can withstand extreme punishment, create shield walls and even deflect energy weapons, and rip apart enemies and walls alike.</B>"
 						Z << "<B>You are still bound to serve your creator, follow their orders and help them complete their goals at all costs.</B>"
 						Z.cancel_camera()
 						qdel(C)
@@ -198,7 +198,7 @@
 								ticker.mode.cult+=Z.mind
 							ticker.mode.update_cult_icons_added(Z.mind)
 						qdel(T)
-						Z << "<B>You are an Artificer. You are incredibly weak and fragile, but you are able to construct fortifications, use magic missile, repair allied constructs (by clicking on them), </B><I>and most important of all create new constructs</I><B> (Use your Artificer spell to summon a new construct shell and Summon Soulstone to create a new soulstone).</B>"
+						Z << "<B>You are an Artificer. You are incredibly weak and fragile, but you are able to construct fortifications, use magic missile, repair allied constructs (by clicking on them), </B><I>and most important of all create new constructs</I><B> (Use your Artificer spell to summon a new construct xell and Summon Soulstone to create a new soulstone).</B>"
 						Z << "<B>You are still bound to serve your creator, follow their orders and help them complete their goals at all costs.</B>"
 						Z.cancel_camera()
 						qdel(C)

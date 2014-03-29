@@ -5,7 +5,7 @@
 	icon_state = "utilitybelt"
 	item_state = "utility"
 	slot_flags = SLOT_BELT
-	attack_verb = list("whipped", "lashed", "disciplined")
+	attack_verb = list("whipped", "laxed", "disciplined")
 
 
 /obj/item/weapon/storage/belt/proc/can_use()
@@ -98,7 +98,7 @@
 
 /obj/item/weapon/storage/belt/security
 	name = "security belt"
-	desc = "Can hold security gear like handcuffs and flashes."
+	desc = "Can hold security gear like handcuffs and flaxes."
 	icon_state = "securitybelt"
 	item_state = "security"//Could likely use a better one.
 	storage_slots = 5

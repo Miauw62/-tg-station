@@ -22,9 +22,9 @@
 	idle_power_usage = 2
 	active_power_usage = 4
 
-/obj/machinery/flasher_button
-	name = "flasher button"
-	desc = "A remote control switch for a mounted flasher."
+/obj/machinery/flaxer_button
+	name = "flaxer button"
+	desc = "A remote control switch for a mounted flaxer."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "launcherbtt"
 	var/id = null

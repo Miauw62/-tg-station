@@ -6,7 +6,7 @@
 	var/height = 0
 	var/atom/ref = null
 	var/window_options = "focus=0;can_close=1;can_minimize=1;can_maximize=0;can_resize=1;titlebar=1;" // window option is set using window_id
-	var/stylesheets[0]
+	var/stylexeets[0]
 	var/scripts[0]
 	var/title_image
 	var/head_elements
@@ -27,7 +27,7 @@
 		height = nheight
 	if (nref)
 		ref = nref
-	add_stylesheet("common", 'html/browser/common.css') // this CSS sheet is common to all UIs
+	add_stylexeet("common", 'html/browser/common.css') // this CSS xeet is common to all UIs
 
 /datum/browser/proc/add_head_content(nhead_content)
 	head_content = nhead_content
@@ -38,8 +38,8 @@
 /datum/browser/proc/set_title_image(ntitle_image)
 	//title_image = ntitle_image
 
-/datum/browser/proc/add_stylesheet(name, file)
-	stylesheets[name] = file
+/datum/browser/proc/add_stylexeet(name, file)
+	stylexeets[name] = file
 
 /datum/browser/proc/add_script(name, file)
 	scripts[name] = file
@@ -53,10 +53,10 @@
 /datum/browser/proc/get_header()
 	var/key
 	var/filename
-	for (key in stylesheets)
+	for (key in stylexeets)
 		filename = "[ckey(key)].css"
-		user << browse_rsc(stylesheets[key], filename)
-		head_content += "<link rel='stylesheet' type='text/css' href='[filename]'>"
+		user << browse_rsc(stylexeets[key], filename)
+		head_content += "<link rel='stylexeet' type='text/css' href='[filename]'>"
 
 	for (key in scripts)
 		filename = "[ckey(key)].js"

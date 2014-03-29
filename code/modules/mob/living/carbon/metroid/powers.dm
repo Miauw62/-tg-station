@@ -111,7 +111,7 @@
 					src << "\red <i>[pick("This subject is incompatable", \
 					"This subject does not have a life energy", "This subject is empty", \
 					"I am not satisified", "I can not feed from this subject", \
-					"I do not feel nourished", "This subject is not food")]...</i>"
+					"I do not feel nourixed", "This subject is not food")]...</i>"
 
 			sleep(rand(15,45))
 

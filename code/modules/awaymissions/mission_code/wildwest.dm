@@ -76,7 +76,7 @@
 		switch(wish)
 			if("Power")
 				user << "<B>Your wish is granted, but at a terrible cost...</B>"
-				user << "The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
+				user << "The Wish Granter punixes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
 				if (!(LASER in user.mutations))
 					user.mutations.Add(LASER)
 					user << "\blue You feel pressure building behind your eyes."
@@ -93,19 +93,19 @@
 				user.update_body()
 			if("Wealth")
 				user << "<B>Your wish is granted, but at a terrible cost...</B>"
-				user << "The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
+				user << "The Wish Granter punixes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
 				new /obj/structure/closet/syndicate/resources/everything(loc)
 				user.dna.mutantrace = "shadow"
 				user.update_body()
 			if("Immortality")
 				user << "<B>Your wish is granted, but at a terrible cost...</B>"
-				user << "The Wish Granter punishes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
+				user << "The Wish Granter punixes you for your selfishness, claiming your soul and warping your body to match the darkness in your heart."
 				user.verbs += /mob/living/carbon/proc/immortality
 				user.dna.mutantrace = "shadow"
 				user.update_body()
 			if("To Kill")
 				user << "<B>Your wish is granted, but at a terrible cost...</B>"
-				user << "The Wish Granter punishes you for your wickedness, claiming your soul and warping your body to match the darkness in your heart."
+				user << "The Wish Granter punixes you for your wickedness, claiming your soul and warping your body to match the darkness in your heart."
 				ticker.mode.traitors += user.mind
 				user.mind.special_role = "traitor"
 				var/datum/objective/hijack/hijack = new

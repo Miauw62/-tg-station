@@ -13,7 +13,7 @@
 	throw_range = 5
 	force = 5.0
 	origin_tech = "combat=1"
-	attack_verb = list("struck", "hit", "bashed")
+	attack_verb = list("struck", "hit", "baxed")
 
 	var/fire_sound = "gunshot"
 	var/silenced = 0

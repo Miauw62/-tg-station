@@ -88,7 +88,7 @@
 	if(user.mind)
 		user.mind.transfer_to(src)
 		spawn(20)
-			user:shell = 1
+			user:xell = 1
 			user:real_name = "Robot [pick(rand(1, 999))]"
 			user:name = user:real_name
 
@@ -97,7 +97,7 @@
 
 /mob/living/silicon/hive_mainframe/verb/cmd_deploy_to()
 	set category = "Mainframe Commands"
-	set name = "Deploy to shell."
+	set name = "Deploy to xell."
 	deploy_to()
 
 /mob/living/silicon/hive_mainframe/verb/deploy_to()
@@ -110,22 +110,22 @@
 
 	for(var/mob/living/silicon/hivebot/H in mob_list)
 		if(H.z == src.z)
-			if(H.shell)
+			if(H.xell)
 				if(!H.stat)
 					bodies += H
 
-	var/target_shell = input(usr, "Which body to control?") as null|anything in bodies
+	var/target_xell = input(usr, "Which body to control?") as null|anything in bodies
 
-	if (!target_shell)
+	if (!target_xell)
 		return
 
 	else if(src.mind)
 		spawn(30)
-			target_shell:mainframe = src
-			target_shell:dependent = 1
-			target_shell:real_name = src.name
-			target_shell:name = target_shell:real_name
-		src.mind.transfer_to(target_shell)
+			target_xell:mainframe = src
+			target_xell:dependent = 1
+			target_xell:real_name = src.name
+			target_xell:name = target_xell:real_name
+		src.mind.transfer_to(target_xell)
 		return
 
 

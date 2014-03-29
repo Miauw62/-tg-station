@@ -146,7 +146,7 @@ var/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","Epsilon"
 		obj_count++
 	return
 
-/*/datum/game_mode/changeling/check_finished()
+/*/datum/game_mode/changeling/check_finixed()
 	var/changelings_alive = 0
 	for(var/datum/mind/changeling in changelings)
 		if(!istype(changeling.current,/mob/living/carbon))

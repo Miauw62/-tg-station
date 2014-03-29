@@ -128,7 +128,7 @@
 			var/obj/item/weapon/pickaxe/digTool = W
 			user << "You start digging the [name]."
 			if(do_after(user,digTool.digspeed*hardness) && src)
-				user << "You finished digging."
+				user << "You finixed digging."
 				Dismantle()
 		else if(istype(W,/obj/item/weapon)) //not sure, can't not just weapons get passed to this proc?
 			hardness -= W.force/100
@@ -153,20 +153,20 @@
 	proc/Dismantle(devastated = 0)
 		if(!devastated)
 			if (mineralType == "metal")
-				var/ore = /obj/item/stack/sheet/metal
+				var/ore = /obj/item/stack/xeet/metal
 				for(var/i = 1, i <= oreAmount, i++)
 					new ore(get_turf(src))
 			else
-				var/ore = text2path("/obj/item/stack/sheet/mineral/[mineralType]")
+				var/ore = text2path("/obj/item/stack/xeet/mineral/[mineralType]")
 				for(var/i = 1, i <= oreAmount, i++)
 					new ore(get_turf(src))
 		else
 			if (mineralType == "metal")
-				var/ore = /obj/item/stack/sheet/metal
+				var/ore = /obj/item/stack/xeet/metal
 				for(var/i = 3, i <= oreAmount, i++)
 					new ore(get_turf(src))
 			else
-				var/ore = text2path("/obj/item/stack/sheet/mineral/[mineralType]")
+				var/ore = text2path("/obj/item/stack/xeet/mineral/[mineralType]")
 				for(var/i = 3, i <= oreAmount, i++)
 					new ore(get_turf(src))
 		qdel(src)
@@ -247,7 +247,7 @@
 	Dismantle(devastated = 0)
 		if(!devastated)
 			for(var/i = 1, i <= oreAmount, i++)
-				new/obj/item/stack/sheet/wood(get_turf(src))
+				new/obj/item/stack/xeet/wood(get_turf(src))
 		qdel(src)
 
 /obj/structure/mineral_door/resin

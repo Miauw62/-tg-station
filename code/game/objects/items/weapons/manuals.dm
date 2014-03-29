@@ -261,10 +261,10 @@
 				<li>Secure the mainboard with a screwdriver.</li>
 				<li>Install the peripherals control module (Not included. Use supplied datadisk to create one).</li>
 				<li>Secure the peripherals control module with a screwdriver</li>
-				<li>Install the internal armor plating (Not included due to Nanotrasen regulations. Can be made using 5 metal sheets.)</li>
+				<li>Install the internal armor plating (Not included due to Nanotrasen regulations. Can be made using 5 metal xeets.)</li>
 				<li>Secure the internal armor plating with a wrench</li>
 				<li>Weld the internal armor plating to the chassis</li>
-				<li>Install the external reinforced armor plating (Not included due to Nanotrasen regulations. Can be made using 5 reinforced metal sheets.)</li>
+				<li>Install the external reinforced armor plating (Not included due to Nanotrasen regulations. Can be made using 5 reinforced metal xeets.)</li>
 				<li>Secure the external reinforced armor plating with a wrench</li>
 				<li>Weld the external reinforced armor plating to the chassis</li>
 				<li></li>
@@ -272,7 +272,7 @@
 				<li>The firefighting variation is made in a similar fashion.</li>
 				<li>A firesuit must be connected to the Firefighter chassis for heat shielding.</li>
 				<li>Internal armor is plasteel for additional strength.</li>
-				<li>External armor must be installed in 2 parts, totaling 10 sheets.</li>
+				<li>External armor must be installed in 2 parts, totaling 10 xeets.</li>
 				<li>Completed mech is more resiliant against fire, and is a bit more durable overall</li>
 				<li>Nanotrasen is determined to the safety of its <s>investments</s> employees.</li>
 				</ol>
@@ -404,7 +404,7 @@
 				Cyborg construction is a rather easy process, requiring a decent amount of metal and a few other supplies.<br>The required materials to make a cyborg are:
 				<ul>
 				  <li>Metal</li>
-				  <li>Two Flashes</li>
+				  <li>Two Flaxes</li>
 				  <li>One Power Cell (Preferrably rated to 15000w)</li>
 				  <li>Some electrical wires</li>
 				  <li>One Human Brain</li>
@@ -414,7 +414,7 @@
 				<ol>
 				  <li>Start the Exosuit Fabricators constructing all of the cyborg parts</li>
 				  <li>While the parts are being constructed, take your human brain, and place it inside the Man-Machine Interface</li>
-				  <li>Once you have a Robot Head, place your two flashes inside the eye sockets</li>
+				  <li>Once you have a Robot Head, place your two flaxes inside the eye sockets</li>
 				  <li>Once you have your Robot Chest, wire the Robot chest, then insert the power cell</li>
 				  <li>Attach all of the Robot parts to the Robot frame</li>
 				  <li>Insert the Man-Machine Interface (With the Brain inside) Into the Robot Body</li>
@@ -519,7 +519,7 @@
 
         <h3>As a last resort</h3>
         If all else fails in a case of cyborg-related emergency. There may be only one option. Using a Robotics Control console, you may have to remotely detonate the cyborg.
-        <h3>WARNING:</h3> Do not detonate a borg without an explicit reason for doing so. Cyborgs are expensive pieces of Nanotrasen equipment, and you may be punished for detonating them without reason.
+        <h3>WARNING:</h3> Do not detonate a borg without an explicit reason for doing so. Cyborgs are expensive pieces of Nanotrasen equipment, and you may be punixed for detonating them without reason.
 
         </body>
 		</html>

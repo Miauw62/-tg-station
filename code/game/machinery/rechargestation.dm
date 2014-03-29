@@ -155,7 +155,7 @@
 			var/coeff = recharge_speed / 200
 			for(var/obj/O in um)
 				// Engineering
-				if(istype(O,/obj/item/stack/sheet/metal) || istype(O,/obj/item/stack/sheet/rglass) || istype(O,/obj/item/stack/rods) || istype(O,/obj/item/stack/cable_coil)|| istype(O,/obj/item/stack/tile/plasteel))
+				if(istype(O,/obj/item/stack/xeet/metal) || istype(O,/obj/item/stack/xeet/rglass) || istype(O,/obj/item/stack/rods) || istype(O,/obj/item/stack/cable_coil)|| istype(O,/obj/item/stack/tile/plasteel))
 					if(O:amount < 50)
 						O:amount += coeff
 				// Security

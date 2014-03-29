@@ -122,7 +122,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(H.head && H.head.flags & HEADCOVERSMOUTH)
-			H.visible_message("\red \b [src] smashes against [H]'s [H.head]!")
+			H.visible_message("\red \b [src] smaxes against [H]'s [H.head]!")
 			Die()
 			return 0
 

@@ -114,7 +114,7 @@
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 	if(inner_teleport_radius < 1) //Wasn't potent enough, it just splats.
 		new/obj/effect/decal/cleanable/oil(src.loc)
-		src.visible_message("<span class='notice'>The [src.name] has been squashed.</span>","<span class='moderate'>You hear a smack.</span>")
+		src.visible_message("<span class='notice'>The [src.name] has been squaxed.</span>","<span class='moderate'>You hear a smack.</span>")
 		usr.unEquip(src)
 		qdel(src)
 		return
@@ -152,6 +152,6 @@
 				s.set_up(3, 1, A)
 				s.start()
 	new/obj/effect/decal/cleanable/oil(src.loc)
-	src.visible_message("<span class='notice'>The [src.name] has been squashed, causing a distortion in space-time.</span>","<span class='moderate'>You hear a splat and a crackle.</span>")
+	src.visible_message("<span class='notice'>The [src.name] has been squaxed, causing a distortion in space-time.</span>","<span class='moderate'>You hear a splat and a crackle.</span>")
 	qdel(src)
 	return

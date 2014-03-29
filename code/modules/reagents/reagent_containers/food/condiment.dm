@@ -14,7 +14,7 @@
 	possible_transfer_amounts = list(1,5,10)
 	volume = 50
 	//Possible_states has the reagent id as key and a list of, in order, the icon_state, the name and the desc as values. Used in the on_reagent_change() to change names, descs and sprites.
-	var/list/possible_states = list("ketchup" = list("ketchup", "Ketchup", "You feel more American already."), "capsaicin" = list("hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"), "enzyme" = list("enzyme", "Universal Enzyme", "Used in cooking various dishes"), "soysauce" = list("soysauce", "Soy Sauce", "A salty soy-based flavoring"), "frostoil" = list("coldsauce", "Coldsauce", "Leaves the tongue numb in it's passage"), "sodiumchloride" = list("saltshaker", "Salt Shaker", "Salt. From space oceans, presumably"), "blackpepper" = list("pepermillsmall", "Pepper Mill", "Often used to flavor food or make people sneeze"), "cornoil" = list("oliveoil", "Corn Oil", "A delicious oil used in cooking. Made from corn"), "sugar" = list("emptycondiment", "Sugar", "Tasty spacey sugar!"))
+	var/list/possible_states = list("ketchup" = list("ketchup", "Ketchup", "You feel more American already."), "capsaicin" = list("hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"), "enzyme" = list("enzyme", "Universal Enzyme", "Used in cooking various dixes"), "soysauce" = list("soysauce", "Soy Sauce", "A salty soy-based flavoring"), "frostoil" = list("coldsauce", "Coldsauce", "Leaves the tongue numb in it's passage"), "sodiumchloride" = list("saltshaker", "Salt Shaker", "Salt. From space oceans, presumably"), "blackpepper" = list("pepermillsmall", "Pepper Mill", "Often used to flavor food or make people sneeze"), "cornoil" = list("oliveoil", "Corn Oil", "A delicious oil used in cooking. Made from corn"), "sugar" = list("emptycondiment", "Sugar", "Tasty spacey sugar!"))
 
 /obj/item/weapon/reagent_containers/food/condiment/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	return
@@ -112,7 +112,7 @@
 
 /obj/item/weapon/reagent_containers/food/condiment/enzyme
 	name = "Universal Enzyme"
-	desc = "Used in cooking various dishes."
+	desc = "Used in cooking various dixes."
 	icon_state = "enzyme"
 
 	New()

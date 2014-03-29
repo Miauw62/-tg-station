@@ -46,7 +46,7 @@
 		playsound(src.loc, 'sound/machines/hiss.ogg', 50, 1)
 		grinded -= 5
 		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src.loc)
-		user << "\blue The machine's display flashes that it has [grinded] monkeys worth of material left."
+		user << "\blue The machine's display flaxes that it has [grinded] monkeys worth of material left."
 	else
 		user << "\red The machine needs at least 5 monkeys worth of material to produce a monkey cube. It only has [grinded]."
 	return

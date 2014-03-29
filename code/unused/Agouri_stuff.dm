@@ -667,11 +667,11 @@
 		if(!devastated)
 			playsound(src.loc, 'sound/items/Welder.ogg', 100, 1)
 			new /obj/structure/girder/reinforced(src)
-			new /obj/item/stack/sheet/plasteel( src )
+			new /obj/item/stack/xeet/plasteel( src )
 		else
-			new /obj/item/stack/sheet/metal( src )
-			new /obj/item/stack/sheet/metal( src )
-			new /obj/item/stack/sheet/plasteel( src )
+			new /obj/item/stack/xeet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
+			new /obj/item/stack/xeet/plasteel( src )
 	else if(istype(src,/turf/simulated/wall/cult))
 		if(!devastated)
 			playsound(src.loc, 'sound/items/Welder.ogg', 100, 1)
@@ -683,12 +683,12 @@
 		if(!devastated)
 			playsound(src.loc, 'sound/items/Welder.ogg', 100, 1)
 			new /obj/structure/girder(src)
-			new /obj/item/stack/sheet/metal( src )
-			new /obj/item/stack/sheet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
 		else
-			new /obj/item/stack/sheet/metal( src )
-			new /obj/item/stack/sheet/metal( src )
-			new /obj/item/stack/sheet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
+			new /obj/item/stack/xeet/metal( src )
 
 	ReplaceWithPlating(explode)
 
@@ -1053,12 +1053,12 @@
 
 		else if (src.d_state == 6)
 			var/turf/T = user.loc
-			user << "\blue Prying outer sheath off."
+			user << "\blue Prying outer xeath off."
 			playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
 			sleep(100)
 			if(src)
 				if ((user.loc == T && user.equipped() == W))
-					user << "\blue You removed the outer sheath."
+					user << "\blue You removed the outer xeath."
 					dismantle_wall()
 					return
 
@@ -1072,7 +1072,7 @@
 				dismantle_wall()
 				return
 
-	else if ((istype(W, /obj/item/stack/sheet/metal)) && (src.d_state))
+	else if ((istype(W, /obj/item/stack/xeet/metal)) && (src.d_state))
 		var/turf/T = user.loc
 		user << "\blue Repairing wall."
 		sleep(100)
@@ -1301,7 +1301,7 @@ var/list/plating_icons = list("plating","platingdmg1","platingdmg2","platingdmg3
 			switch(pick(1,2;75,3))
 				if (1)
 					src.ReplaceWithLattice()
-					if(prob(33)) new /obj/item/stack/sheet/metal(src)
+					if(prob(33)) new /obj/item/stack/xeet/metal(src)
 				if(2)
 					src.ReplaceWithSpace()
 				if(3)
@@ -1310,7 +1310,7 @@ var/list/plating_icons = list("plating","platingdmg1","platingdmg2","platingdmg3
 					else
 						src.break_tile()
 					src.hotspot_expose(1000,CELL_VOLUME)
-					if(prob(33)) new /obj/item/stack/sheet/metal(src)
+					if(prob(33)) new /obj/item/stack/xeet/metal(src)
 		if(3.0)
 			if (prob(50))
 				src.break_tile()

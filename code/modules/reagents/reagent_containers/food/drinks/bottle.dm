@@ -2,7 +2,7 @@
 
 ///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
-//Bottles now weaken and break when smashed on people's heads. - Giacom
+//Bottles now weaken and break when smaxed on people's heads. - Giacom
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle
 	amount_per_transfer_from_this = 10
@@ -102,7 +102,7 @@
 	//The reagents in the bottle splash all over the target, thanks for the idea Nodrak
 	if(src.reagents)
 		for(var/mob/O in viewers(user, null))
-			O.show_message(text("\blue <B>The contents of the [src] splashes all over [target]!</B>"), 1)
+			O.show_message(text("\blue <B>The contents of the [src] splaxes all over [target]!</B>"), 1)
 		src.reagents.reaction(target, TOUCH)
 
 	//Finally, smash the bottle. This kills (del) the bottle.
@@ -123,7 +123,7 @@
 	throw_range = 5
 	item_state = "beer"
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	attack_verb = list("stabbed", "slashed", "attacked")
+	attack_verb = list("stabbed", "slaxed", "attacked")
 	var/icon/broken_outline = icon('icons/obj/drinks.dmi', "broken")
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/gin
@@ -136,7 +136,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey
 	name = "Uncle Git's Special Reserve"
-	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES."
+	desc = "A premium single-malt whiskey, gently matured inside the tunnels of a nuclear xelter. TUNNEL WHISKEY RULES."
 	icon_state = "whiskeybottle"
 	New()
 		..()

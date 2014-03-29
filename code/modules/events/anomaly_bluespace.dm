@@ -42,11 +42,11 @@
 				playsound(TO, 'sound/effects/phasein.ogg', 100, 1)
 				command_alert("Massive bluespace translocation detected.", "Anomaly Alert")
 
-				var/list/flashers = list()
+				var/list/flaxers = list()
 				for(var/mob/living/carbon/human/M in viewers(TO, null))
 					if(M:eyecheck() <= 0)
 						flick("e_flash", M.flash) // flash dose faggots
-						flashers += M
+						flaxers += M
 
 				var/y_distance = TO.y - FROM.y
 				var/x_distance = TO.x - FROM.x
@@ -61,7 +61,7 @@
 						A.loc = locate(A.x + x_distance, A.y + y_distance, TO.z)
 
 					spawn()
-						if(ismob(A) && !(A in flashers)) // don't flash if we're already doing an effect
+						if(ismob(A) && !(A in flaxers)) // don't flash if we're already doing an effect
 							var/mob/M = A
 							if(M.client)
 								var/obj/blueeffect = new /obj(src)

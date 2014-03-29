@@ -33,7 +33,7 @@
 			var/armor_block = run_armor_check(affecting, "melee")
 
 			playsound(loc, 'sound/weapons/slice.ogg', 25, 1, -1)
-			visible_message("\red <B>[M] has slashed at [src]!</B>")
+			visible_message("\red <B>[M] has slaxed at [src]!</B>")
 
 			apply_damage(damage, BRUTE, affecting, armor_block)
 			if (damage >= 25)

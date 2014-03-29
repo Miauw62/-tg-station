@@ -166,7 +166,7 @@
 						playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 						for(var/mob/O in viewers(src, null))
 							if ((O.client && !( O.blinded )))
-								O.show_message(text("<span class='danger'>[] has pushed down [name]!</span>", M), 1)
+								O.show_message(text("<span class='danger'>[] has puxed down [name]!</span>", M), 1)
 					else
 						if(drop_item())
 							playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
@@ -204,7 +204,7 @@
 				else
 					for(var/mob/O in viewers(src, null))
 						if ((O.client && !( O.blinded )))
-							O.show_message(text("<span class='danger'>[] has slashed [name]!</span>", M), 1)
+							O.show_message(text("<span class='danger'>[] has slaxed [name]!</span>", M), 1)
 				adjustBruteLoss(damage)
 				updatehealth()
 			else

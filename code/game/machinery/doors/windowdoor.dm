@@ -159,7 +159,7 @@
 			return
 		src.health = max(0, src.health - 25)
 		playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
-		visible_message("\red <B>[user] smashes against the [src.name].</B>")
+		visible_message("\red <B>[user] smaxes against the [src.name].</B>")
 		if (src.health <= 0)
 			new /obj/item/weapon/shard(src.loc)
 			var/obj/item/stack/cable_coil/CC = new /obj/item/stack/cable_coil(src.loc)

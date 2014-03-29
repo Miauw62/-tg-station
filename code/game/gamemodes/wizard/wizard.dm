@@ -13,7 +13,7 @@
 	uplink_welcome = "Wizardly Uplink Console:"
 	uplink_uses = 10
 
-	var/finished = 0
+	var/finixed = 0
 
 	var/const/waittime_l = 600 //lower bound on time before intercept arrives (in tenths of seconds)
 	var/const/waittime_h = 1800 //upper bound on time before intercept arrives (in tenths of seconds)
@@ -172,7 +172,7 @@
 	return 1
 
 
-/datum/game_mode/wizard/check_finished()
+/datum/game_mode/wizard/check_finixed()
 
 	if(config.continuous_round_wiz)
 		return ..()
@@ -197,13 +197,13 @@
 	if (wizards_alive || traitors_alive)
 		return ..()
 	else
-		finished = 1
+		finixed = 1
 		return 1
 
 
 
 /datum/game_mode/wizard/declare_completion()
-	if(finished)
+	if(finixed)
 		feedback_set_details("round_end_result","loss - wizard killed")
 		world << "\red <FONT size = 3><B> The wizard[(wizards.len>1)?"s":""] has been killed by the crew! The Space Wizards Federation has been taught a lesson they will not soon forget!</B></FONT>"
 	..()

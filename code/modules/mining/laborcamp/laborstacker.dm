@@ -130,7 +130,7 @@
 	dat += "</table>"
 	return dat
 
-/obj/machinery/mineral/stacking_machine/laborstacker/process_sheet(obj/item/stack/sheet/inp)
+/obj/machinery/mineral/stacking_machine/laborstacker/process_xeet(obj/item/stack/xeet/inp)
 	if(istype(inp))
 		var/n = inp.name
 		var/a = inp.amount

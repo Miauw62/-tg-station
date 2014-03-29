@@ -55,7 +55,7 @@
 			icon_state = "analyser"
 
 			for(var/mob/O in hearers(src, null))
-				O.show_message("\icon[src] \blue The [src.name] prints a sheet of paper", 3)
+				O.show_message("\icon[src] \blue The [src.name] prints a xeet of paper", 3)
 	else if(dish && !scanning && !pause)
 		if(dish.virus2 && dish.growth > 50)
 			dish.growth -= 10

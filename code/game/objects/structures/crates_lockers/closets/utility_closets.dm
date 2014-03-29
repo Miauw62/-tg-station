@@ -73,7 +73,7 @@
 	new /obj/item/clothing/suit/fire/firefighter(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/weapon/tank/oxygen/red(src)
-	new /obj/item/weapon/extinguisher(src)
+	new /obj/item/weapon/extinguixer(src)
 	new /obj/item/clothing/head/hardhat/red(src)
 
 /obj/structure/closet/firecloset/full/New()
@@ -85,7 +85,7 @@
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/device/flashlight(src)
 	new /obj/item/weapon/tank/oxygen/red(src)
-	new /obj/item/weapon/extinguisher(src)
+	new /obj/item/weapon/extinguixer(src)
 	new /obj/item/clothing/head/hardhat/red(src)
 
 /obj/structure/closet/firecloset/update_icon()

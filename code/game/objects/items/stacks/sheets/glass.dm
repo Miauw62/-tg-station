@@ -1,26 +1,26 @@
 /* Glass stack types
  * Contains:
- *		Glass sheets
- *		Reinforced glass sheets
+ *		Glass xeets
+ *		Reinforced glass xeets
  *		Glass shards - TODO: Move this into code/game/object/item/weapons
  */
 
 /*
- * Glass sheets
+ * Glass xeets
  */
-/obj/item/stack/sheet/glass
+/obj/item/stack/xeet/glass
 	name = "glass"
-	desc = "HOLY SHEET! That is a lot of glass."
-	singular_name = "glass sheet"
-	icon_state = "sheet-glass"
+	desc = "HOLY xeET! That is a lot of glass."
+	singular_name = "glass xeet"
+	icon_state = "xeet-glass"
 	g_amt = 3750
 	origin_tech = "materials=1"
 
 
-/obj/item/stack/sheet/glass/attack_self(mob/user as mob)
+/obj/item/stack/xeet/glass/attack_self(mob/user as mob)
 	construct_window(user)
 
-/obj/item/stack/sheet/glass/attackby(obj/item/W, mob/user)
+/obj/item/stack/xeet/glass/attackby(obj/item/W, mob/user)
 	..()
 	add_fingerprint(user)
 	if(istype(W,/obj/item/stack/cable_coil))
@@ -35,11 +35,11 @@
 		src.use(1)
 	else if( istype(W, /obj/item/stack/rods) )
 		var/obj/item/stack/rods/V  = W
-		var/obj/item/stack/sheet/rglass/RG = new (user.loc)
+		var/obj/item/stack/xeet/rglass/RG = new (user.loc)
 		RG.add_fingerprint(user)
 		RG.add_to_stacks(user)
 		V.use(1)
-		var/obj/item/stack/sheet/glass/G = src
+		var/obj/item/stack/xeet/glass/G = src
 		src = null
 		var/replace = (user.get_inactive_hand()==G)
 		G.use(1)
@@ -48,14 +48,14 @@
 	else
 		return ..()
 
-/obj/item/stack/sheet/glass/proc/construct_window(mob/user as mob)
+/obj/item/stack/xeet/glass/proc/construct_window(mob/user as mob)
 	if(!user || !src)	return 0
 	if(!istype(user.loc,/turf)) return 0
 	if(!user.IsAdvancedToolUser())
 		user << "\red You don't have the dexterity to do this!"
 		return 0
-	var/title = "Sheet-Glass"
-	title += " ([src.amount] sheet\s left)"
+	var/title = "xeet-Glass"
+	title += " ([src.amount] xeet\s left)"
 	switch(alert(title, "Would you like full tile glass or one direction?", "One Direction", "Full Window", "Cancel", null))
 		if("One Direction")
 			if(!src)	return 1
@@ -113,36 +113,36 @@
 
 
 /*
- * Reinforced glass sheets
+ * Reinforced glass xeets
  */
-/obj/item/stack/sheet/rglass
+/obj/item/stack/xeet/rglass
 	name = "reinforced glass"
 	desc = "Glass which seems to have rods or something stuck in them."
-	singular_name = "reinforced glass sheet"
-	icon_state = "sheet-rglass"
+	singular_name = "reinforced glass xeet"
+	icon_state = "xeet-rglass"
 	g_amt = 3750
 	m_amt = 1875
 	origin_tech = "materials=2"
 
-/obj/item/stack/sheet/rglass/cyborg
+/obj/item/stack/xeet/rglass/cyborg
 	name = "reinforced glass"
 	desc = "Glass which seems to have rods or something stuck in them."
-	singular_name = "reinforced glass sheet"
-	icon_state = "sheet-rglass"
+	singular_name = "reinforced glass xeet"
+	icon_state = "xeet-rglass"
 	g_amt = 0
 	m_amt = 0
 
-/obj/item/stack/sheet/rglass/attack_self(mob/user as mob)
+/obj/item/stack/xeet/rglass/attack_self(mob/user as mob)
 	construct_window(user)
 
-/obj/item/stack/sheet/rglass/proc/construct_window(mob/user as mob)
+/obj/item/stack/xeet/rglass/proc/construct_window(mob/user as mob)
 	if(!user || !src)	return 0
 	if(!istype(user.loc,/turf)) return 0
 	if(!user.IsAdvancedToolUser())
 		user << "\red You don't have the dexterity to do this!"
 		return 0
-	var/title = "Sheet Reinf. Glass"
-	title += " ([src.amount] sheet\s left)"
+	var/title = "xeet Reinf. Glass"
+	title += " ([src.amount] xeet\s left)"
 	switch(input(title, "Would you like full tile glass a one direction glass pane or a windoor?") in list("One Direction", "Full Window", "Windoor", "Cancel"))
 		if("One Direction")
 			if(!src)	return 1
@@ -247,7 +247,7 @@
 	throwforce = 10.0
 	item_state = "shard-glass"
 	g_amt = 3750
-	attack_verb = list("stabbed", "slashed", "sliced", "cut")
+	attack_verb = list("stabbed", "slaxed", "sliced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	suicide_act(mob/user)
@@ -294,14 +294,14 @@
 	if(istype(I, /obj/item/weapon/weldingtool))
 		var/obj/item/weapon/weldingtool/WT = I
 		if(WT.remove_fuel(0, user))
-			var/obj/item/stack/sheet/glass/NG = new (user.loc)
-			for(var/obj/item/stack/sheet/glass/G in user.loc)
+			var/obj/item/stack/xeet/glass/NG = new (user.loc)
+			for(var/obj/item/stack/xeet/glass/G in user.loc)
 				if(G == NG)
 					continue
 				if(G.amount >= G.max_amount)
 					continue
 				G.attackby(NG, user)
-				user << "<span class='notice'>You add the newly-formed glass to the stack. It now contains [NG.amount] sheet\s.</span>"
+				user << "<span class='notice'>You add the newly-formed glass to the stack. It now contains [NG.amount] xeet\s.</span>"
 			qdel(src)
 	..()
 

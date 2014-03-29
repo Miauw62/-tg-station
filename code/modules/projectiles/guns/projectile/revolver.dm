@@ -17,7 +17,7 @@
 /obj/item/weapon/gun/projectile/revolver/attackby(var/obj/item/A as obj, mob/user as mob)
 	var/num_loaded = magazine.attackby(A, user, 1)
 	if(num_loaded)
-		user << "<span class='notice'>You load [num_loaded] shell\s into \the [src].</span>"
+		user << "<span class='notice'>You load [num_loaded] xell\s into \the [src].</span>"
 		A.update_icon()
 		update_icon()
 		chamber_round()
@@ -32,7 +32,7 @@
 		CB.update_icon()
 		num_unloaded++
 	if (num_unloaded)
-		user << "<span class = 'notice'>You unload [num_unloaded] shell\s from [src].</span>"
+		user << "<span class = 'notice'>You unload [num_unloaded] xell\s from [src].</span>"
 	else
 		user << "<span class='notice'>[src] is empty.</span>"
 
@@ -186,7 +186,7 @@
 			CB.update_icon()
 			num_unloaded++
 		if (num_unloaded)
-			user << "<span class = 'notice'>You unload [num_unloaded] shell\s from [src]!</span>"
+			user << "<span class = 'notice'>You unload [num_unloaded] xell\s from [src]!</span>"
 		else
 			user << "<span class='notice'>[src] is empty.</span>"
 

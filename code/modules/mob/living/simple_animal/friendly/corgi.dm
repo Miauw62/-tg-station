@@ -133,7 +133,7 @@
 						/obj/item/clothing/suit/cardborg,
 						/obj/item/weapon/tank/oxygen,
 						/obj/item/weapon/tank/air,
-						/obj/item/weapon/extinguisher
+						/obj/item/weapon/extinguixer
 					)
 
 					if( ! ( item_to_add.type in allowed_types ) )
@@ -231,7 +231,7 @@
 		if(/obj/item/clothing/head/pirate, /obj/item/clothing/head/collectable/pirate)
 			name = "[pick("Ol'","Scurvy","Black","Rum","Gammy","Bloody","Gangrene","Death","Long-John")] [pick("kibble","leg","beard","tooth","poop-deck","Threepwood","Le Chuck","corsair","Silver","Crusoe")]"
 			desc = "Yaarghh!! Thar' be a scurvy dog!"
-			emote_see = list("hunts for treasure","stares coldly...","gnashes his tiny corgi teeth")
+			emote_see = list("hunts for treasure","stares coldly...","gnaxes his tiny corgi teeth")
 			emote_hear = list("growls ferociously", "snarls")
 			speak = list("Arrrrgh!!","Grrrrrr!")
 			valid = 1
@@ -260,7 +260,7 @@
 			desc = "Result of robotics budget cuts."
 			valid = 1
 
-		if(/obj/item/weapon/bedsheet)
+		if(/obj/item/weapon/bedxeet)
 			name = "\improper Ghost"
 			speak = list("WoooOOOooo~","AUUUUUUUUUUUUUUUUUU")
 			emote_see = list("stumbles around", "shivers")

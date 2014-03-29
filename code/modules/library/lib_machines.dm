@@ -293,7 +293,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 
 				else
 					for (var/mob/V in hearers(src))
-						V.show_message("<b>[src]</b>'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\"")
+						V.show_message("<b>[src]</b>'s monitor flaxes, \"Bible printer currently unavailable, please wait a moment.\"")
 
 			if("7")
 				screenstate = 7
@@ -365,7 +365,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			alert("Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
-				V.show_message("<b>[src]</b>'s monitor flashes, \"Printer unavailable. Please allow a short time before attempting to print.\"")
+				V.show_message("<b>[src]</b>'s monitor flaxes, \"Printer unavailable. Please allow a short time before attempting to print.\"")
 		else
 			bibledelay = 1
 			spawn(60)

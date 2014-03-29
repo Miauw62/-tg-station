@@ -114,8 +114,8 @@
 	else ..()
 
 /obj/item/clothing/tie/medal/conduct
-	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+	name = "distinguixed conduct medal"
+	desc = "A bronze medal awarded for distinguixed conduct. Whilst a great honor, this is most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
 
 /obj/item/clothing/tie/medal/bronze_heart
 	name = "bronze heart medal"
@@ -138,7 +138,7 @@
 
 /obj/item/clothing/tie/medal/silver/security
 	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of Nanotrasen's commercial interests. Often awarded to security staff."
+	desc = "An award for distinguixed combat and sacrifice in defence of Nanotrasen's commercial interests. Often awarded to security staff."
 
 /obj/item/clothing/tie/medal/gold
 	name = "gold medal"

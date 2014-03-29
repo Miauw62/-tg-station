@@ -75,7 +75,7 @@
 		force = 30
 		throwforce = 20
 		hitsound = 'sound/weapons/blade1.ogg'
-		attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+		attack_verb = list("attacked", "slaxed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 		if(istype(src,/obj/item/weapon/melee/energy/sword/pirate))
 			icon_state = "cutlass1"
 		else
@@ -170,7 +170,7 @@
 	throw_range = 1
 	w_class = 4.0//So you can't hide it in your pocket or some such.
 	flags = NOSHIELD
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb = list("attacked", "slaxed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	var/datum/effect/effect/system/spark_spread/spark_system
 
 //Most of the other special functions are handled in their own files. aka special snowflake code so kewl

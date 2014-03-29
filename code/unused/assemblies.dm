@@ -141,7 +141,7 @@
 	return
 
 /obj/effect/decal/ash/attack_hand(mob/user as mob)
-	usr << "\blue The ashes slip through your fingers."
+	usr << "\blue The axes slip through your fingers."
 	del(src)
 	return
 

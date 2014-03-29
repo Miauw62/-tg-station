@@ -125,7 +125,7 @@
 					if(1)
 						//industrial grade eye protection
 						C.eye_stat += rand(0, 2)
-						C << "<span class='notice'>Something bright flashes in the corner of your vision!</span>"
+						C << "<span class='notice'>Something bright flaxes in the corner of your vision!</span>"
 					if(2)
 						//basic eye protection (sunglasses)
 						flick("flash", C.flash)

@@ -15,7 +15,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	meat_amount = 4
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "kicks"
 	faction = "goat"
 	attacktext = "kicks"
@@ -101,7 +101,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	meat_amount = 6
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "kicks"
 	attacktext = "kicks"
 	health = 50
@@ -162,7 +162,7 @@
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	meat_amount = 1
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "kicks"
 	attacktext = "kicks"
 	health = 1
@@ -203,7 +203,7 @@ var/global/chicken_count = 0
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
 	meat_amount = 2
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "kicks"
 	attacktext = "kicks"
 	health = 10

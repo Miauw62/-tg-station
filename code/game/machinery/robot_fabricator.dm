@@ -12,7 +12,7 @@
 	active_power_usage = 5000
 
 /obj/machinery/robotic_fabricator/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if (istype(O, /obj/item/stack/sheet/metal))
+	if (istype(O, /obj/item/stack/xeet/metal))
 		if (src.metal_amount < 150000.0)
 			var/count = 0
 			src.overlays += "fab-load-metal"
@@ -28,7 +28,7 @@
 					if (O:amount < 1)
 						qdel(O)
 
-					user << "You insert [count] metal sheet\s into \the [src]."
+					user << "You insert [count] metal xeet\s into \the [src]."
 					src.overlays -= "fab-load-metal"
 					updateDialog()
 		else

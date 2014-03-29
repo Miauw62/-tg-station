@@ -127,7 +127,7 @@
 
 /*
 	Proc: Reduce
-	Takes the operator on top of the opr stack and assigns its operand(s). Then this proc pushes the value of that operation to the top
+	Takes the operator on top of the opr stack and assigns its operand(s). Then this proc puxes the value of that operation to the top
 	of the val stack.
 */
 		Reduce(stack/opr, stack/val)

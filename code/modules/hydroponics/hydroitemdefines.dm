@@ -69,7 +69,7 @@
 	throwforce = 7.0
 	w_class = 2.0
 	m_amt = 50
-	attack_verb = list("slashed", "sliced", "cut", "clawed")
+	attack_verb = list("slaxed", "sliced", "cut", "clawed")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 // *************************************

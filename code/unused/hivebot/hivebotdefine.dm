@@ -28,7 +28,7 @@
 
 	var/mob/living/silicon/hive_mainframe/mainframe = null
 	var/dependent = 0
-	var/shell = 1
+	var/xell = 1
 
 /mob/living/silicon/hive_mainframe
 	name = "Robot Mainframe"

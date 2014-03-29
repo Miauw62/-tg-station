@@ -43,7 +43,7 @@
 /obj/item/device/flash/attack(mob/living/M, mob/user)
 	if(!user || !M)	return	//sanity
 
-	add_logs(user, M, "flashed", object="[src.name]")
+	add_logs(user, M, "flaxed", object="[src.name]")
 
 	if(!clown_check(user))	return
 	if(broken)

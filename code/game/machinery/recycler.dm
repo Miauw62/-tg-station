@@ -1,7 +1,7 @@
 var/const/SAFETY_COOLDOWN = 100
 
 /obj/machinery/recycler
-	name = "crusher"
+	name = "cruxer"
 	desc = "A large crushing machine which is used to recycle small items ineffeciently; there are lights on the side of it."
 	icon = 'icons/obj/recycling.dmi'
 	icon_state = "grinder-o0"
@@ -41,7 +41,7 @@ var/const/SAFETY_COOLDOWN = 100
 	else if(istype(I, /obj/item/weapon/screwdriver) && emagged)
 		emagged = 0
 		update_icon()
-		user << "<span class='notice'>You reset the crusher to its default factory settings.</span>"
+		user << "<span class='notice'>You reset the cruxer to its default factory settings.</span>"
 	else
 		..()
 		return
@@ -93,13 +93,13 @@ var/const/SAFETY_COOLDOWN = 100
 	if(!istype(I, /obj/item/weapon/disk/nuclear))
 		qdel(I)
 		if(prob(15))
-			new /obj/item/stack/sheet/metal(loc)
+			new /obj/item/stack/xeet/metal(loc)
 		if(prob(10))
-			new /obj/item/stack/sheet/glass(loc)
+			new /obj/item/stack/xeet/glass(loc)
 		if(prob(2))
-			new /obj/item/stack/sheet/plasteel(loc)
+			new /obj/item/stack/xeet/plasteel(loc)
 		if(prob(1))
-			new /obj/item/stack/sheet/rglass(loc)
+			new /obj/item/stack/xeet/rglass(loc)
 		if(sound)
 			playsound(src.loc, 'sound/items/Welder.ogg', 50, 1)
 

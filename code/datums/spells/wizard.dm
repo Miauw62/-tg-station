@@ -172,7 +172,7 @@
 	invocation_type = "none"
 	range = 0
 
-	summon_type = list(/obj/structure/constructshell)
+	summon_type = list(/obj/structure/constructxell)
 
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/creature

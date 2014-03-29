@@ -8,7 +8,7 @@
 	throw_speed = 3
 	throw_range = 7
 	w_class = 3.0
-	attack_verb = list("mopped", "bashed", "bludgeoned", "whacked")
+	attack_verb = list("mopped", "baxed", "bludgeoned", "whacked")
 	var/mopping = 0
 	var/mopcount = 0
 
@@ -39,7 +39,7 @@ obj/item/weapon/mop/proc/clean(turf/simulated/A)
 		if(do_after(user, 40))
 			if(A)
 				clean(get_turf(A))
-			user << "<span class='notice'>You have finished mopping!</span>"
+			user << "<span class='notice'>You have finixed mopping!</span>"
 
 
 /obj/effect/attackby(obj/item/I, mob/user)

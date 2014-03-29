@@ -495,12 +495,12 @@ datum/mind
 				if("clear")
 					if(src in ticker.mode.revolutionaries)
 						ticker.mode.revolutionaries -= src
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a revolutionary!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a revolutionary!</B></FONT>"
 						ticker.mode.update_rev_icons_removed(src)
 						special_role = null
 					if(src in ticker.mode.head_revolutionaries)
 						ticker.mode.head_revolutionaries -= src
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a head revolutionary!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a head revolutionary!</B></FONT>"
 						ticker.mode.update_rev_icons_removed(src)
 						special_role = null
 					message_admins("[key_name_admin(usr)] has de-rev'ed [current].")
@@ -592,7 +592,7 @@ datum/mind
 						var/datum/game_mode/cult/cult = ticker.mode
 						if (istype(cult))
 							cult.memorize_cult_objectives(src)
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a cultist!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a cultist!</B></FONT>"
 						memory = ""
 						message_admins("[key_name_admin(usr)] has de-cult'ed [current].")
 						log_admin("[key_name(usr)] has de-cult'ed [current].")
@@ -637,7 +637,7 @@ datum/mind
 						ticker.mode.wizards -= src
 						special_role = null
 						current.spellremove(current)
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a wizard!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a wizard!</B></FONT>"
 						log_admin("[key_name(usr)] has de-wizard'ed [current].")
 				if("wizard")
 					if(!(src in ticker.mode.wizards))
@@ -700,7 +700,7 @@ datum/mind
 						special_role = null
 						for (var/datum/objective/nuclear/O in objectives)
 							objectives-=O
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a syndicate operative!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a syndicate operative!</B></FONT>"
 						message_admins("[key_name_admin(usr)] has de-nuke op'ed [current].")
 						log_admin("[key_name(usr)] has de-nuke op'ed [current].")
 				if("nuclear")
@@ -751,7 +751,7 @@ datum/mind
 					if(src in ticker.mode.traitors)
 						ticker.mode.traitors -= src
 						special_role = null
-						current << "\red <FONT size = 3><B>You have been brainwashed! You are no longer a traitor!</B></FONT>"
+						current << "\red <FONT size = 3><B>You have been brainwaxed! You are no longer a traitor!</B></FONT>"
 						message_admins("[key_name_admin(usr)] has de-traitor'ed [current].")
 						log_admin("[key_name(usr)] has de-traitor'ed [current].")
 						if(isAI(current))

@@ -2,7 +2,7 @@ var/list/sting_paths
 // totally stolen from the new player panel.  YAYY
 
 /obj/effect/proc_holder/changeling/evolution_menu
-	name = "-Evolution Menu-" //Dashes are so it's listed before all the other abilities.
+	name = "-Evolution Menu-" //Daxes are so it's listed before all the other abilities.
 	desc = "Choose our method of subjugation."
 	dna_cost = 0
 

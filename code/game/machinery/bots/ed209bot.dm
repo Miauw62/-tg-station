@@ -919,8 +919,8 @@ Auto Patrol: []"},
 				build_step++
 				user << "<span class='notice'>You add the armor to [src].</span>"
 				name = "vest/legs/frame assembly"
-				item_state = "[lasercolor]ed209_shell"
-				icon_state = "[lasercolor]ed209_shell"
+				item_state = "[lasercolor]ed209_xell"
+				icon_state = "[lasercolor]ed209_xell"
 
 		if(3)
 			if(istype(W, /obj/item/weapon/weldingtool))

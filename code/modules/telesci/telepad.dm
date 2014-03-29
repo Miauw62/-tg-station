@@ -76,8 +76,8 @@
 	if(istype(W, /obj/item/weapon/weldingtool) && stage == 1)
 		playsound(src, 'sound/items/Welder.ogg', 50, 1)
 		user << "<span class = 'caution'> You disassemble the telepad.</span>"
-		new /obj/item/stack/sheet/metal(get_turf(src))
-		new /obj/item/stack/sheet/glass(get_turf(src))
+		new /obj/item/stack/xeet/metal(get_turf(src))
+		new /obj/item/stack/xeet/glass(get_turf(src))
 		qdel(src)
 
 ///TELEPAD CALLER///

@@ -15,7 +15,7 @@
 	see_in_dark = 6
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/bearmeat
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "hits"
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 60

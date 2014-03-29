@@ -9,7 +9,7 @@
 	throwforce = 7
 	w_class = 3
 	origin_tech = "combat=4"
-	attack_verb = list("flogged", "whipped", "lashed", "disciplined")
+	attack_verb = list("flogged", "whipped", "laxed", "disciplined")
 	hitsound = 'sound/weapons/slash.ogg' //pls replace
 
 /obj/item/weapon/melee/chainofcommand/suicide_act(mob/user)

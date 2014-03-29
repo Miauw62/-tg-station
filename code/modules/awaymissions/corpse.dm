@@ -113,7 +113,7 @@
 	M.adjustToxLoss(9001) //kills the slime, death() doesn't update its icon correctly
 	qdel(src)
 
-/obj/effect/landmark/corpse/facehugCorpse/createCorpse() //Creates a squashed facehugger
+/obj/effect/landmark/corpse/facehugCorpse/createCorpse() //Creates a squaxed facehugger
 	var/obj/item/clothing/mask/facehugger/O = new(src.loc) //variable O is a new facehugger at the location of the landmark
 	O.name = src.name
 	O.Die() //call the facehugger's death proc

@@ -33,7 +33,7 @@
 				playsound(src.loc, 'sound/items/Welder.ogg', 50, 1)
 				if(do_after(user, 20))
 					user << "\blue You deconstruct the frame."
-					new /obj/item/stack/sheet/metal( src.loc, 5 )
+					new /obj/item/stack/xeet/metal( src.loc, 5 )
 					del(src)
 		if(1)
 			if(istype(P, /obj/item/weapon/wrench))
@@ -117,7 +117,7 @@
 				src.hd.loc = src.loc
 				src.hd = null
 
-			if(istype(P, /obj/item/stack/sheet/glass))
+			if(istype(P, /obj/item/stack/xeet/glass))
 				if(P:amount >= 2)
 					playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 					if(do_after(user, 20))
@@ -131,7 +131,7 @@
 				user << "\blue You remove the glass panel."
 				src.state = 3
 				src.icon_state = "3"
-				new /obj/item/stack/sheet/glass( src.loc, 2 )
+				new /obj/item/stack/xeet/glass( src.loc, 2 )
 			if(istype(P, /obj/item/weapon/screwdriver))
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)
 				user << "\blue You connect the monitor."

@@ -473,7 +473,7 @@
 var/const/NO_SLIP_WHEN_WALKING = 1
 var/const/STEP = 2
 var/const/SLIDE = 4
-var/const/GALOSHES_DONT_HELP = 8
+var/const/GALOxeS_DONT_HELP = 8
 /mob/living/carbon/slip(var/s_amount, var/w_amount, var/obj/O, var/lube)
 	loc.handle_slip(src, s_amount, w_amount, O, lube)
 

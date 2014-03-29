@@ -280,7 +280,7 @@
 				if(do_after(user, 20))
 					if(!src || !WT.isOn()) return
 					user << "<span class='notice'>You deconstruct the frame.</span>"
-					var/obj/item/stack/sheet/metal/M = new (loc, 5)
+					var/obj/item/stack/xeet/metal/M = new (loc, 5)
 					M.add_fingerprint(user)
 					qdel(src)
 		if(1)
@@ -342,7 +342,7 @@
 				A.amount = 5
 				A.add_fingerprint(user)
 
-			if(istype(P, /obj/item/stack/sheet/glass))
+			if(istype(P, /obj/item/stack/xeet/glass))
 				if(P:amount >= 2)
 					playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
 					if(do_after(user, 20))
@@ -357,7 +357,7 @@
 				user << "<span class='notice'>You remove the glass panel.</span>"
 				src.state = 3
 				src.icon_state = "3"
-				var/obj/item/stack/sheet/glass/G = new (loc, 2)
+				var/obj/item/stack/xeet/glass/G = new (loc, 2)
 				G.add_fingerprint(user)
 			if(istype(P, /obj/item/weapon/screwdriver))
 				playsound(src.loc, 'sound/items/Screwdriver.ogg', 50, 1)

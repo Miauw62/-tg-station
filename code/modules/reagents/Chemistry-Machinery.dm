@@ -827,17 +827,17 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 		var/limit = 10
 		var/list/blend_items = list (
 
-				//Sheets
-				/obj/item/stack/sheet/mineral/plasma = list("plasma" = 20),
-				/obj/item/stack/sheet/metal = list("iron" = 20),
-				/obj/item/stack/sheet/plasteel = list("iron" = 20, "plasma" = 20),
-				/obj/item/stack/sheet/wood = list("carbon" = 20),
-				/obj/item/stack/sheet/glass = list("silicon" = 20),
-				/obj/item/stack/sheet/rglass = list("silicon" = 20, "iron" = 20),
-				/obj/item/stack/sheet/mineral/uranium = list("uranium" = 20),
-				/obj/item/stack/sheet/mineral/clown = list("banana" = 20),
-				/obj/item/stack/sheet/mineral/silver = list("silver" = 20),
-				/obj/item/stack/sheet/mineral/gold = list("gold" = 20),
+				//xeets
+				/obj/item/stack/xeet/mineral/plasma = list("plasma" = 20),
+				/obj/item/stack/xeet/metal = list("iron" = 20),
+				/obj/item/stack/xeet/plasteel = list("iron" = 20, "plasma" = 20),
+				/obj/item/stack/xeet/wood = list("carbon" = 20),
+				/obj/item/stack/xeet/glass = list("silicon" = 20),
+				/obj/item/stack/xeet/rglass = list("silicon" = 20, "iron" = 20),
+				/obj/item/stack/xeet/mineral/uranium = list("uranium" = 20),
+				/obj/item/stack/xeet/mineral/clown = list("banana" = 20),
+				/obj/item/stack/xeet/mineral/silver = list("silver" = 20),
+				/obj/item/stack/xeet/mineral/gold = list("gold" = 20),
 				/obj/item/weapon/grown/nettle = list("sacid" = 0),
 				/obj/item/weapon/grown/deathnettle = list("pacid" = 0),
 				/obj/item/weapon/grown/novaflower = list("capsaicin" = 0),
@@ -1175,8 +1175,8 @@ obj/machinery/computer/pandemic/proc/replicator_cooldown(var/waittime)
 				if(O.reagents.reagent_list.len == 0)
 						remove_object(O)
 
-		//Sheets
-		for (var/obj/item/stack/sheet/O in holdingitems)
+		//xeets
+		for (var/obj/item/stack/xeet/O in holdingitems)
 				var/allowed = get_allowed_by_id(O)
 				if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 						break

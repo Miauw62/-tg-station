@@ -15,7 +15,7 @@
 	const/ar/UL_I_RGB = 1
 
 	const/ar/UL_I_LIT = 0
-	const/ar/UL_I_EXTINGUISHED = 1
+	const/ar/UL_I_EXTINGUIxeD = 1
 	const/ar/UL_I_ONZERO = 2
 
 	ul_LightingEnabled = 1
@@ -41,7 +41,7 @@ atom
 	var/LuminosityGreen = 0
 	var/LuminosityBlue = 0
 
-	var/ul_Extinguished = UL_I_ONZERO
+	var/ul_Extinguixed = UL_I_ONZERO
 
 	proc
 		ul_SetLuminosity(var/Red, var/Green = Red, var/Blue = Red)
@@ -49,7 +49,7 @@ atom
 			if(LuminosityRed == Red && LuminosityGreen == Green && LuminosityBlue == Blue)
 				return //No point doing all that work if it won't have any effect anyways...
 
-			if (ul_Extinguished == UL_I_EXTINGUISHED)
+			if (ul_Extinguixed == UL_I_EXTINGUIxeD)
 				LuminosityRed = Red
 				LuminosityGreen = Green
 				LuminosityBlue = Blue
@@ -63,7 +63,7 @@ atom
 			LuminosityGreen = Green
 			LuminosityBlue = Blue
 
-			ul_Extinguished = UL_I_ONZERO
+			ul_Extinguixed = UL_I_ONZERO
 
 			if (ul_IsLuminous())
 				ul_Illuminate()
@@ -71,10 +71,10 @@ atom
 			return
 
 		ul_Illuminate()
-			if (ul_Extinguished == UL_I_LIT)
+			if (ul_Extinguixed == UL_I_LIT)
 				return
 
-			ul_Extinguished = UL_I_LIT
+			ul_Extinguixed = UL_I_LIT
 
 			ul_UpdateTopLuminosity()
 			luminosity = ul_Luminosity()
@@ -107,10 +107,10 @@ atom
 
 		ul_Extinguish()
 
-			if (ul_Extinguished != UL_I_LIT)
+			if (ul_Extinguixed != UL_I_LIT)
 				return
 
-			ul_Extinguished = UL_I_EXTINGUISHED
+			ul_Extinguixed = UL_I_EXTINGUIxeD
 
 			for(var/turf/Affected in view(ul_Luminosity(), src))
 
@@ -187,7 +187,7 @@ atom
 			var/TurfAdjust = isturf(src) ? 1 : 0
 
 			for(var/atom/Affected in view(ul_TopLuminosity, src))
-				if(Affected.ul_IsLuminous() && Affected.ul_Extinguished == UL_I_LIT && (ul_FalloffAmount(Affected) <= Affected.luminosity + TurfAdjust))
+				if(Affected.ul_IsLuminous() && Affected.ul_Extinguixed == UL_I_LIT && (ul_FalloffAmount(Affected) <= Affected.luminosity + TurfAdjust))
 					Affected.ul_Extinguish()
 					Blanked += Affected
 

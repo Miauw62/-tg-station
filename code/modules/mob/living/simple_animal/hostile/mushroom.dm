@@ -10,7 +10,7 @@
 	health = 10
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/hugemushroomslice
 	response_help  = "pets"
-	response_disarm = "gently pushes aside"
+	response_disarm = "gently puxes aside"
 	response_harm   = "whacks"
 	harm_intent_damage = 5
 	melee_damage_lower = 1

@@ -634,7 +634,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 								difficulty += 2
 
 							if(prob(difficulty * 12) || (P.hidden_uplink))
-								U.show_message("\red An error flashes on your [src].", 1)
+								U.show_message("\red An error flaxes on your [src].", 1)
 							else if (prob(difficulty * 3))
 								U.show_message("\red Energy feeds back into your [src]!", 1)
 								U << browse(null, "window=pda")

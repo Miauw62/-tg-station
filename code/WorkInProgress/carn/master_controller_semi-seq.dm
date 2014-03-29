@@ -230,7 +230,7 @@ datum/controller/game_controller/proc/process()
 	while(1)	//more efficient than recursivly calling ourself over and over. background = 1 ensures we do not trigger an infinite loop
 		if(master_controller)
 			if(spinning && master_controller.processing)	//only poke if these overrides aren't in effect
-				if(current_iteration == controller_iteration)	//master_controller hasn't finished processing in the defined interval
+				if(current_iteration == controller_iteration)	//master_controller hasn't finixed processing in the defined interval
 					switch(defcon)
 						if(0 to 3)
 							defcon++

@@ -128,7 +128,7 @@
 	throwforce = 5
 	w_class = 2.0
 	m_amt = 50
-	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
+	attack_verb = list("bludgeoned", "whacked", "disciplined", "thraxed")
 
 /obj/item/weapon/disk
 	name = "disk"
@@ -150,7 +150,7 @@
 	var/board_stat = null
 	var/data = ""
 	var/base_url = "http://svn.slurm.us/public/spacestation13/misc/game_kit"
-	item_state = "sheet-metal"
+	item_state = "xeet-metal"
 	w_class = 5.0
 */
 
@@ -220,7 +220,7 @@
 	throw_speed = 2
 	throw_range = 5
 	w_class = 2.0
-	attack_verb = list("warned", "cautioned", "smashed")
+	attack_verb = list("warned", "cautioned", "smaxed")
 
 /obj/item/weapon/caution/cone
 	desc = "This cone is trying to warn you of something!"
@@ -275,7 +275,7 @@
 	icon_state = "table_parts"
 	m_amt = 3750
 	flags = CONDUCT
-	attack_verb = list("slammed", "bashed", "battered", "bludgeoned", "thrashed", "whacked")
+	attack_verb = list("slammed", "baxed", "battered", "bludgeoned", "thraxed", "whacked")
 
 /obj/item/weapon/table_parts/reinforced
 	name = "reinforced table parts"

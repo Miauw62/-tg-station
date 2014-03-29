@@ -238,7 +238,7 @@
 
 	if ((src.player_mp <= 0) || (src.player_hp <= 0))
 		src.gameover = 1
-		src.temp = "You have been crushed! GAME OVER"
+		src.temp = "You have been cruxed! GAME OVER"
 		if(emagged)
 			feedback_inc("arcade_loss_hp_emagged")
 			usr.gib()
@@ -307,7 +307,7 @@
 	stops = list("Pluto","Asteroid Belt","Proxima Centauri","Dead Space","Rigel Prime","Tau Ceti Beta","Black Hole","Space Outpost Beta-9","Orion Prime")
 	stopblurbs = list(
 		"Pluto, long since occupied with long-range sensors and scanners stands ready to, and indeed continues to, probe the far reaches of the galaxy.",
-		"At the edge of the Sol system lies a treacherous asteroid belt, many have been crushed by stray asteroids and miss-guided judgement.",
+		"At the edge of the Sol system lies a treacherous asteroid belt, many have been cruxed by stray asteroids and miss-guided judgement.",
 		"The nearest star system to Sol, in ages past it stood as a reminder of the boundaries of sub-light travel, now it is a low-population sanctuary for adventureres and traders.",
 		"This region of space is particularly devoid of matter. Such low-density pockets are known to exist, but the vastness of it is astounding.",
 		"Rigel Prime, the center of the Rigel system, burns hot, basking it's planetary bodies in warmth and radiation.",

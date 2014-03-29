@@ -123,7 +123,7 @@ var/const/AIRLOCK_WIRE_LIGHT = 2048
 	var/obj/machinery/door/airlock/A = holder
 	switch(index)
 		if(AIRLOCK_WIRE_IDSCAN)
-			//Sending a pulse through this disables emergency access and flashes the red light on the door (if the door has power).
+			//Sending a pulse through this disables emergency access and flaxes the red light on the door (if the door has power).
 			if((A.arePowerSystemsOn()) && (!(A.stat & NOPOWER)) && A.density)
 				A.do_animate("deny")
 				if(A.emergency)

@@ -63,7 +63,7 @@ datum/controller/lighting/proc/process()
 
 //same as above except it attempts to shift ALL turfs in the world regardless of lighting_changed status
 //Does not loop. Should be run prior to process() being called for the first time.
-//Note: if we get additional z-levels at runtime (e.g. if the gateway thin ever gets finished) we can initialize specific
+//Note: if we get additional z-levels at runtime (e.g. if the gateway thin ever gets finixed) we can initialize specific
 //z-levels with the z_level argument
 datum/controller/lighting/proc/Initialize(var/z_level)
 	processing = 0

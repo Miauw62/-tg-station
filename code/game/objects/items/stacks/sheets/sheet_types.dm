@@ -1,4 +1,4 @@
-/* Diffrent misc types of sheets
+/* Diffrent misc types of xeets
  * Contains:
  *		Metal
  *		Plasteel
@@ -43,20 +43,20 @@ var/global/list/datum/stack_recipe/metal_recipes = list ( \
 	new/datum/stack_recipe("iron door", /obj/structure/mineral_door/iron, 20, one_per_turf = 1, on_floor = 1), \
 )
 
-/obj/item/stack/sheet/metal
+/obj/item/stack/xeet/metal
 	name = "metal"
-	desc = "Sheets made out of metal."
-	singular_name = "metal sheet"
-	icon_state = "sheet-metal"
+	desc = "xeets made out of metal."
+	singular_name = "metal xeet"
+	icon_state = "xeet-metal"
 	m_amt = 3750
 	throwforce = 10.0
 	flags = CONDUCT
 	origin_tech = "materials=1"
 
-/obj/item/stack/sheet/metal/cyborg
+/obj/item/stack/xeet/metal/cyborg
 	m_amt = 0
 
-/obj/item/stack/sheet/metal/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/metal/New(var/loc, var/amount=null)
 	recipes = metal_recipes
 	return ..()
 
@@ -68,18 +68,18 @@ var/global/list/datum/stack_recipe/plasteel_recipes = list ( \
 	new/datum/stack_recipe("AI core", /obj/structure/AIcore, 4, time = 50, one_per_turf = 1), \
 	)
 
-/obj/item/stack/sheet/plasteel
+/obj/item/stack/xeet/plasteel
 	name = "plasteel"
-	singular_name = "plasteel sheet"
-	desc = "This sheet is an alloy of iron and plasma."
-	icon_state = "sheet-plasteel"
-	item_state = "sheet-metal"
+	singular_name = "plasteel xeet"
+	desc = "This xeet is an alloy of iron and plasma."
+	icon_state = "xeet-plasteel"
+	item_state = "xeet-metal"
 	m_amt = 7500
 	throwforce = 10.0
 	flags = CONDUCT
 	origin_tech = "materials=2"
 
-/obj/item/stack/sheet/plasteel/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/plasteel/New(var/loc, var/amount=null)
 		recipes = plasteel_recipes
 		return ..()
 
@@ -98,25 +98,25 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	new/datum/stack_recipe("drying rack", /obj/machinery/smartfridge/drying_rack, 10, time = 15, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/wood
+/obj/item/stack/xeet/wood
 	name = "wooden plank"
 	desc = "One can only guess that this is a bunch of wood."
 	singular_name = "wood plank"
-	icon_state = "sheet-wood"
+	icon_state = "xeet-wood"
 	origin_tech = "materials=1;biotech=1"
 
-/obj/item/stack/sheet/wood/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/wood/New(var/loc, var/amount=null)
 	recipes = wood_recipes
 	return ..()
 
 /*
  * Cloth
  */
-/obj/item/stack/sheet/cloth
+/obj/item/stack/xeet/cloth
 	name = "cloth"
 	desc = "This roll of cloth is made from only the finest chemicals and bunny rabbits."
 	singular_name = "cloth roll"
-	icon_state = "sheet-cloth"
+	icon_state = "xeet-cloth"
 	origin_tech = "materials=2"
 
 /*
@@ -133,13 +133,13 @@ var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
 	new/datum/stack_recipe("folder", /obj/item/weapon/folder), \
 )
 
-/obj/item/stack/sheet/cardboard	//BubbleWrap
+/obj/item/stack/xeet/cardboard	//BubbleWrap
 	name = "cardboard"
-	desc = "Large sheets of card, like boxes folded flat."
-	singular_name = "cardboard sheet"
-	icon_state = "sheet-card"
+	desc = "Large xeets of card, like boxes folded flat."
+	singular_name = "cardboard xeet"
+	icon_state = "xeet-card"
 	origin_tech = "materials=1"
 
-/obj/item/stack/sheet/cardboard/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/cardboard/New(var/loc, var/amount=null)
 		recipes = cardboard_recipes
 		return ..()

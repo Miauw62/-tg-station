@@ -12,7 +12,7 @@
 	opened = 1
 	var/hitstaken = 0
 	locked = 1
-	var/smashed = 0
+	var/smaxed = 0
 
 	attackby(var/obj/item/O as obj, var/mob/user as mob)  //Marker -Agouri
 		//..() //That's very useful, Erro
@@ -32,10 +32,10 @@
 				return
 			else if(istype(O, /obj/item/weapon))
 				var/obj/item/weapon/W = O
-				if(src.smashed || src.localopened)
+				if(src.smaxed || src.localopened)
 					if(localopened)
 						localopened = 0
-						icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+						icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 						spawn(10) update_icon()
 					return
 				else
@@ -46,7 +46,7 @@
 					src.hitstaken++
 					if(src.hitstaken == 4)
 						playsound(user, 'sound/effects/Glassbr3.ogg', 100, 1) //Break cabinet, receive goodies. Cabinet's fucked for life after that.
-						src.smashed = 1
+						src.smaxed = 1
 						src.locked = 0
 						src.localopened = 1
 				update_icon()
@@ -62,23 +62,23 @@
 				user << "\blue You place the fire axe back in the [src.name]."
 				update_icon()
 			else
-				if(src.smashed)
+				if(src.smaxed)
 					return
 				else
 					localopened = !localopened
 					if(localopened)
-						icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smashed)
+						icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 						spawn(10) update_icon()
 					else
-						icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+						icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 						spawn(10) update_icon()
 		else
-			if(src.smashed)
+			if(src.smaxed)
 				return
 			if(istype(O, /obj/item/device/multitool))
 				if(localopened)
 					localopened = 0
-					icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+					icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 					spawn(10) update_icon()
 					return
 				else
@@ -91,10 +91,10 @@
 			else
 				localopened = !localopened
 				if(localopened)
-					icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smashed)
+					icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 					spawn(10) update_icon()
 				else
-					icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+					icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 					spawn(10) update_icon()
 
 
@@ -117,24 +117,24 @@
 				src.add_fingerprint(user)
 				update_icon()
 			else
-				if(src.smashed)
+				if(src.smaxed)
 					return
 				else
 					localopened = !localopened
 					if(localopened)
-						src.icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smashed)
+						src.icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 						spawn(10) update_icon()
 					else
-						src.icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+						src.icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 						spawn(10) update_icon()
 
 		else
-			localopened = !localopened //I'm pretty sure we don't need an if(src.smashed) in here. In case I'm wrong and it fucks up teh cabinet, **MARKER**. -Agouri
+			localopened = !localopened //I'm pretty sure we don't need an if(src.smaxed) in here. In case I'm wrong and it fucks up teh cabinet, **MARKER**. -Agouri
 			if(localopened)
-				src.icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smashed)
+				src.icon_state = text("fireaxe[][][][]opening",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 				spawn(10) update_icon()
 			else
-				src.icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smashed)
+				src.icon_state = text("fireaxe[][][][]closing",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 				spawn(10) update_icon()
 
 	attack_tk(mob/user as mob)
@@ -150,10 +150,10 @@
 		set name = "Open/Close"
 		set category = "Object"
 
-		if (isrobot(usr) || src.locked || src.smashed)
+		if (isrobot(usr) || src.locked || src.smaxed)
 			if(src.locked)
 				usr << "\red The cabinet won't budge!"
-			else if(src.smashed)
+			else if(src.smaxed)
 				usr << "\blue The protective glass is broken!"
 			return
 
@@ -183,7 +183,7 @@
 		return
 
 	attack_ai(mob/user as mob)
-		if(src.smashed)
+		if(src.smaxed)
 			user << "\red The security of the cabinet is compromised."
 			return
 		else
@@ -194,11 +194,11 @@
 				user << "\blue Cabinet unlocked."
 			return
 
-	update_icon() //Template: fireaxe[has fireaxe][is opened][hits taken][is smashed]. If you want the opening or closing animations, add "opening" or "closing" right after the numbers
+	update_icon() //Template: fireaxe[has fireaxe][is opened][hits taken][is smaxed]. If you want the opening or closing animations, add "opening" or "closing" right after the numbers
 		var/hasaxe = 0
 		if(fireaxe)
 			hasaxe = 1
-		icon_state = text("fireaxe[][][][]",hasaxe,src.localopened,src.hitstaken,src.smashed)
+		icon_state = text("fireaxe[][][][]",hasaxe,src.localopened,src.hitstaken,src.smaxed)
 
 	open()
 		return

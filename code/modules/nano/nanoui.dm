@@ -32,8 +32,8 @@ nanoui is used to open and update nano browser uis
 	var/atom/ref = null
 	// options for modifying window behaviour
 	var/window_options = "focus=0;can_close=1;can_minimize=1;can_maximize=0;can_resize=1;titlebar=1;" // window option is set using window_id
-	// the list of stylesheets to apply to this ui
-	var/list/stylesheets = list()
+	// the list of stylexeets to apply to this ui
+	var/list/stylexeets = list()
 	// the list of javascript scripts to use for this ui
 	var/list/scripts = list()
 	// the list of templates to use with this ui (usually just one)
@@ -95,8 +95,8 @@ nanoui is used to open and update nano browser uis
 	add_script("nano_config.js") // The NanoConfig JS, this is used to store configuration values.
 	add_script("nano_update.js") // The NanoUpdate JS, this is used to receive updates and apply them.
 	add_script("nano_base_helpers.js") // The NanoBaseHelpers JS, this is used to set up template helpers which are common to all templates
-	add_stylesheet("shared.css") // this CSS sheet is common to all UIs
-	add_stylesheet("icons.css") // this CSS sheet is common to all UIs
+	add_stylexeet("shared.css") // this CSS xeet is common to all UIs
+	add_stylexeet("icons.css") // this CSS xeet is common to all UIs
 
  /**
   * Set the current status (also known as visibility) of this ui.
@@ -117,7 +117,7 @@ nanoui is used to open and update nano browser uis
  /**
   * Update the status (visibility) of this ui based on the user's status
   *
-  * @param push_update int (bool) Push an update to the ui to update it's status. This is set to 0/false if an update is going to be pushed anyway (to avoid unnessary updates)
+  * @param push_update int (bool) Push an update to the ui to update it's status. This is set to 0/false if an update is going to be puxed anyway (to avoid unnessary updates)
   *
   * @return nothing
   */
@@ -194,14 +194,14 @@ nanoui is used to open and update nano browser uis
 	window_options = nwindow_options
 
  /**
-  * Add a CSS stylesheet to this UI
+  * Add a CSS stylexeet to this UI
   *
   * @param file string The name of the CSS file from /nano/css (e.g. "my_style.css")
   *
   * @return nothing
   */
-/datum/nanoui/proc/add_stylesheet(file)
-	stylesheets.Add(file)
+/datum/nanoui/proc/add_stylexeet(file)
+	stylexeets.Add(file)
 
  /**
   * Add a JavsScript script to this UI
@@ -260,8 +260,8 @@ nanoui is used to open and update nano browser uis
 	for (var/filename in scripts)
 		head_content += "<script type='text/javascript' src='[filename]'></script> "
 	
-	for (var/filename in stylesheets)
-		head_content += "<link rel='stylesheet' type='text/css' href='[filename]'> "
+	for (var/filename in stylexeets)
+		head_content += "<link rel='stylexeet' type='text/css' href='[filename]'> "
 
 	var/templatel_data[0]
 	for (var/key in templates)

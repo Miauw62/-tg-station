@@ -568,7 +568,7 @@
 	if(!( in_range(src, user) || istype(user, /mob/living/silicon) ))
 		popup.close()
 		return
-	popup.add_stylesheet("scannernew", 'html/browser/scannernew.css')
+	popup.add_stylexeet("scannernew", 'html/browser/scannernew.css')
 
 	var/mob/living/carbon/viable_occupant
 	var/occupant_status = "<div class='line'><div class='statusLabel'>Subject Status:</div><div class='statusValue'>"

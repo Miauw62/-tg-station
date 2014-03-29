@@ -24,7 +24,7 @@ proc/check_craftlathe_recipe(var/list/param_recipe)
 	var/id = "" //must be unique for each item type. used to create recipes
 	var/name = "unknown" //what the lathe will show as it's contents
 	var/list/recipe = list("","","","","","","","","") //the 9 items here represent what items need to be placed in the lathe to produce this item.
-	var/item_type = null //this is used on items like sheets which are added when inserted into the lathe.
+	var/item_type = null //this is used on items like xeets which are added when inserted into the lathe.
 	var/amount = 1
 	var/amount_attackby = 1
 
@@ -167,17 +167,17 @@ proc/check_craftlathe_recipe(var/list/param_recipe)
 
 /obj/machinery/autolathe2/proc/build_recipes()
 	//Parameters: ID, Name, Amount, Amount_added_per_attackby, Recipe, Object type
-	CRAFT_ITEMS += new/datum/craftlathe_item("METAL","Metal",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/metal)
-	CRAFT_ITEMS += new/datum/craftlathe_item("R METAL","Reinforced Metal",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/r_metal)
-	CRAFT_ITEMS += new/datum/craftlathe_item("GLASS","Glass",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/glass)
-	CRAFT_ITEMS += new/datum/craftlathe_item("R GLASS","Reinforced Glass",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/rglass)
-	CRAFT_ITEMS += new/datum/craftlathe_item("GOLD","Gold",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/gold)
-	CRAFT_ITEMS += new/datum/craftlathe_item("SILVER","Silver",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/silver)
-	CRAFT_ITEMS += new/datum/craftlathe_item("DIAMOND","Diamond",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/diamond)
-	CRAFT_ITEMS += new/datum/craftlathe_item("PLASMA","Plasma",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/plasma)
+	CRAFT_ITEMS += new/datum/craftlathe_item("METAL","Metal",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/metal)
+	CRAFT_ITEMS += new/datum/craftlathe_item("R METAL","Reinforced Metal",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/r_metal)
+	CRAFT_ITEMS += new/datum/craftlathe_item("GLASS","Glass",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/glass)
+	CRAFT_ITEMS += new/datum/craftlathe_item("R GLASS","Reinforced Glass",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/rglass)
+	CRAFT_ITEMS += new/datum/craftlathe_item("GOLD","Gold",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/gold)
+	CRAFT_ITEMS += new/datum/craftlathe_item("SILVER","Silver",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/silver)
+	CRAFT_ITEMS += new/datum/craftlathe_item("DIAMOND","Diamond",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/diamond)
+	CRAFT_ITEMS += new/datum/craftlathe_item("PLASMA","Plasma",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/plasma)
 	CRAFT_ITEMS += new/datum/craftlathe_item("URANIUM","Uranium",1,1,list("","","","","","","","",""),/obj/item/weapon/ore/mineral/uranium)
-	CRAFT_ITEMS += new/datum/craftlathe_item("CLOWN","Bananium",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/clown)
-	CRAFT_ITEMS += new/datum/craftlathe_item("ADMAMANTINE","Adamantine",1,1,list("","","","","","","","",""),/obj/item/stack/sheet/mineral/adamantine)
+	CRAFT_ITEMS += new/datum/craftlathe_item("CLOWN","Bananium",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/clown)
+	CRAFT_ITEMS += new/datum/craftlathe_item("ADMAMANTINE","Adamantine",1,1,list("","","","","","","","",""),/obj/item/stack/xeet/mineral/adamantine)
 	CRAFT_ITEMS += new/datum/craftlathe_item("SCREWS","Screws",9,9,list("","","","","METAL","","","METAL",""))
 	CRAFT_ITEMS += new/datum/craftlathe_item("COGS","Cogs",9,9,list("","METAL","","METAL","METAL","METAL","","METAL",""))
 	CRAFT_ITEMS += new/datum/craftlathe_item("SWITCH","Switch",12,12,list("METAL","","METAL","METAL","METAL","","METAL","",""))

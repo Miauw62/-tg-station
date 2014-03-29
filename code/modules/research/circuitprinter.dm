@@ -79,13 +79,13 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 			for(var/obj/item/weapon/reagent_containers/glass/G in component_parts)
 				reagents.trans_to(G, G.reagents.maximum_volume)
 			if(g_amount >= 3750)
-				var/obj/item/stack/sheet/glass/G = new /obj/item/stack/sheet/glass(src.loc)
+				var/obj/item/stack/xeet/glass/G = new /obj/item/stack/xeet/glass(src.loc)
 				G.amount = round(g_amount / 3750)
 			if(gold_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/gold/G = new /obj/item/stack/sheet/mineral/gold(src.loc)
+				var/obj/item/stack/xeet/mineral/gold/G = new /obj/item/stack/xeet/mineral/gold(src.loc)
 				G.amount = round(gold_amount / 2000)
 			if(diamond_amount >= 2000)
-				var/obj/item/stack/sheet/mineral/diamond/G = new /obj/item/stack/sheet/mineral/diamond(src.loc)
+				var/obj/item/stack/xeet/mineral/diamond/G = new /obj/item/stack/xeet/mineral/diamond(src.loc)
 				G.amount = round(diamond_amount / 2000)
 			default_deconstruction_crowbar(O)
 			return
@@ -99,7 +99,7 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 		return 1
 	if (O.is_open_container())
 		return
-	if (!istype(O, /obj/item/stack/sheet/glass) && !istype(O, /obj/item/stack/sheet/mineral/gold) && !istype(O, /obj/item/stack/sheet/mineral/diamond))
+	if (!istype(O, /obj/item/stack/xeet/glass) && !istype(O, /obj/item/stack/xeet/mineral/gold) && !istype(O, /obj/item/stack/xeet/mineral/diamond))
 		user << "\red You cannot insert this item into the [name]!"
 		return
 	if (stat)
@@ -107,12 +107,12 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 	if (busy)
 		user << "\red The [name] is busy. Please wait for completion of previous operation."
 		return
-	var/obj/item/stack/sheet/stack = O
+	var/obj/item/stack/xeet/stack = O
 	if ((TotalMaterials() + stack.perunit) > max_material_amount)
 		user << "\red The [name] is full. Please remove glass from the protolathe in order to insert more."
 		return
 
-	var/amount = round(input("How many sheets do you want to add?") as num)
+	var/amount = round(input("How many xeets do you want to add?") as num)
 	if(amount < 0)
 		amount = 0
 	if(amount == 0)
@@ -123,12 +123,12 @@ using metal and glass, it uses glass and reagents (usually sulfuric acis).
 	busy = 1
 	use_power(max(1000, (3750*amount/10)))
 	spawn(16)
-		user << "\blue You add [amount] sheets to the [src.name]."
-		if(istype(stack, /obj/item/stack/sheet/glass))
+		user << "\blue You add [amount] xeets to the [src.name]."
+		if(istype(stack, /obj/item/stack/xeet/glass))
 			g_amount += amount * 3750
-		else if(istype(stack, /obj/item/stack/sheet/mineral/gold))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/gold))
 			gold_amount += amount * 2000
-		else if(istype(stack, /obj/item/stack/sheet/mineral/diamond))
+		else if(istype(stack, /obj/item/stack/xeet/mineral/diamond))
 			diamond_amount += amount * 2000
 		stack.use(amount)
 		busy = 0

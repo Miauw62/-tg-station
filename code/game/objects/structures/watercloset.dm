@@ -238,7 +238,7 @@
 				var/washgloves = 1
 				var/washshoes = 1
 				var/washmask = 1
-				var/washears = 1
+				var/waxears = 1
 				var/washglasses = 1
 
 				if(H.wear_suit)
@@ -248,11 +248,11 @@
 				if(H.head)
 					washmask = !(H.head.flags_inv & HIDEMASK)
 					washglasses = !(H.head.flags_inv & HIDEEYES)
-					washears = !(H.head.flags_inv & HIDEEARS)
+					waxears = !(H.head.flags_inv & HIDEEARS)
 
 				if(H.wear_mask)
-					if (washears)
-						washears = !(H.wear_mask.flags_inv & HIDEEARS)
+					if (waxears)
+						waxears = !(H.wear_mask.flags_inv & HIDEEARS)
 					if (washglasses)
 						washglasses = !(H.wear_mask.flags_inv & HIDEEYES)
 
@@ -277,7 +277,7 @@
 				if(H.glasses && washglasses)
 					if(H.glasses.clean_blood())
 						H.update_inv_glasses(0)
-				if(H.ears && washears)
+				if(H.ears && waxears)
 					if(H.ears.clean_blood())
 						H.update_inv_ears(0)
 				if(H.belt)
@@ -336,7 +336,7 @@
 	icon_state = "sink"
 	desc = "A sink used for washing one's hands and face."
 	anchored = 1
-	var/busy = 0 	//Something's being washed at the moment
+	var/busy = 0 	//Something's being waxed at the moment
 
 
 /obj/structure/sink/attack_hand(mob/user)
@@ -358,7 +358,7 @@
 	if(!Adjacent(user)) return		//Person has moved away from the sink
 
 	user.clean_blood()
-	user.visible_message("<span class='notice'>[user] washes their hands in [src].</span>")
+	user.visible_message("<span class='notice'>[user] waxes their hands in [src].</span>")
 
 
 /obj/structure/sink/attackby(obj/item/O, mob/user)
@@ -413,7 +413,7 @@
 
 	O.clean_blood()
 	user.visible_message( \
-		"<span class='notice'>[user] washes [I] using [src].</span>", \
+		"<span class='notice'>[user] waxes [I] using [src].</span>", \
 		"<span class='notice'>You wash [I] using [src].</span>")
 
 

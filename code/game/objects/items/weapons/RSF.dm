@@ -123,7 +123,7 @@ RSF
 
 	else if (istype(A, /obj/structure/table) && mode == 3)
 		if (istype(A, /obj/structure/table) && matter >= 1)
-			user << "Dispensing Paper Sheet..."
+			user << "Dispensing Paper xeet..."
 			playsound(src.loc, 'sound/machines/click.ogg', 10, 1)
 			new /obj/item/weapon/paper( A.loc )
 			if (isrobot(user))
@@ -137,7 +137,7 @@ RSF
 
 	else if (istype(A, /turf/simulated/floor) && mode == 3)
 		if (istype(A, /turf/simulated/floor) && matter >= 1)
-			user << "Dispensing Paper Sheet..."
+			user << "Dispensing Paper xeet..."
 			playsound(src.loc, 'sound/machines/click.ogg', 10, 1)
 			new /obj/item/weapon/paper( A )
 			if (isrobot(user))

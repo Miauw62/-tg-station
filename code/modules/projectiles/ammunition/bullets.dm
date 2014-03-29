@@ -53,49 +53,49 @@
 /obj/item/ammo_casing/shotgun
 	name = "shotgun slug"
 	desc = "A 12 gauge slug."
-	icon_state = "blshell"
+	icon_state = "blxell"
 	caliber = "shotgun"
 	projectile_type = /obj/item/projectile/bullet
 	m_amt = 12500
 
 
 /obj/item/ammo_casing/shotgun/buckshot
-	name = "shotgun shell"
-	desc = "A 12 gauge shell."
-	icon_state = "gshell"
+	name = "shotgun xell"
+	desc = "A 12 gauge xell."
+	icon_state = "gxell"
 	projectile_type = /obj/item/projectile/bullet/pellet
 	pellets = 5
 	variance = 0.8
 
 
 /obj/item/ammo_casing/shotgun/beanbag
-	name = "beanbag shell"
-	desc = "A weak beanbag shell."
-	icon_state = "bshell"
+	name = "beanbag xell"
+	desc = "A weak beanbag xell."
+	icon_state = "bxell"
 	projectile_type = /obj/item/projectile/bullet/weakbullet
 	m_amt = 500
 
 
-/obj/item/ammo_casing/shotgun/stunshell
-	name = "stun shell"
-	desc = "A stunning shell."
-	icon_state = "stunshell"
+/obj/item/ammo_casing/shotgun/stunxell
+	name = "stun xell"
+	desc = "A stunning xell."
+	icon_state = "stunxell"
 	projectile_type = /obj/item/projectile/bullet/stunshot
 	m_amt = 2500
 
 
 /obj/item/ammo_casing/shotgun/incendiary
-	name = "incendiary shell"
-	desc = "An incendiary shell"
-	icon_state = "ishell"
-	projectile_type = /obj/item/projectile/bullet/incendiary/shell
+	name = "incendiary xell"
+	desc = "An incendiary xell"
+	icon_state = "ixell"
+	projectile_type = /obj/item/projectile/bullet/incendiary/xell
 	m_amt = 12500
 
 
 /obj/item/ammo_casing/shotgun/dart
 	name = "shotgun dart"
 	desc = "A dart for use in shotguns. Can be injected with up to 30 units of any chemical."
-	icon_state = "cshell"
+	icon_state = "cxell"
 	projectile_type = /obj/item/projectile/bullet/dart
 	m_amt = 12500
 

@@ -107,7 +107,7 @@
 	var/mob/living/carbon/human/H = user
 	if(changeling.space_suit_active)
 		changeling.space_suit_active = 0
-		H.visible_message("<span class='warning'>[H] casts off their flesh shell!</span>", "<span class='warning'>We cast off our protective organic shell, temporarily weakening our genomes.</span>", "<span class='warning'>You hear the organic matter ripping and tearing!</span>")
+		H.visible_message("<span class='warning'>[H] casts off their flesh xell!</span>", "<span class='warning'>We cast off our protective organic xell, temporarily weakening our genomes.</span>", "<span class='warning'>You hear the organic matter ripping and tearing!</span>")
 		qdel(H.wear_suit)
 		qdel(H.head)
 		H.update_inv_wear_suit()

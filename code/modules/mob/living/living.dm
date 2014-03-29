@@ -491,7 +491,7 @@
 			CM.visible_message("<span class='danger'>[CM] rolls on the floor, trying to put themselves out!</span>", \
 				"<span class='notice'>You stop, drop, and roll!</span>")
 			if(fire_stacks <= 0)
-				CM.visible_message("<span class='danger'>[CM] has successfully extinguished themselves!</span>", \
+				CM.visible_message("<span class='danger'>[CM] has successfully extinguixed themselves!</span>", \
 					"<span class='notice'>You extinguish yourself.</span>")
 				ExtinguishMob()
 			return

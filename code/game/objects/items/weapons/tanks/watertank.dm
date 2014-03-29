@@ -144,34 +144,34 @@
 //Atmos tank
 /obj/item/weapon/watertank/atmos
 	name = "backpack water tank"
-	desc = "A backpack watertank with fire extinguisher nozzle, intended to fight fires. Shouldn't toxins have one of these?"
+	desc = "A backpack watertank with fire extinguixer nozzle, intended to fight fires. Shouldn't toxins have one of these?"
 	icon_state = "waterbackpackatmos"
 	item_state = "waterbackpackatmos"
 	volume = 100
 	
 /obj/item/weapon/watertank/atmos/make_noz()
-	noz = new /obj/item/weapon/extinguisher/mini/nozzle(src)
+	noz = new /obj/item/weapon/extinguixer/mini/nozzle(src)
 	
-/obj/item/weapon/extinguisher/mini/nozzle
-	name = "fire extinguisher nozzle"
-	desc = "A fire extinguisher nozzle attached to a water tank."
+/obj/item/weapon/extinguixer/mini/nozzle
+	name = "fire extinguixer nozzle"
+	desc = "A fire extinguixer nozzle attached to a water tank."
 	icon = 'icons/obj/hydroponics.dmi'
 	icon_state = "misteratmos"
 	item_state = "misteratmos"
 	safety = 0
 	var/obj/item/weapon/watertank/tank
 	
-/obj/item/weapon/extinguisher/mini/nozzle/New(parent_tank)
+/obj/item/weapon/extinguixer/mini/nozzle/New(parent_tank)
 	if(check_tank_exists(parent_tank, usr, src))
 		tank = parent_tank
 		reagents = tank.reagents
 		max_water = tank.volume
 	return
 		
-/obj/item/weapon/extinguisher/mini/nozzle/dropped(mob/user as mob)
+/obj/item/weapon/extinguixer/mini/nozzle/dropped(mob/user as mob)
 	user << "<span class='notice'>The nozzle snaps back onto the watertank!</span>"
 	tank.on = 0
 	qdel(src)
 	
-/obj/item/weapon/extinguisher/mini/nozzle/attack_self()
+/obj/item/weapon/extinguixer/mini/nozzle/attack_self()
 	return

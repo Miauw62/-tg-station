@@ -70,7 +70,7 @@
 	m_amt = 10000
 	g_amt = 5000
 	origin_tech = "materials=1;biotech=1"
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb = list("attacked", "slaxed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	suicide_act(mob/user)
@@ -96,7 +96,7 @@
 	m_amt = 20000
 	g_amt = 10000
 	origin_tech = "materials=1;biotech=1"
-	attack_verb = list("attacked", "slashed", "sawed", "cut")
+	attack_verb = list("attacked", "slaxed", "sawed", "cut")
 
 
 /obj/item/weapon/surgical_drapes

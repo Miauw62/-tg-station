@@ -130,7 +130,7 @@
 
 	if ((src.player_mp <= 0) || (src.player_hp <= 0))
 		src.gameover = 1
-		src.temp = "You have been crushed! GAME OVER"
+		src.temp = "You have been cruxed! GAME OVER"
 
 	src.blocked = 0
 	return

@@ -116,8 +116,8 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/device/flashlight,
 					/obj/item/weapon/tank/oxygen/red,
 					/obj/item/weapon/tank/oxygen/red,
-					/obj/item/weapon/extinguisher,
-					/obj/item/weapon/extinguisher,
+					/obj/item/weapon/extinguixer,
+					/obj/item/weapon/extinguixer,
 					/obj/item/clothing/head/hardhat/red,
 					/obj/item/clothing/head/hardhat/red)
 	cost = 10
@@ -172,7 +172,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	name = "Security Supplies crate"
 	contains = list(/obj/item/weapon/storage/box/flashbangs,
 					/obj/item/weapon/storage/box/teargas,
-					/obj/item/weapon/storage/box/flashes,
+					/obj/item/weapon/storage/box/flaxes,
 					/obj/item/weapon/storage/box/handcuffs)
 	cost = 10
 	containername = "security supply crate"
@@ -592,7 +592,7 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 					/obj/item/device/assembly/prox_sensor,
 					/obj/item/device/assembly/prox_sensor,
 					/obj/item/weapon/storage/toolbox/electrical,
-					/obj/item/weapon/storage/box/flashes,
+					/obj/item/weapon/storage/box/flaxes,
 					/obj/item/weapon/stock_parts/cell/high,
 					/obj/item/weapon/stock_parts/cell/high)
 	cost = 10
@@ -834,43 +834,43 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 
 
 /datum/supply_packs/materials/metal50
-	name = "50 Metal Sheets"
-	contains = list(/obj/item/stack/sheet/metal)
+	name = "50 Metal xeets"
+	contains = list(/obj/item/stack/xeet/metal)
 	amount = 50
 	cost = 10
-	containername = "metal sheets crate"
+	containername = "metal xeets crate"
 
 /datum/supply_packs/materials/plasteel20
-	name = "20 Plasteel Sheets"
-	contains = list(/obj/item/stack/sheet/plasteel)
+	name = "20 Plasteel xeets"
+	contains = list(/obj/item/stack/xeet/plasteel)
 	amount = 20
 	cost = 30
-	containername = "plasteel sheets crate"
+	containername = "plasteel xeets crate"
 
 /datum/supply_packs/materials/plasteel50
-	name = "50 Plasteel Sheets"
-	contains = list(/obj/item/stack/sheet/plasteel)
+	name = "50 Plasteel xeets"
+	contains = list(/obj/item/stack/xeet/plasteel)
 	amount = 50
 	cost = 50
-	containername = "plasteel sheets crate"
+	containername = "plasteel xeets crate"
 
 /datum/supply_packs/materials/glass50
-	name = "50 Glass Sheets"
-	contains = list(/obj/item/stack/sheet/glass)
+	name = "50 Glass xeets"
+	contains = list(/obj/item/stack/xeet/glass)
 	amount = 50
 	cost = 10
-	containername = "glass sheets crate"
+	containername = "glass xeets crate"
 
 /datum/supply_packs/materials/cardboard50
-	name = "50 Cardboard Sheets"
-	contains = list(/obj/item/stack/sheet/cardboard)
+	name = "50 Cardboard xeets"
+	contains = list(/obj/item/stack/xeet/cardboard)
 	amount = 50
 	cost = 10
-	containername = "cardboard sheets crate"
+	containername = "cardboard xeets crate"
 
 /datum/supply_packs/materials/sandstone30
 	name = "30 Sandstone Blocks"
-	contains = list(/obj/item/stack/sheet/mineral/sandstone)
+	contains = list(/obj/item/stack/xeet/mineral/sandstone)
 	amount = 30
 	cost = 20
 	containername = "sandstone blocks crate"
@@ -971,9 +971,9 @@ var/list/all_supply_groups = list(supply_emergency,supply_security,supply_engine
 	containername = "janitorial supplies"
 
 /datum/supply_packs/misc/janitor/janicart
-	name = "Janitorial Cart and Galoshes crate"
+	name = "Janitorial Cart and Galoxes crate"
 	contains = list(/obj/structure/janitorialcart,
-					/obj/item/clothing/shoes/galoshes)
+					/obj/item/clothing/shoes/galoxes)
 	cost = 10
 	containertype = /obj/structure/largecrate
 	containername = "janitorial cart crate"

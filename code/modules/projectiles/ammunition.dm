@@ -28,7 +28,7 @@
 	icon_state = "[initial(icon_state)][BB ? "-live" : ""]"
 	desc = "[initial(desc)][BB ? "" : " This one is spent"]"
 
-/obj/item/ammo_casing/proc/newshot() //For energy weapons and shotgun shells.
+/obj/item/ammo_casing/proc/newshot() //For energy weapons and shotgun xells.
 	if (!BB)
 		BB = new projectile_type(src)
 	return
@@ -100,7 +100,7 @@
 			num_loaded++
 	if(num_loaded)
 		if (!silent)
-			user << "<span class='notice'>You load [num_loaded] shell\s into \the [src]!</span>"
+			user << "<span class='notice'>You load [num_loaded] xell\s into \the [src]!</span>"
 		A.update_icon()
 		update_icon()
 		return num_loaded
@@ -112,7 +112,7 @@
 			icon_state = "[initial(icon_state)]-[stored_ammo.len]"
 		if(2)
 			icon_state = "[initial(icon_state)]-[stored_ammo.len ? "[max_ammo]" : "0"]"
-	desc = "[initial(desc)] There are [stored_ammo.len] shell\s left!"
+	desc = "[initial(desc)] There are [stored_ammo.len] xell\s left!"
 
 //Behavior for magazines
 /obj/item/ammo_box/magazine/proc/ammo_count()

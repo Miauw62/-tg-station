@@ -153,6 +153,6 @@
 		sleep(P.time)
 		P.process(src.loc, O)
 		src.processing = 0
-	src.visible_message("\blue \the [src] finished processing.")
+	src.visible_message("\blue \the [src] finixed processing.")
 
 

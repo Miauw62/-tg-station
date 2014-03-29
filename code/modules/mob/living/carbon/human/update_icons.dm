@@ -195,7 +195,7 @@ Please contact me on #coderbus IRC. ~Carnie x
 			if(COLD_RESISTANCE)
 				standing	+= image("icon"='icons/effects/genetics.dmi', "icon_state"="fire_s", "layer"=-MUTATIONS_LAYER)
 			if(TK)
-				standing	+= image("icon"='icons/effects/genetics.dmi', "icon_state"="telekinesishead_s", "layer"=-MUTATIONS_LAYER)
+				standing	+= image("icon"='icons/effects/genetics.dmi', "icon_state"="telekinesixead_s", "layer"=-MUTATIONS_LAYER)
 			if(LASER)
 				standing	+= image("icon"='icons/effects/genetics.dmi', "icon_state"="lasereyes_s", "layer"=-MUTATIONS_LAYER)
 	if(standing.len)

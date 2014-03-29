@@ -27,7 +27,7 @@ var/list/liftable_structures = list(
 	/obj/machinery/seed_extractor,
 	/obj/machinery/space_heater,
 	/obj/machinery/recharge_station,
-	/obj/machinery/flasher,
+	/obj/machinery/flaxer,
 	/obj/structure/stool,
 	/obj/structure/closet,
 	/obj/machinery/photocopier,

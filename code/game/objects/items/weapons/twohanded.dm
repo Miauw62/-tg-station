@@ -196,7 +196,7 @@ obj/item/weapon/twohanded/
 	flags = NOSHIELD
 	origin_tech = "magnets=3;syndicate=4"
 	item_color = "green"
-	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_verb = list("attacked", "slaxed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	var/hacked = 0
 	reflect_chance = 0
 

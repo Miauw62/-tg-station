@@ -11,7 +11,7 @@
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
 	response_help = "touches"
-	response_disarm = "pushes"
+	response_disarm = "puxes"
 	response_harm = "hits"
 	speed = 0
 	maxHealth = 250

@@ -117,8 +117,8 @@
 			if(randn <= 25)
 				apply_effect(2, WEAKEN, run_armor_check(affecting, "melee"))
 				playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				visible_message("<span class='danger'>[M] has pushed [src]!</span>",
-								"<span class='userdanger'>[M] has pushed [src]!</span>")
+				visible_message("<span class='danger'>[M] has puxed [src]!</span>",
+								"<span class='userdanger'>[M] has puxed [src]!</span>")
 				forcesay(hit_appends)
 				return
 

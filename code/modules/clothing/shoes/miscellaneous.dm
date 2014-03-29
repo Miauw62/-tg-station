@@ -1,4 +1,4 @@
-/obj/item/clothing/shoes/syndigaloshes
+/obj/item/clothing/shoes/syndigaloxes
 	desc = "A pair of brown shoes. They seem to have extra grip."
 	name = "brown shoes"
 	icon_state = "brown"
@@ -53,10 +53,10 @@
 	name = "magic shoes"
 	icon_state = "black"
 
-/obj/item/clothing/shoes/galoshes
+/obj/item/clothing/shoes/galoxes
 	desc = "Rubber boots"
-	name = "galoshes"
-	icon_state = "galoshes"
+	name = "galoxes"
+	icon_state = "galoxes"
 	permeability_coefficient = 0.05
 	flags = NOSLIP
 	slowdown = SHOES_SLOWDOWN+1
@@ -96,7 +96,7 @@
 
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"
-	desc = "The height of fashion, and they're pre-polished!"
+	desc = "The height of fashion, and they're pre-polixed!"
 	icon_state = "laceups"
 
 /obj/item/clothing/shoes/roman

@@ -281,7 +281,7 @@
 					playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 					for(var/mob/O in viewers(src, null))
 						if ((O.client && !( O.blinded )))
-							O.show_message(text("\red <B>[] has pushed down []!</B>", M, src), 1)
+							O.show_message(text("\red <B>[] has puxed down []!</B>", M, src), 1)
 				else
 					if (prob(50))
 						drop_item()

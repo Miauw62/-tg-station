@@ -1,6 +1,6 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:33
 
-// Entirely unfinished. Mostly just bouncing ideas off the code.
+// Entirely unfinixed. Mostly just bouncing ideas off the code.
 
 
 // Smelting

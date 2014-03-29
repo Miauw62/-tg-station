@@ -1,5 +1,5 @@
 /*
-Mineral Sheets
+Mineral xeets
 	Contains:
 		- Sandstone
 		- Diamond
@@ -18,18 +18,18 @@ Mineral Sheets
  * Sandstone
  */
 
-/obj/item/stack/sheet/mineral
+/obj/item/stack/xeet/mineral
 	icon = 'icons/obj/mining.dmi'
 
-/obj/item/stack/sheet/mineral/sandstone
+/obj/item/stack/xeet/mineral/sandstone
 	name = "sandstone brick"
 	desc = "This appears to be a combination of both sand and stone."
 	singular_name = "sandstone brick"
-	icon_state = "sheet-sandstone"
+	icon_state = "xeet-sandstone"
 	throw_speed = 3
 	throw_range = 5
 	origin_tech = "materials=1"
-	sheettype = "sandstone"
+	xeettype = "sandstone"
 
 var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 	new/datum/stack_recipe("pile of dirt", /obj/machinery/hydroponics/soil, 3, time = 10, one_per_turf = 1, on_floor = 1), \
@@ -38,7 +38,7 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 		new/datum/stack_recipe("sandstone floor", ???),\ */
 	)
 
-/obj/item/stack/sheet/mineral/sandstone/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/sandstone/New(var/loc, var/amount=null)
 	recipes = sandstone_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -47,9 +47,9 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 /*
  * Diamond
  */
-/obj/item/stack/sheet/mineral/diamond
+/obj/item/stack/xeet/mineral/diamond
 	name = "diamond"
-	icon_state = "sheet-diamond"
+	icon_state = "xeet-diamond"
 	singular_name = "diamond"
 	force = 5.0
 	throwforce = 5
@@ -57,13 +57,13 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 	throw_range = 3
 	origin_tech = "materials=6"
 	perunit = 3750
-	sheettype = "diamond"
+	xeettype = "diamond"
 
 var/global/list/datum/stack_recipe/diamond_recipes = list ( \
 	new/datum/stack_recipe("diamond door", /obj/structure/mineral_door/transparent/diamond, 10, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/mineral/diamond/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/diamond/New(var/loc, var/amount=null)
 	recipes = diamond_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -72,10 +72,10 @@ var/global/list/datum/stack_recipe/diamond_recipes = list ( \
 /*
  * Uranium
  */
-/obj/item/stack/sheet/mineral/uranium
+/obj/item/stack/xeet/mineral/uranium
 	name = "uranium"
-	icon_state = "sheet-uranium"
-	singular_name = "uranium sheet"
+	icon_state = "xeet-uranium"
+	singular_name = "uranium xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0
@@ -83,13 +83,13 @@ var/global/list/datum/stack_recipe/diamond_recipes = list ( \
 	throw_range = 3
 	origin_tech = "materials=5"
 	perunit = 2000
-	sheettype = "uranium"
+	xeettype = "uranium"
 
 var/global/list/datum/stack_recipe/uranium_recipes = list ( \
 	new/datum/stack_recipe("uranium door", /obj/structure/mineral_door/uranium, 10, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/mineral/uranium/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/uranium/New(var/loc, var/amount=null)
 	recipes = uranium_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -98,10 +98,10 @@ var/global/list/datum/stack_recipe/uranium_recipes = list ( \
 /*
  * Plasma
  */
-/obj/item/stack/sheet/mineral/plasma
+/obj/item/stack/xeet/mineral/plasma
 	name = "solid plasma"
-	icon_state = "sheet-plasma"
-	singular_name = "plasma sheet"
+	icon_state = "xeet-plasma"
+	singular_name = "plasma xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0
@@ -109,13 +109,13 @@ var/global/list/datum/stack_recipe/uranium_recipes = list ( \
 	throw_range = 3
 	origin_tech = "plasmatech=2;materials=2"
 	perunit = 2000
-	sheettype = "plasma"
+	xeettype = "plasma"
 
 var/global/list/datum/stack_recipe/plasma_recipes = list ( \
 	new/datum/stack_recipe("plasma door", /obj/structure/mineral_door/transparent/plasma, 10, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/mineral/plasma/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/plasma/New(var/loc, var/amount=null)
 	recipes = plasma_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -124,9 +124,9 @@ var/global/list/datum/stack_recipe/plasma_recipes = list ( \
 /*
  * Gold
  */
-/obj/item/stack/sheet/mineral/gold
+/obj/item/stack/xeet/mineral/gold
 	name = "gold"
-	icon_state = "sheet-gold"
+	icon_state = "xeet-gold"
 	singular_name = "gold bar"
 	force = 5.0
 	throwforce = 5
@@ -135,13 +135,13 @@ var/global/list/datum/stack_recipe/plasma_recipes = list ( \
 	throw_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000
-	sheettype = "gold"
+	xeettype = "gold"
 
 var/global/list/datum/stack_recipe/gold_recipes = list ( \
 	new/datum/stack_recipe("golden door", /obj/structure/mineral_door/gold, 10, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/mineral/gold/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/gold/New(var/loc, var/amount=null)
 	recipes = gold_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -150,9 +150,9 @@ var/global/list/datum/stack_recipe/gold_recipes = list ( \
 /*
  * Silver
  */
-/obj/item/stack/sheet/mineral/silver
+/obj/item/stack/xeet/mineral/silver
 	name = "silver"
-	icon_state = "sheet-silver"
+	icon_state = "xeet-silver"
 	singular_name = "silver bar"
 	force = 5.0
 	throwforce = 5
@@ -161,13 +161,13 @@ var/global/list/datum/stack_recipe/gold_recipes = list ( \
 	throw_range = 3
 	origin_tech = "materials=3"
 	perunit = 2000
-	sheettype = "silver"
+	xeettype = "silver"
 
 var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	new/datum/stack_recipe("silver door", /obj/structure/mineral_door/silver, 10, one_per_turf = 1, on_floor = 1), \
 	)
 
-/obj/item/stack/sheet/mineral/silver/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/silver/New(var/loc, var/amount=null)
 	recipes = silver_recipes
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
@@ -176,10 +176,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 /*
  * Clown
  */
-/obj/item/stack/sheet/mineral/clown
+/obj/item/stack/xeet/mineral/clown
 	name = "bananium"
-	icon_state = "sheet-clown"
-	singular_name = "bananium sheet"
+	icon_state = "xeet-clown"
+	singular_name = "bananium xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0
@@ -187,9 +187,9 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	throw_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000
-	sheettype = "clown"
+	xeettype = "clown"
 
-/obj/item/stack/sheet/mineral/clown/New(var/loc, var/amount=null)
+/obj/item/stack/xeet/mineral/clown/New(var/loc, var/amount=null)
 	pixel_x = rand(0,4)-4
 	pixel_y = rand(0,4)-4
 	..()
@@ -200,10 +200,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 /*
  * Enriched Uranium
  */
-/obj/item/stack/sheet/mineral/enruranium
+/obj/item/stack/xeet/mineral/enruranium
 	name = "enriched uranium"
-	icon_state = "sheet-enruranium"
-	singular_name = "enriched uranium sheet"
+	icon_state = "xeet-enruranium"
+	singular_name = "enriched uranium xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0
@@ -215,10 +215,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 /*
  * Adamantine
  */
-/obj/item/stack/sheet/mineral/adamantine
+/obj/item/stack/xeet/mineral/adamantine
 	name = "adamantine"
-	icon_state = "sheet-adamantine"
-	singular_name = "adamantine sheet"
+	icon_state = "xeet-adamantine"
+	singular_name = "adamantine xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0
@@ -230,10 +230,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 /*
  * Mythril
  */
-/obj/item/stack/sheet/mineral/mythril
+/obj/item/stack/xeet/mineral/mythril
 	name = "mythril"
-	icon_state = "sheet-mythril"
-	singular_name = "mythril sheet"
+	icon_state = "xeet-mythril"
+	singular_name = "mythril xeet"
 	force = 5.0
 	throwforce = 5
 	w_class = 3.0

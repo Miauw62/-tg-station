@@ -4,7 +4,7 @@ Ideas for the subtle effects of hallucination:
 Light up oxygen/plasma indicators (done)
 Cause health to look critical/dead, even when standing (done)
 Characters silently watching you
-Brief flashes of fire/space/bombs/c4/dangerous shit (done)
+Brief flaxes of fire/space/bombs/c4/dangerous shit (done)
 Items that are rare/traitorous/don't exist appearing in your inventory slots (done)
 Strange audio (should be rare) (done)
 Gunshots/explosions/opening doors/less rare audio (done)
@@ -79,7 +79,7 @@ mob/living/carbon/proc/handle_hallucinations()
 						spawn(rand(100,250))
 							qdel(src)
 			if(26 to 40)
-				//Flashes of danger
+				//Flaxes of danger
 				//src << "Danger Flash"
 				if(!halimage)
 					var/list/possible_points = list()
@@ -141,7 +141,7 @@ mob/living/carbon/proc/handle_hallucinations()
 							'sound/hallucinations/turn_around1.ogg', 'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg', 'sound/hallucinations/wail.ogg')
 						src << pick(creepyasssounds)
 			if(66 to 70)
-				//Flashes of danger
+				//Flaxes of danger
 				//src << "Danger Flash"
 				if(!halbody)
 					var/list/possible_points = list()
@@ -334,7 +334,7 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 	/obj/item/weapon/gun/energy/crossbow, /obj/item/weapon/melee/energy/sword,\
 	/obj/item/weapon/storage/box/syndicate, /obj/item/weapon/storage/box/emps,\
 	/obj/item/weapon/cartridge/syndicate, /obj/item/clothing/under/chameleon,\
-	/obj/item/clothing/shoes/syndigaloshes, /obj/item/weapon/card/id/syndicate,\
+	/obj/item/clothing/shoes/syndigaloxes, /obj/item/weapon/card/id/syndicate,\
 	/obj/item/clothing/mask/gas/voice, /obj/item/clothing/glasses/thermal,\
 	/obj/item/device/chameleon, /obj/item/weapon/card/emag,\
 	/obj/item/weapon/storage/toolbox/syndicate, /obj/item/weapon/aiModule,\

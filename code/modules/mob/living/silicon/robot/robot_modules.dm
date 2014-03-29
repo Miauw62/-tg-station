@@ -64,7 +64,7 @@
 	New()
 		..()
 		modules += new /obj/item/weapon/melee/baton/loaded(src)
-		modules += new /obj/item/weapon/extinguisher(src)
+		modules += new /obj/item/weapon/extinguixer(src)
 		modules += new /obj/item/weapon/wrench(src)
 		modules += new /obj/item/weapon/crowbar(src)
 		modules += new /obj/item/device/healthanalyzer(src)
@@ -82,7 +82,7 @@
 		modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 		modules += new /obj/item/weapon/reagent_containers/dropper(src)
 		modules += new /obj/item/weapon/reagent_containers/syringe(src)
-		modules += new /obj/item/weapon/extinguisher/mini(src)
+		modules += new /obj/item/weapon/extinguixer/mini(src)
 		emag = new /obj/item/weapon/reagent_containers/spray(src)
 
 		emag.reagents.add_reagent("pacid", 250)
@@ -98,7 +98,7 @@
 		modules += new /obj/item/borg/sight/meson(src)
 		emag = new /obj/item/borg/stun(src)
 		modules += new /obj/item/weapon/rcd/borg(src)
-		modules += new /obj/item/weapon/extinguisher(src)
+		modules += new /obj/item/weapon/extinguixer(src)
 		modules += new /obj/item/weapon/weldingtool/largetank/cyborg(src)
 		modules += new /obj/item/weapon/screwdriver(src)
 		modules += new /obj/item/weapon/wrench(src)
@@ -108,11 +108,11 @@
 		modules += new /obj/item/device/t_scanner(src)
 		modules += new /obj/item/device/analyzer(src)
 
-		var/obj/item/stack/sheet/metal/cyborg/M = new /obj/item/stack/sheet/metal/cyborg(src)
+		var/obj/item/stack/xeet/metal/cyborg/M = new /obj/item/stack/xeet/metal/cyborg(src)
 		M.amount = 50
 		modules += M
 
-		var/obj/item/stack/sheet/rglass/cyborg/G = new /obj/item/stack/sheet/rglass/cyborg(src)
+		var/obj/item/stack/xeet/rglass/cyborg/G = new /obj/item/stack/xeet/rglass/cyborg(src)
 		G.amount = 50
 		modules += G
 
@@ -131,8 +131,8 @@
 
 	respawn_consumable(var/mob/living/silicon/robot/R)
 		var/list/what = list (
-			/obj/item/stack/sheet/metal,
-			/obj/item/stack/sheet/rglass,
+			/obj/item/stack/xeet/metal,
+			/obj/item/stack/xeet/rglass,
 			/obj/item/stack/rods,
 			/obj/item/stack/cable_coil,
 			/obj/item/stack/tile/plasteel/cyborg,
@@ -217,7 +217,7 @@
 			modules += new /obj/item/weapon/pickaxe/diamonddrill(src)
 		else
 			modules += new /obj/item/weapon/pickaxe/borgdrill(src)
-		modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
+		modules += new /obj/item/weapon/storage/bag/xeetsnatcher/borg(src)
 		modules += new /obj/item/device/mining_scanner(src)
 		modules += new /obj/item/weapon/gun/energy/kinetic_accelerator(src)
 	on_emag()

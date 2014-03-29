@@ -27,7 +27,7 @@
 
 		// This may seem a little counter-intuitive but I assure you that's for a purpose.
 		// Stakes are the ones that carry targets, yes, but in the stake code we set
-		// a stake's density to 0 meaning it can't be pushed anymore. Instead of pushing
+		// a stake's density to 0 meaning it can't be puxed anymore. Instead of pushing
 		// the stake now, we have to push the target.
 
 

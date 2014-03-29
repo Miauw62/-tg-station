@@ -65,7 +65,7 @@
 		if(!setup_database_connection())
 			world.log << "Your server failed to establish a connection with the database."
 		else
-			world.log << "Database connection established."
+			world.log << "Database connection establixed."
 
 	plmaster = new /obj/effect/overlay()
 	plmaster.icon = 'icons/effects/tile_effects.dmi'
@@ -310,7 +310,7 @@ proc/setup_database_connection()
 
 	return .
 
-//This proc ensures that the connection to the feedback database (global variable dbcon) is established
+//This proc ensures that the connection to the feedback database (global variable dbcon) is establixed
 proc/establish_db_connection()
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
 		return 0

@@ -9,8 +9,8 @@
 	speak_chance = 0
 	turns_per_move = 5
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/carpmeat
-	response_help = "brushes"
-	response_disarm = "pushes"
+	response_help = "bruxes"
+	response_disarm = "puxes"
 	response_harm = "hits"
 	speed = 1
 	maxHealth = 250
@@ -53,7 +53,7 @@
 /mob/living/simple_animal/hostile/tree/Die()
 	..()
 	visible_message("\red <b>[src]</b> is hacked into pieces!")
-	new /obj/item/stack/sheet/wood(loc)
+	new /obj/item/stack/xeet/wood(loc)
 	qdel(src)
 
 /mob/living/simple_animal/hostile/tree/festivus

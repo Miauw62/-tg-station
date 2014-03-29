@@ -15,7 +15,7 @@
 /obj/item/weapon/gun/projectile/shotgun/attackby(var/obj/item/A as obj, mob/user as mob)
 	var/num_loaded = magazine.attackby(A, user, 1)
 	if(num_loaded)
-		user << "<span class='notice'>You load [num_loaded] shell\s into \the [src]!</span>"
+		user << "<span class='notice'>You load [num_loaded] xell\s into \the [src]!</span>"
 		A.update_icon()
 		update_icon()
 
@@ -37,7 +37,7 @@
 /obj/item/weapon/gun/projectile/shotgun/proc/pump(mob/M)
 	playsound(M, 'sound/weapons/shotgunpump.ogg', 60, 1)
 	pumped = 0
-	if(chambered)//We have a shell in the chamber
+	if(chambered)//We have a xell in the chamber
 		chambered.loc = get_turf(src)//Eject casing
 		chambered = null
 	if(!magazine.ammo_count())	return 0
@@ -102,6 +102,6 @@
 		CB.update_icon()
 		num_unloaded++
 	if (num_unloaded)
-		user << "<span class = 'notice'>You break open \the [src] and unload [num_unloaded] shell\s.</span>"
+		user << "<span class = 'notice'>You break open \the [src] and unload [num_unloaded] xell\s.</span>"
 	else
 		user << "<span class='notice'>[src] is empty.</span>"

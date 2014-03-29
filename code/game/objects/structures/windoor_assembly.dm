@@ -82,7 +82,7 @@ obj/structure/windoor_assembly/Destroy()
 					if(do_after(user, 40))
 						if(!src || !WT.isOn()) return
 						user << "<span class='notice'>You dissasembled the windoor assembly!</span>"
-						var/obj/item/stack/sheet/rglass/RG = new (get_turf(src), 5)
+						var/obj/item/stack/xeet/rglass/RG = new (get_turf(src), 5)
 						RG.add_fingerprint(user)
 						if(secure)
 							var/obj/item/stack/rods/R = new (get_turf(src), 4)
@@ -121,8 +121,8 @@ obj/structure/windoor_assembly/Destroy()
 						src.name = "Windoor Assembly"
 
 			//Adding plasteel makes the assembly a secure windoor assembly. Step 2 (optional) complete.
-			else if(istype(W, /obj/item/stack/sheet/plasteel) && !secure)
-				var/obj/item/stack/sheet/plasteel/P = W
+			else if(istype(W, /obj/item/stack/xeet/plasteel) && !secure)
+				var/obj/item/stack/xeet/plasteel/P = W
 				if(P.amount < 2)
 					user << "\red You need more plasteel to do this."
 					return
@@ -185,7 +185,7 @@ obj/structure/windoor_assembly/Destroy()
 					user.drop_item()
 					W.loc = src
 					user << "\blue You've installed the airlock electronics!"
-					src.name = "Near finished Windoor Assembly"
+					src.name = "Near finixed Windoor Assembly"
 					src.electronics = W
 				else
 					W.loc = src.loc

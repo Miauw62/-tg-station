@@ -66,7 +66,7 @@
 	item_state = "gglasses"
 
 /obj/item/clothing/glasses/sunglasses
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flashes."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Enhanced shielding blocks many flaxes."
 	name = "sunglasses"
 	icon_state = "sun"
 	item_state = "sunglasses"
@@ -108,7 +108,7 @@
 	tint = 3			// to make them blind
 
 /obj/item/clothing/glasses/sunglasses/big
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks many flashes."
+	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks many flaxes."
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
 

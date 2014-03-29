@@ -9,14 +9,14 @@ For the materials datum, it assumes you need reagents unless specified otherwise
 you use one of the material IDs below. These are NOT ids in the usual sense (they aren't defined in the object or part of a datum),
 they are simply references used as part of a "has materials?" type proc. They all start with a $ to denote that they aren't reagents.
 The currently supporting non-reagent materials:
-- $metal (/obj/item/stack/metal). One sheet = 3750 units.
-- $glass (/obj/item/stack/glass). One sheet = 3750 units.
-- $plasma (/obj/item/stack/plasma). One sheet = 3750 units.
-- $silver (/obj/item/stack/silver). One sheet = 3750 units.
-- $gold (/obj/item/stack/gold). One sheet = 3750 units.
-- $uranium (/obj/item/stack/uranium). One sheet = 3750 units.
-- $diamond (/obj/item/stack/diamond). One sheet = 3750 units.
-- $clown (/obj/item/stack/clown). One sheet = 3750 units. ("Bananium")
+- $metal (/obj/item/stack/metal). One xeet = 3750 units.
+- $glass (/obj/item/stack/glass). One xeet = 3750 units.
+- $plasma (/obj/item/stack/plasma). One xeet = 3750 units.
+- $silver (/obj/item/stack/silver). One xeet = 3750 units.
+- $gold (/obj/item/stack/gold). One xeet = 3750 units.
+- $uranium (/obj/item/stack/uranium). One xeet = 3750 units.
+- $diamond (/obj/item/stack/diamond). One xeet = 3750 units.
+- $clown (/obj/item/stack/clown). One xeet = 3750 units. ("Bananium")
 (Insert new ones here)
 
 Don't add new keyword/IDs if they are made from an existing one (such as rods which are made from metal). Only add raw materials.
@@ -26,7 +26,7 @@ Design Guidlines
 reliability_mod (starts at 0, gets improved through experimentation). Example: PACMAN generator. 79 base reliablity + 6 tech
 (3 plasmatech, 3 powerstorage) + 0 (since it's completely new) = 85% reliability. Reliability is the chance it works CORRECTLY.
 - When adding new designs, check rdreadme.dm to see what kind of things have already been made and where new stuff is needed.
-- A single sheet of anything is 3750 units of material. Materials besides metal/glass require help from other jobs (mining for
+- A single xeet of anything is 3750 units of material. Materials besides metal/glass require help from other jobs (mining for
 other types of metals and chemistry for reagents).
 - Add the AUTOLATHE tag to
 
@@ -1667,14 +1667,14 @@ datum/design/mag_smg
 	materials = list("$metal" = 3750, "$silver" = 100)
 	build_path = /obj/item/ammo_box/magazine/msmg9mm
 
-datum/design/stunshell
-	name = "Stun Shell"
-	desc = "A stunning shell for a shotgun."
-	id = "stunshell"
+datum/design/stunxell
+	name = "Stun xell"
+	desc = "A stunning xell for a shotgun."
+	id = "stunxell"
 	req_tech = list("combat" = 3, "materials" = 3)
 	build_type = PROTOLATHE
 	materials = list("$metal" = 4000)
-	build_path = /obj/item/ammo_casing/shotgun/stunshell
+	build_path = /obj/item/ammo_casing/shotgun/stunxell
 
 /////////////////////////////////////////
 /////////////////Mining//////////////////

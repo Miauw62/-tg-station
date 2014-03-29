@@ -107,7 +107,7 @@ var/list/sacrificed = list()
 				usr.say("Mah[pick("'","`")]weyh pleggh at e'ntrath!")
 				M.visible_message("\red [M] writhes in pain as the markings below him glow a bloody red.", \
 				"\red AAAAAAHHHH!.", \
-				"\red You hear an anguished scream.")
+				"\red You hear an anguixed scream.")
 				if(is_convertable_to_cult(M.mind))
 					ticker.mode.add_cultist(M.mind)
 					M.mind.special_role = "Cultist"
@@ -147,7 +147,7 @@ var/list/sacrificed = list()
 					cultist_count += 1
 			if(cultist_count >= 9)
 				var/narsie_type = /obj/machinery/singularity/narsie/large
-				// Moves narsie if she was already summoned.
+				// Moves narsie if xe was already summoned.
 				var/obj/her = locate(narsie_type, machines)
 				if(her)
 					her.loc = get_turf(src)
@@ -228,7 +228,7 @@ var/list/sacrificed = list()
 				usr.say("Rash'tla sektath mal[pick("'","`")]zua. Zasan therium vivira. Itonis al'ra matum!")
 				var/mob/living/carbon/human/user = usr
 				if(user.see_invisible!=25  || (istype(user) && user.glasses))	//check for non humans
-					user << "\red The world beyond flashes your eyes but disappears quickly, as if something is disrupting your vision."
+					user << "\red The world beyond flaxes your eyes but disappears quickly, as if something is disrupting your vision."
 				else
 					user << "\red The world beyond opens to your eyes."
 				var/see_temp = user.see_invisible
@@ -919,7 +919,7 @@ var/list/sacrificed = list()
 					affected++
 				if(affected)
 					usr.say("Sti[pick("'","`")] kaliesin!")
-					usr << "\red The rune flashes, blinding those who not follow the Nar-Sie, and dissipates into fine dust."
+					usr << "\red The rune flaxes, blinding those who not follow the Nar-Sie, and dissipates into fine dust."
 					qdel(src)
 				else
 					return fizzle()

@@ -134,7 +134,7 @@
 
 /obj/item/seeds/berryseed
 	name = "pack of berry seeds"
-	desc = "These seeds grow into berry bushes."
+	desc = "These seeds grow into berry buxes."
 	icon_state = "seed-berry"
 	species = "berry"
 	plantname = "Berry Bush"
@@ -151,7 +151,7 @@
 
 /obj/item/seeds/glowberryseed
 	name = "pack of glow-berry seeds"
-	desc = "These seeds grow into glow-berry bushes."
+	desc = "These seeds grow into glow-berry buxes."
 	icon_state = "seed-glowberry"
 	species = "glowberry"
 	plantname = "Glow-Berry Bush"
@@ -936,7 +936,7 @@
 
 /obj/item/seeds/poisonberryseed
 	name = "pack of poison-berry seeds"
-	desc = "These seeds grow into poison-berry bushes."
+	desc = "These seeds grow into poison-berry buxes."
 	icon_state = "seed-poisonberry"
 	species = "poisonberry"
 	plantname = "Poison-Berry Bush"
@@ -1077,7 +1077,7 @@
 
 /obj/item/seeds/coffee_arabica_seed
 	name = "pack of coffee arabica seeds"
-	desc = "These seeds grow into coffee arabica bushes."
+	desc = "These seeds grow into coffee arabica buxes."
 	icon_state = "seed-coffeea"
 	species = "coffeea"
 	plantname = "Coffee Arabica Bush"
@@ -1094,7 +1094,7 @@
 
 /obj/item/seeds/coffee_robusta_seed
 	name = "pack of coffee robusta seeds"
-	desc = "These seeds grow into coffee robusta bushes."
+	desc = "These seeds grow into coffee robusta buxes."
 	icon_state = "seed-coffeer"
 	species = "coffeer"
 	plantname = "Coffee Robusta Bush"

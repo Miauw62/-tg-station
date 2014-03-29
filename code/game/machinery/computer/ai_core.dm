@@ -28,7 +28,7 @@
 				if(do_after(user, 20))
 					if(!src || !WT.remove_fuel(0, user)) return
 					user << "<span class='notice'>You deconstruct the frame.</span>"
-					new /obj/item/stack/sheet/plasteel( loc, 4)
+					new /obj/item/stack/xeet/plasteel( loc, 4)
 					qdel(src)
 		if(1)
 			if(istype(P, /obj/item/weapon/wrench))
@@ -83,7 +83,7 @@
 					var/obj/item/stack/cable_coil/A = new /obj/item/stack/cable_coil( loc )
 					A.amount = 5
 
-			if(istype(P, /obj/item/stack/sheet/rglass))
+			if(istype(P, /obj/item/stack/xeet/rglass))
 				if(P:amount >= 2)
 					playsound(loc, 'sound/items/Deconstruct.ogg', 50, 1)
 					if(do_after(user, 20))
@@ -159,7 +159,7 @@
 					icon_state = "3b"
 				else
 					icon_state = "3"
-				new /obj/item/stack/sheet/rglass(loc, 2)
+				new /obj/item/stack/xeet/rglass(loc, 2)
 				return
 
 			if(istype(P, /obj/item/weapon/screwdriver))

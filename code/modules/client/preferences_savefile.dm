@@ -2,7 +2,7 @@
 #define SAVEFILE_VERSION_MIN	8
 
 //This is the current version, anything below this will attempt to update (if it's not obsolete)
-#define SAVEFILE_VERSION_MAX	10
+#define SAVEFILE_VERSION_MAX	11
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
 	This proc checks if the current directory of the savefile S needs updating
@@ -75,6 +75,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 				if(13)	underwear = "Nude"
 		if(!(pref_species in species_list))
 			pref_species = new /datum/species/human()
+
+	if(current_version < 11) //Wipe the toggles to prevent weirdness.
+		toggles = TOGGLES_DEFAULT
+		chat_toggles = TOGGLES_DEFAULT_CHAT
+
 	return
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
@@ -100,6 +105,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["be_special"]			>> be_special
 	S["default_slot"]		>> default_slot
 	S["toggles"]			>> toggles
+	S["chat_toggles"]		>> chat_toggles
 	S["ghost_form"]			>> ghost_form
 
 	//try to fix any outdated data if necessary

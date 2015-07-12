@@ -299,7 +299,7 @@
 	sound = "sound/magic/Fireball.ogg"
 
 /obj/effect/proc_holder/spell/turf/fireball/cast(var/turf/T)
-	explosion(T, -1, 0, 2, 3, 0, flame_range = 2)
+	explosion(T, -1, 0, 3, 4, 0, flame_range = 3)
 
 
 /obj/effect/proc_holder/spell/targeted/inflict_handler/fireball

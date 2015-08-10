@@ -11,18 +11,30 @@
 	verb_exclaim = "beeps"
 	var/listening = 0
 	var/recorded = "" //the activation message
+	var/triggeredtick = 0 //it activates only once per tick.
 
 /obj/item/device/assembly/voice/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, list/spans)
 	if(speaker == src)
 		return
 
+	if(connected) //dont let the thing we're connected to trigger us
+		if(speaker == connected.holder)
+			return
+
+		else if(radio_freq)
+			if(speaker.GetSource() == connected.holder)
+				return
+
 	if(listening && !radio_freq)
 		recorded = raw_message
 		listening = 0
 		say("Activation message is '[recorded]'.")
-	else
+
+	else if(triggeredtick != world.time)
 		if(findtext(raw_message, recorded))
-			pulse(0)
+			triggeredtick = world.time
+			spawn(-1) //some devices sleep(), this fucks up radio things if we dont spawn() here.
+				pulse(0)
 
 /obj/item/device/assembly/voice/activate()
 	if(secured)

@@ -101,6 +101,9 @@
 
 
 /obj/item/device/taperecorder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans)
+	if(radio_freq || istype(speaker, /obj/item/device/taperecorder))
+		return
+
 	if(mytape && recording)
 		mytape.timestamp += mytape.used_capacity
 		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] [message]"
@@ -121,7 +124,7 @@
 		return
 
 	if(mytape.used_capacity < mytape.max_capacity)
-		usr << "<span class='notice'>Recording started.</span>"
+		say("Recording started")
 		recording = 1
 		update_icon()
 		mytape.timestamp += mytape.used_capacity
@@ -139,7 +142,7 @@
 		recording = 0
 		update_icon()
 	else
-		usr << "<span class='notice'>The tape is full.</span>"
+		say("Tape capacity reached, cannot record.")
 
 
 /obj/item/device/taperecorder/verb/stop()
@@ -152,13 +155,15 @@
 	if(recording)
 		recording = 0
 		mytape.timestamp += mytape.used_capacity
-		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] Recording stopped."
-		usr << "<span class='notice'>Recording stopped.</span>"
+		if(!findtext(mytape.storedinfo[mytape.storedinfo.len], "\] Recording started.")) //if nothing was recorded, don't record any "stopped" or "started" messages
+			mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] Recording stopped."
+		else
+			mytape.storedinfo.Cut(mytape.storedinfo.len, 0)
+		say("Recording stopped.")
 		return
 	else if(playing)
 		playing = 0
-		var/turf/T = get_turf(src)
-		T.visible_message("<font color=Maroon><B>Tape Recorder</B>: Playback stopped.</font>")
+		say("Playback stopped.")
 	update_icon()
 
 
@@ -179,10 +184,10 @@
 
 	playing = 1
 	update_icon()
-	usr << "<span class='notice'>Playing started.</span>"
+	say("Playback started.")
 	var/used = mytape.used_capacity	//to stop runtimes when you eject the tape
 	var/max = mytape.max_capacity
-	for(var/i = 1, used < max, sleep(10 * playsleepseconds))
+	for(var/i = 1, used < max, sleep(max(10 * playsleepseconds, 2)))
 		if(!mytape)
 			break
 		if(!wires.get_play())
